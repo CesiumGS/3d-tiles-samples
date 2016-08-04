@@ -1,0 +1,36 @@
+{
+  "name": "3d-tiles-samples",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "Sample tilesets for learning how to use 3D Tiles.",
+  "author": {
+    "name": "Analytical Graphics, Inc. and Contributors"
+  },
+  "keywords": [
+    "3D Tiles"
+  ],
+  "homepage": "https://github.com/AnalyticalGraphicsInc/3d-tiles-samples",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnalyticalGraphicsInc/3d-tiles-samples.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnalyticalGraphicsInc/3d-tiles-samples/issues"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "async": "2.0.1",
+    "cesium": "1.24.0",
+    "compression": "1.6.2",
+    "express": "4.14.x",
+    "nodemon": "1.10.0",
+    "request": "2.74.0",
+    "yargs": "4.8.1"
+  },
+  "scripts": {
+    "start": "nodemon --watch bin --watch lib --watch index.js server.js"
+  }
+}
