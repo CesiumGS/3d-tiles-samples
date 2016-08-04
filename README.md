@@ -1,6 +1,6 @@
-# 3d-tiles-samples
+<p align="center"><img src="https://github.com/AnalyticalGraphicsInc/3d-tiles/blob/master/figures/Cesium3DTiles.png" /></p>
 
-Sample tilesets for learning how to use 3D Tiles and a simple Node.js server for serving tilesets.
+Sample tilesets for learning how to use [3D Tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) and a simple Node.js server for serving tilesets.
 
 ## Instructions
 
