@@ -29,12 +29,12 @@ Cesium.when(tileset.readyPromise).then(function(tileset) {
 
 See the `README.txt` in each tileset's directory for usage restrictions.
 
-| Model                                         | Screenshot                                                            | Description|
-|-----------------------------------------------|-----------------------------------------------------------------------|------------|
-| [Discrete LOD](tilesets/TilesetWithDiscreteLOD)                  | ![](tilesets/TilesetWithDiscreteLOD/screenshot/screenshot.gif)        | Tileset with discrete LODs. |
-| [Expiration](tilesets/TilesetWithExpiration)                      | ![](tilesets/TilesetWithExpiration/screenshot/screenshot.gif)         | Tileset that expires and re-requests new content every five seconds. |
-| [Request Volume](tilesets/TilesetWithRequestVolume)              | ![](tilesets/TilesetWithRequestVolume/screenshot/screenshot.gif)      | Tileset with request volumes. |
-| [Tree Billboards](tilesets/TilesetWithTreeBillboards)            | ![](tilesets/TilesetWithTreeBillboards/screenshot/screenshot.gif)     | Tileset that combines instanced 3D models and billboards. |
+| Model                                                  | Screenshot                                                            | Description|
+|--------------------------------------------------------|-----------------------------------------------------------------------|------------|
+| [Discrete LOD](tilesets/TilesetWithDiscreteLOD)        | ![](tilesets/TilesetWithDiscreteLOD/screenshot/screenshot.gif)        | Tileset with discrete LODs. |
+| [Expiration](tilesets/TilesetWithExpiration)           | ![](tilesets/TilesetWithExpiration/screenshot/screenshot.gif)         | Tileset that expires and re-requests new content every five seconds. |
+| [Request Volume](tilesets/TilesetWithRequestVolume)    | ![](tilesets/TilesetWithRequestVolume/screenshot/screenshot.gif)      | Tileset with request volumes. |
+| [Tree Billboards](tilesets/TilesetWithTreeBillboards)  | ![](tilesets/TilesetWithTreeBillboards/screenshot/screenshot.gif)     | Tileset that combines instanced 3D models and billboards. |
 
 ## Contributions
 
