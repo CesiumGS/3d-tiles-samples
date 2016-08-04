@@ -16,7 +16,7 @@ npm start
 
 The tilesets are hosted at `http://localhost:8003/tilesets/`.
 
-To load a tileset Cesium use the [3d-tiles branch](https://github.com/AnalyticalGraphicsInc/cesium/tree/3d-tiles):
+To load a tileset in Cesium use the [3d-tiles branch](https://github.com/AnalyticalGraphicsInc/cesium/tree/3d-tiles):
 ```javascript
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
     url : 'http://localhost:8003/tilesets/TilesetWithDiscreteLOD/'
