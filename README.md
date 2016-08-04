@@ -29,7 +29,9 @@ Cesium.when(tileset.readyPromise).then(function(tileset) {
 });
 ```
 
-See the `README.md` in each tileset's directory for usage restrictions.
+Unless otherwise noted use the `3d-tiles` branch.
+
+See the `README.md` in each tileset's directory for further instructions and usage restrictions.
 
 | Model                                                  | Screenshot                                                            | Description|
 |--------------------------------------------------------|-----------------------------------------------------------------------|------------|
