@@ -1,5 +1,6 @@
 # 3d-tiles-samples
-Sample tilesets for learning how to use 3D Tiles :books:
+
+Sample tilesets for learning how to use 3D Tiles and a simple Node.js server for serving tilesets.
 
 ## Instructions
 
@@ -15,8 +16,8 @@ npm start
 
 The tilesets are hosted at `http://localhost:8003/tilesets/`.
 
-To load a tileset within Cesium:
-```
+To load a tileset Cesium use the [3d-tiles branch](https://github.com/AnalyticalGraphicsInc/cesium/tree/3d-tiles):
+```javascript
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
     url : 'http://localhost:8003/tilesets/TilesetWithDiscreteLOD/'
 }));
@@ -27,7 +28,7 @@ Cesium.when(tileset.readyPromise).then(function(tileset) {
 
 ```
 
-See the `README.txt` in each tileset's directory for usage restrictions.
+See the `README.md` in each tileset's directory for usage restrictions.
 
 | Model                                                  | Screenshot                                                            | Description|
 |--------------------------------------------------------|-----------------------------------------------------------------------|------------|
