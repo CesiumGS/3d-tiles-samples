@@ -1,0 +1,24 @@
+{
+  "asset": {
+    "version": "0.0"
+  },
+  "geometricError": 346.4,
+  "root": {
+    "expire": {
+      "duration": 5
+    },
+    "boundingVolume": {
+      "sphere": [
+        1215030.954952962,
+        -4736383.49897829,
+        4081666.3400867586,
+        100
+      ]
+    },
+    "geometricError": 0,
+    "refine": "add",
+    "content": {
+      "url": "points.pnts"
+    }
+  }
+}

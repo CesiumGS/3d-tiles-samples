@@ -1,0 +1,6 @@
+# NPM
+node_modules
+npm-debug.log
+
+# WebStorm user-specific
+.idea
