@@ -29,6 +29,8 @@ Cesium.when(tileset.readyPromise).then(function(tileset) {
 });
 ```
 
+When testing tilesets using this server that you do not want to accidently push to git, create a `localTilesets` directory, place the tilesets there, and access like `'http://localhost:8003/localTilesets/GitIgnoredTileset/'`.
+
 Unless otherwise noted use the `3d-tiles` branch.
 
 See the `README.md` in each tileset's directory for further instructions and usage restrictions.
