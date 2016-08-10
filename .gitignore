@@ -2,5 +2,8 @@
 node_modules
 npm-debug.log
 
+# Local data
+/localTilesets
+
 # WebStorm user-specific
 .idea
