@@ -24,8 +24,9 @@ var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
     url : 'http://localhost:8003/tilesets/TilesetWithDiscreteLOD/'
 }));
 
-Cesium.when(tileset.readyPromise).then(function(tileset) {
+tileset.readyPromise.then(function(tileset) {
     viewer.camera.viewBoundingSphere(tileset.boundingSphere, new Cesium.HeadingPitchRange(0, -0.5, 0));
+    viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
 });
 ```
 
