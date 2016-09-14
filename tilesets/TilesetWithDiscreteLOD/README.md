@@ -7,7 +7,7 @@ The tileset contains three tiles each with a different decimation of the Stanfor
 
 When a tile's screen space error is met, it is replaced by its higher LOD child.
 
-When running in Cesium, use the `3d-tiles-transform` branch.
+When running in Cesium, use the `3d-tiles` branch.
 
 ## Screenshot
 
