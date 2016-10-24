@@ -2,24 +2,6 @@
   "asset": {
     "version": "0.0"
   },
-  "properties": {
-    "id": {
-      "minimum": 0,
-      "maximum": 99
-    },
-    "Longitude": {
-      "minimum": -1.3197209267166137,
-      "maximum": -1.319639102447024
-    },
-    "Latitude": {
-      "minimum": 0.6988426520676222,
-      "maximum": 0.6989055039320631
-    },
-    "Height": {
-      "minimum": 6,
-      "maximum": 84
-    }
-  },
   "geometricError": 100,
   "root": {
     "boundingVolume": {
