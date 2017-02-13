@@ -2,6 +2,8 @@
 
 Sample tilesets for learning how to use [3D Tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) and a simple Node.js server for serving tilesets.
 
+These tilesets are generated with [3d-tiles-generator](https://github.com/AnalyticalGraphicsInc/3d-tiles-tools/tree/master/generator).
+
 ## Instructions
 
 Clone this repo and install [Node.js](http://nodejs.org/).  From the root directory of this repo, run:
@@ -19,9 +21,7 @@ The tilesets are hosted at `http://localhost:8003/tilesets/`.
 To load a tileset with Cesium use:
 
 ```javascript
-var viewer = new Cesium.Viewer('cesiumContainer', {
-    scene3DOnly : true
-});
+var viewer = new Cesium.Viewer('cesiumContainer');
 
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
     url : 'http://localhost:8003/tilesets/TilesetWithDiscreteLOD/'
@@ -33,7 +33,7 @@ tileset.readyPromise.then(function(tileset) {
 });
 ```
 
-When testing tilesets using this server that you do not want to accidently push to git, create a `localTilesets` directory, place the tilesets there, and access like `'http://localhost:8003/localTilesets/GitIgnoredTileset/'`.
+When testing tilesets using this server that you do not want to accidentally push to git, create a `localTilesets` directory, place the tilesets there, and access like `'http://localhost:8003/localTilesets/GitIgnoredTileset/'`.
 
 Unless otherwise noted use the `3d-tiles` branch.
 
