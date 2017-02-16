@@ -5,8 +5,11 @@
 
     var express = require('express');
     var compression = require('compression');
+    var fs = require('fs');
     var url = require('url');
     var request = require('request');
+
+    var gzipHeader = Buffer.from("1F8B08", "hex");
 
     var yargs = require('yargs').options({
         'port' : {
@@ -48,11 +51,35 @@
 
     var app = express();
     app.use(compression());
+
+    function checkGzipAndNext(req, res, next) {
+        var buffer = Buffer.alloc(3);
+        var reqUrl = url.parse(req.url, true);
+        var filePath = reqUrl.pathname.substring(1);
+        fs.open(filePath, 'r', function(status, fd) {
+            if(status) {
+                // Error opening file. Continue.
+                next();
+                return;
+            }
+            fs.read(fd, buffer, 0, 3, 0, function(err, num) {
+                if (buffer.equals(gzipHeader)) {
+                    res.header('Content-Encoding', 'gzip');
+                }
+                next();
+            });
+        });
+    }
+
+    var knownTilesetFormats = [/\.b3dm/, /\.pnts/, /\.i3dm/, /\.cmpt/, /\.glb/, /tileset.*\.json$/];
+    app.get(knownTilesetFormats, checkGzipAndNext);
+
     app.use(function(req, res, next) {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next();
     });
+
     app.use(express.static(__dirname));
 
     function getRemoteUrlFromParam(req) {
