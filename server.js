@@ -57,7 +57,7 @@
         var reqUrl = url.parse(req.url, true);
         var filePath = reqUrl.pathname.substring(1);
         fs.open(filePath, 'r', function(status, fd) {
-            if(status) {
+            if (status) {
                 // Error opening file. Continue.
                 next();
                 return;
@@ -66,7 +66,9 @@
                 if (buffer.equals(gzipHeader)) {
                     res.header('Content-Encoding', 'gzip');
                 }
-                next();
+                fs.close(fd, function(err) {
+                    next();
+                });
             });
         });
     }
