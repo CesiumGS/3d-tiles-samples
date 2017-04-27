@@ -52,10 +52,17 @@
     var app = express();
     app.use(compression());
 
+    app.use(function(req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+    });
+
     function checkGzipAndNext(req, res, next) {
         var buffer = Buffer.alloc(3);
         var reqUrl = url.parse(req.url, true);
         var filePath = reqUrl.pathname.substring(1);
+
         fs.open(filePath, 'r', function(status, fd) {
             if (status) {
                 // Error opening file. Continue.
@@ -74,12 +81,19 @@
     }
 
     var knownTilesetFormats = [/\.b3dm/, /\.pnts/, /\.i3dm/, /\.cmpt/, /\.glb/, /tileset.*\.json$/];
-    app.get(knownTilesetFormats, checkGzipAndNext);
+    app.use(knownTilesetFormats, checkGzipAndNext);
 
-    app.use(function(req, res, next) {
-        res.header("Access-Control-Allow-Origin", "*");
-        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-        next();
+    // Custom code for serving TilesetWithExpiration. When points.pnts is requested it cycles between the tiles in the cache folder.
+    var expirationPntsPath = '/tilesets/TilesetWithExpiration/points.pnts';
+    var expirationCacheDirectory = '/tilesets/TilesetWithExpiration/cache/';
+    var expirationCacheLength = 5;
+    var expireCount = 0;
+
+    app.use(expirationPntsPath, function(req, res) {
+        var pntsPath = expirationCacheDirectory +  'points_' + expireCount + '.pnts';
+        expireCount = (expireCount + 1) % expirationCacheLength;
+        res.sendFile(pntsPath, {root: __dirname});
+        // Don't call next() because we don't need to run the express.static middleware
     });
 
     app.use(express.static(__dirname));
