@@ -81,7 +81,7 @@
     }
 
     var knownTilesetFormats = [/\.b3dm/, /\.pnts/, /\.i3dm/, /\.cmpt/, /\.glb/, /tileset.*\.json$/];
-    app.use(knownTilesetFormats, checkGzipAndNext);
+    app.get(knownTilesetFormats, checkGzipAndNext);
 
     // Custom code for serving TilesetWithExpiration. When points.pnts is requested it cycles between the tiles in the cache folder.
     var expirationPntsPath = '/tilesets/TilesetWithExpiration/points.pnts';
