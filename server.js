@@ -63,20 +63,16 @@
         var reqUrl = url.parse(req.url, true);
         var filePath = reqUrl.pathname.substring(1);
 
-        fs.open(filePath, 'r', function(status, fd) {
-            if (status) {
-                // Error opening file. Continue.
-                next();
-                return;
+        var readStream = fs.createReadStream(filePath, { start: 0, end: 2 });
+        readStream.on('error', function(err) {
+            next();
+        });
+
+        readStream.on('data', function(chunk) {
+            if (chunk.equals(gzipHeader)) {
+                res.header('Content-Encoding', 'gzip');
             }
-            fs.read(fd, buffer, 0, 3, 0, function(err, num) {
-                if (buffer.equals(gzipHeader)) {
-                    res.header('Content-Encoding', 'gzip');
-                }
-                fs.close(fd, function(err) {
-                    next();
-                });
-            });
+            next();
         });
     }
 
