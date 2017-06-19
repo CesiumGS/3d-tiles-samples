@@ -72,9 +72,6 @@
             if (chunk.equals(gzipHeader)) {
                 res.header('Content-Encoding', 'gzip');
             }
-        });
-
-        readStream.on('close', function() {
             next();
         });
     }
