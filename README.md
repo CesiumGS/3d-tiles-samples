@@ -2,7 +2,7 @@
 
 Sample tilesets for learning how to use [3D Tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles) and a simple Node.js server for serving tilesets.
 
-These tilesets are generated with [3d-tiles-generator](https://github.com/AnalyticalGraphicsInc/3d-tiles-tools/tree/master/generator).
+These tilesets are generated with [3d-tiles-samples-generator](https://github.com/AnalyticalGraphicsInc/3d-tiles-tools/tree/master/samples-generator).
 
 ## Instructions
 
