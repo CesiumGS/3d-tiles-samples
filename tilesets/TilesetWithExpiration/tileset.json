@@ -1,6 +1,6 @@
 {
   "asset": {
-    "version": "0.0"
+    "version": "1.0"
   },
   "geometricError": 346.4,
   "root": {
@@ -34,7 +34,7 @@
       ]
     },
     "geometricError": 0,
-    "refine": "add",
+    "refine": "ADD",
     "content": {
       "url": "points.pnts"
     }

@@ -1,6 +1,6 @@
 {
   "asset": {
-    "version": "0.0"
+    "version": "1.0"
   },
   "geometricError": 500,
   "root": {
@@ -39,7 +39,7 @@
       ]
     },
     "geometricError": 100,
-    "refine": "replace",
+    "refine": "REPLACE",
     "content": {
       "url": "dragon_low.b3dm"
     },

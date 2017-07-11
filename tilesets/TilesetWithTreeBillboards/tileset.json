@@ -1,6 +1,6 @@
 {
   "asset": {
-    "version": "0.0"
+    "version": "1.0"
   },
   "geometricError": 100,
   "root": {
@@ -15,7 +15,7 @@
       ]
     },
     "geometricError": 10,
-    "refine": "replace",
+    "refine": "REPLACE",
     "content": {
       "url": "tree_billboard.i3dm"
     },
