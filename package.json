@@ -22,13 +22,13 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "async": "^2.4.1",
-    "cesium": "^1.33.0",
-    "compression": "^1.6.2",
-    "express": "^4.15.3",
-    "nodemon": "^1.11.0",
-    "request": "^2.81.0",
-    "yargs": "^8.0.1"
+    "async": "^2.5.0",
+    "cesium": "^1.39.0",
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "nodemon": "^1.12.1",
+    "request": "^2.83.0",
+    "yargs": "^10.0.3"
   },
   "scripts": {
     "start": "nodemon --watch bin --watch lib --watch index.js server.js"
