@@ -24,13 +24,10 @@ To load a tileset with Cesium use:
 var viewer = new Cesium.Viewer('cesiumContainer');
 
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-    url : 'http://localhost:8003/tilesets/TilesetWithDiscreteLOD/'
+    url : 'http://localhost:8003/tilesets/TilesetWithDiscreteLOD/tileset.json'
 }));
 
-tileset.readyPromise.then(function(tileset) {
-    viewer.camera.viewBoundingSphere(tileset.boundingSphere, new Cesium.HeadingPitchRange(0, -0.5, 0));
-    viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
-});
+viewer.zoomTo(tileset, new Cesium.HeadingPitchRange(0, -0.5, 0));
 ```
 
 When testing tilesets using this server that you do not want to accidentally push to git, create a `localTilesets` directory, place the tilesets there, and access like `'http://localhost:8003/localTilesets/GitIgnoredTileset/'`.
