@@ -4,18 +4,18 @@
   "license": "Apache-2.0",
   "description": "Sample tilesets for learning how to use 3D Tiles.",
   "author": {
-    "name": "Analytical Graphics, Inc. and Contributors"
+    "name": "Cesium GS, Inc. and Contributors"
   },
   "keywords": [
     "3D Tiles"
   ],
-  "homepage": "https://github.com/AnalyticalGraphicsInc/3d-tiles-samples",
+  "homepage": "https://github.com/CesiumGS/3d-tiles-samples",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnalyticalGraphicsInc/3d-tiles-samples.git"
+    "url": "https://github.com/CesiumGS/3d-tiles-samples.git"
   },
   "bugs": {
-    "url": "https://github.com/AnalyticalGraphicsInc/3d-tiles-samples/issues"
+    "url": "https://github.com/CesiumGS/3d-tiles-samples/issues"
   },
   "main": "index.js",
   "engines": {
