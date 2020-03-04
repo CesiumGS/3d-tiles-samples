@@ -17,7 +17,7 @@
     "geometricError": 10,
     "refine": "REPLACE",
     "content": {
-      "url": "tree_billboard.i3dm"
+      "uri": "tree_billboard.i3dm"
     },
     "children": [
       {
@@ -33,7 +33,7 @@
         },
         "geometricError": 0,
         "content": {
-          "url": "tree.i3dm"
+          "uri": "tree.i3dm"
         }
       }
     ]
