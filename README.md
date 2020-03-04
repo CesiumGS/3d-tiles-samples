@@ -32,8 +32,6 @@ viewer.zoomTo(tileset, new Cesium.HeadingPitchRange(0, -0.5, 0));
 
 When testing tilesets using this server that you do not want to accidentally push to git, create a `localTilesets` directory, place the tilesets there, and access like `'http://localhost:8003/localTilesets/GitIgnoredTileset/'`.
 
-Unless otherwise noted use the `3d-tiles` branch.
-
 See the `README.md` in each tileset's directory for further instructions and usage restrictions.
 
 | Model                                                  | Screenshot                                                            | Description|
