@@ -7,3 +7,7 @@ Note: the billboard effect is coded into the i3dm's embedded glTF model, but a s
 ## Screenshot
 
 ![screenshot](screenshot/screenshot.gif)
+
+## License
+
+[CC0](https://creativecommons.org/share-your-work/public-domain/cc0/)

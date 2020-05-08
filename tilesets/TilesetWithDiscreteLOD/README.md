@@ -10,3 +10,7 @@ When a tile's screen space error is met, it is replaced by its higher LOD child.
 ## Screenshot
 
 ![screenshot](screenshot/screenshot.gif)
+
+## License
+
+[CC0](https://creativecommons.org/share-your-work/public-domain/cc0/)
