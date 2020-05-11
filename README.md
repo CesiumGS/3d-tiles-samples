@@ -2,7 +2,7 @@
 
 Sample tilesets for learning how to use [3D Tiles](https://github.com/CesiumGS/3d-tiles) and a simple Node.js server for serving tilesets.
 
-These tilesets are generated with [3d-tiles-samples-generator](https://github.com/CesiumGS/3d-tiles-validator/tree/master/samples-generator).
+These tilesets are generated with [3d-tiles-samples-generator](https://github.com/CesiumGS/3d-tiles-validator/tree/master/samples-generator). License information can be found in each sample's README.
 
 ## Instructions
 
