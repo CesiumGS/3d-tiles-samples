@@ -1,8 +1,8 @@
-<p align="center"><img src="https://github.com/CesiumGS/3d-tiles/blob/master/figures/Cesium3DTiles.png" /></p>
+<p align="center"><img src="https://github.com/CesiumGS/3d-tiles/blob/main/figures/Cesium3DTiles.png" /></p>
 
 Sample tilesets for learning how to use [3D Tiles](https://github.com/CesiumGS/3d-tiles) and a simple Node.js server for serving tilesets.
 
-These tilesets are generated with [3d-tiles-samples-generator](https://github.com/CesiumGS/3d-tiles-validator/tree/master/samples-generator). License information can be found in each sample's README.
+These tilesets are generated with [3d-tiles-samples-generator](https://github.com/CesiumGS/3d-tiles-validator/tree/main/samples-generator). License information can be found in each sample's README.
 
 ## Instructions
 
@@ -43,4 +43,4 @@ See the `README.md` in each tileset's directory for further instructions and usa
 
 ## Contributions
 
-Pull requests are appreciated!  Please use the same [Contributor License Agreement (CLA)](https://github.com/CesiumGS/cesium/blob/master/CONTRIBUTING.md) and [Coding Guide](https://github.com/CesiumGS/cesium/blob/master/Documentation/Contributors/CodingGuide/README.md) used for [CesiumJS](https://cesium.com/cesiumjs/).
+Pull requests are appreciated!  Please use the same [Contributor License Agreement (CLA)](https://github.com/CesiumGS/cesium/blob/main/CONTRIBUTING.md) and [Coding Guide](https://github.com/CesiumGS/cesium/blob/main/Documentation/Contributors/CodingGuide/README.md) used for [CesiumJS](https://cesium.com/cesiumjs/).
