@@ -68,7 +68,7 @@
       ]
     },
     "content": {
-      "uri": "content/{level}/{x}/{y}.b3dm"
+      "uri": "content/{level}/{x}/{y}.glb"
     },
     "extensions": {
       "3DTILES_implicit_tiling": {
