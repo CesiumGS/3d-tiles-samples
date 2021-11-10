@@ -1,45 +1,30 @@
 <p align="center"><img src="https://github.com/CesiumGS/3d-tiles/blob/main/figures/Cesium3DTiles.png" /></p>
 
-Sample tilesets for learning how to use [3D Tiles](https://github.com/CesiumGS/3d-tiles) and a simple Node.js server for serving tilesets.
 
-These tilesets are generated with [3d-tiles-samples-generator](https://github.com/CesiumGS/3d-tiles-validator/tree/main/samples-generator). License information can be found in each sample's README.
+## Samples
 
-## Instructions
 
-Clone this repo and install [Node.js](http://nodejs.org/).  From the root directory of this repo, run:
-```
-npm install
-```
+Sample tilesets for learning how to use [3D Tiles 1.0](https://github.com/CesiumGS/3d-tiles) and [3D Tiles Next](https://github.com/CesiumGS/3d-tiles/tree/main/next).
 
-Then to host the tilesets locally, run:
-```
-npm start
-```
+### 3D Tiles 1.0
 
-The tilesets are hosted at `http://localhost:8003/tilesets/`.
+| Tileset | Screenshot |
+| - | - |
+| [TilesetWithDiscreteLOD](1.0/TilesetWithDiscreteLOD/README.md) | <img src="1.0/TilesetWithDiscreteLOD/screenshot/screenshot.gif" width="300" height="200"> |
+| [TilesetWithExpiration](1.0/TilesetWithExpiration/README.md) | <img src="1.0/TilesetWithExpiration/screenshot/screenshot.gif" width="300" height="200"> |
+| [TilesetWithRequestVolume](1.0/TilesetWithRequestVolume/README.md) | <img src="1.0/TilesetWithRequestVolume/screenshot/screenshot.gif" width="300" height="200"> |
+| [TilesetWithTreeBillboards](1.0/TilesetWithTreeBillboards/README.md) | <img src="1.0/TilesetWithTreeBillboards/screenshot/screenshot.gif" width="300" height="200"> |
 
-To load a tileset with CesiumJS use:
 
-```javascript
-var viewer = new Cesium.Viewer('cesiumContainer');
+### 3D Tiles Next
 
-var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-    url : 'http://localhost:8003/tilesets/TilesetWithDiscreteLOD/tileset.json'
-}));
-
-viewer.zoomTo(tileset, new Cesium.HeadingPitchRange(0, -0.5, 0));
-```
-
-When testing tilesets using this server that you do not want to accidentally push to git, create a `localTilesets` directory, place the tilesets there, and access like `'http://localhost:8003/localTilesets/GitIgnoredTileset/'`.
-
-See the `README.md` in each tileset's directory for further instructions and usage restrictions.
-
-| Model                                                  | Screenshot                                                            | Description|
-|--------------------------------------------------------|-----------------------------------------------------------------------|------------|
-| [Discrete LOD](tilesets/TilesetWithDiscreteLOD)        | ![](tilesets/TilesetWithDiscreteLOD/screenshot/screenshot.gif)        | Tileset with discrete LODs. |
-| [Expiration](tilesets/TilesetWithExpiration)           | ![](tilesets/TilesetWithExpiration/screenshot/screenshot.gif)         | Tileset that expires and re-requests new content every five seconds. |
-| [Request Volume](tilesets/TilesetWithRequestVolume)    | ![](tilesets/TilesetWithRequestVolume/screenshot/screenshot.gif)      | Tileset with request volumes. |
-| [Tree Billboards](tilesets/TilesetWithTreeBillboards)  | ![](tilesets/TilesetWithTreeBillboards/screenshot/screenshot.gif)     | Tileset that combines instanced 3D models and billboards. |
+| Tileset | Screenshot |
+| - | - |
+| [TilesetWithTilesetMetadata](next/TilesetWithTilesetMetadata/README.md) | <img src="next/TilesetWithTilesetMetadata/screenshot/TilesetWithTilesetMetadata.gif" width="300" height="200"> |
+| [TilesetWithTileMetadata](next/TilesetWithTileMetadata/README.md) | <img src="next/TilesetWithTileMetadata/screenshot/TilesetWithTileMetadata.gif" width="300" height="200"> |
+| [TilesetWithGroupMetadata](next/TilesetWithGroupMetadata/README.md) | <img src="next/TilesetWithGroupMetadata/screenshot/TilesetWithGroupMetadata.gif" width="300" height="200"> |
+| [TilesetWithExternalSchema](next/TilesetWithExternalSchema/README.md) | <img src="next/TilesetWithExternalSchema/screenshot/TilesetWithExternalSchema.gif" width="300" height="200"> |
+| [ImplicitTilesetWithTileMetadata](next/ImplicitTilesetWithTileMetadata/README.md) | <img src="next/ImplicitTilesetWithTileMetadata/screenshot/ImplicitWithTileMetadata.gif" width="300" height="200"> |
 
 ## Contributions
 
