@@ -23,7 +23,7 @@ Sample tilesets for learning how to use [3D Tiles 1.0](https://github.com/Cesium
 | [TilesetWithTilesetMetadata](next/TilesetWithTilesetMetadata/README.md) | <img src="next/TilesetWithTilesetMetadata/screenshot/TilesetWithTilesetMetadata.gif" width="300" height="200"> |
 | [TilesetWithTileMetadata](next/TilesetWithTileMetadata/README.md) | <img src="next/TilesetWithTileMetadata/screenshot/TilesetWithTileMetadata.gif" width="300" height="200"> |
 | [TilesetWithGroupMetadata](next/TilesetWithGroupMetadata/README.md) | <img src="next/TilesetWithGroupMetadata/screenshot/TilesetWithGroupMetadata.gif" width="300" height="200"> |
-| [TilesetWithExternalMetadata](next/TilesetWithExternalMetadata/README.md) | <img src="next/TilesetWithExternalMetadata/screenshot/TilesetWithExternalMetadata.gif" width="300" height="200"> |
+| [TilesetWithExternalSchema](next/TilesetWithExternalSchema/README.md) | <img src="next/TilesetWithExternalSchema/screenshot/TilesetWithExternalSchema.gif" width="300" height="200"> |
 | [ImplicitTilesetWithTileMetadata](next/ImplicitTilesetWithTileMetadata/README.md) | <img src="next/ImplicitTilesetWithTileMetadata/screenshot/ImplicitWithTileMetadata.gif" width="300" height="200"> |
 
 ## Contributions
