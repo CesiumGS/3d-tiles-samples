@@ -4,7 +4,7 @@
 ## Samples
 
 
-Sample tilesets for learning how to use [3D Tiles 1.0](https://github.com/CesiumGS/3d-tiles) and  and [3D Tiles Next](https://github.com/CesiumGS/3d-tiles/tree/main/next).
+Sample tilesets for learning how to use [3D Tiles 1.0](https://github.com/CesiumGS/3d-tiles) and [3D Tiles Next](https://github.com/CesiumGS/3d-tiles/tree/main/next).
 
 ### 3D Tiles 1.0
 
