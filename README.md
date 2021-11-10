@@ -13,17 +13,18 @@ Sample tilesets for learning how to use [3D Tiles 1.0](https://github.com/Cesium
 | [TilesetWithDiscreteLOD](1.0/TilesetWithDiscreteLOD/README.md) | <img src="1.0/TilesetWithDiscreteLOD/screenshot/screenshot.gif" width="300" height="200"> |
 | [TilesetWithExpiration](1.0/TilesetWithExpiration/README.md) | <img src="1.0/TilesetWithExpiration/screenshot/screenshot.gif" width="300" height="200"> |
 | [TilesetWithRequestVolume](1.0/TilesetWithRequestVolume/README.md) | <img src="1.0/TilesetWithRequestVolume/screenshot/screenshot.gif" width="300" height="200"> |
-| [TilesetWithTreeBillboards](1.0/TilesetWithTreeBillboards/README.md) | <img src="1.0/TilesetWithTreeBillboards/screenshot/screenshot.gif" width="300" height="150"> |
+| [TilesetWithTreeBillboards](1.0/TilesetWithTreeBillboards/README.md) | <img src="1.0/TilesetWithTreeBillboards/screenshot/screenshot.gif" width="300" height="200"> |
 
 
 ### 3D Tiles Next
 
-| Tileset | Screenshot | Extensions Used |
-| - | - | - |
-| [TilesetWithTilesetMetadata](next/TilesetWithTilesetMetadata/README.md) | <img src="next/TilesetWithTilesetMetadata/screenshot/TilesetWithTilesetMetadata.gif" width="400" height="200"> | `3DTILES_content_gltf`, `3DTILES_metadata`
-| [TilesetWithTileMetadata](next/TilesetWithTileMetadata/README.md) | <img src="next/TilesetWithTileMetadata/screenshot/TilesetWithTileMetadata.gif" width="400" height="200"> |`3DTILES_content_gltf`, `3DTILES_metadata`
-| [TilesetWithGroupMetadata](next/TilesetWithGroupMetadata/README.md) | <img src="next/TilesetWithGroupMetadata/screenshot/TilesetWithGroupMetadata.gif" width="400" height="200"> |`3DTILES_content_gltf`, `3DTILES_metadata`
-| [ImplicitTilesetWithTileMetadata](next/ImplicitTilesetWithTileMetadata/README.md) | <img src="next/ImplicitTilesetWithTileMetadata/screenshot/ImplicitWithTileMetadata.gif" width="400" height="200"> | `3DTILES_content_gltf`, `3DTILES_metadata`, `3DTILES_implicit_tiling`
+| Tileset | Screenshot |
+| - | - |
+| [TilesetWithTilesetMetadata](next/TilesetWithTilesetMetadata/README.md) | <img src="next/TilesetWithTilesetMetadata/screenshot/TilesetWithTilesetMetadata.gif" width="300" height="200"> |
+| [TilesetWithTileMetadata](next/TilesetWithTileMetadata/README.md) | <img src="next/TilesetWithTileMetadata/screenshot/TilesetWithTileMetadata.gif" width="300" height="200"> |
+| [TilesetWithGroupMetadata](next/TilesetWithGroupMetadata/README.md) | <img src="next/TilesetWithGroupMetadata/screenshot/TilesetWithGroupMetadata.gif" width="300" height="200"> |
+| [TilesetWithExternalMetadata](next/TilesetWithExternalMetadata/README.md) | <img src="next/TilesetWithExternalMetadata/screenshot/TilesetWithExternalMetadata.gif" width="300" height="200"> |
+| [ImplicitTilesetWithTileMetadata](next/ImplicitTilesetWithTileMetadata/README.md) | <img src="next/ImplicitTilesetWithTileMetadata/screenshot/ImplicitWithTileMetadata.gif" width="300" height="200"> |
 
 ## Contributions
 
