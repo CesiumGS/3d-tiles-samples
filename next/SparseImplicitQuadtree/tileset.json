@@ -1,7 +1,4 @@
 {
-  "extensions" : {
-    "3DTILES_content_gltf" : { }
-  },
   "asset" : {
     "version" : "1.0"
   },
@@ -25,5 +22,7 @@
     "content" : {
       "uri" : "content/content_{level}__{x}_{y}.b3dm"
     }
-  }
+  },
+  "extensionsUsed" : [ "3DTILES_implicit_tiling" ],
+  "extensionsRequired" : [ "3DTILES_implicit_tiling" ]
 }
