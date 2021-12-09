@@ -10,21 +10,22 @@ Sample tilesets for learning how to use [3D Tiles 1.0](https://github.com/Cesium
 
 | Tileset | Screenshot |
 | - | - |
-| [TilesetWithDiscreteLOD](1.0/TilesetWithDiscreteLOD/README.md) | <img src="1.0/TilesetWithDiscreteLOD/screenshot/screenshot.gif" width="300" height="200"> |
-| [TilesetWithExpiration](1.0/TilesetWithExpiration/README.md) | <img src="1.0/TilesetWithExpiration/screenshot/screenshot.gif" width="300" height="200"> |
-| [TilesetWithRequestVolume](1.0/TilesetWithRequestVolume/README.md) | <img src="1.0/TilesetWithRequestVolume/screenshot/screenshot.gif" width="300" height="200"> |
-| [TilesetWithTreeBillboards](1.0/TilesetWithTreeBillboards/README.md) | <img src="1.0/TilesetWithTreeBillboards/screenshot/screenshot.gif" width="300" height="200"> |
+| [TilesetWithDiscreteLOD](1.0/TilesetWithDiscreteLOD) | <img src="1.0/TilesetWithDiscreteLOD/screenshot/screenshot.gif" width="300" height="200"> |
+| [TilesetWithExpiration](1.0/TilesetWithExpiration) | <img src="1.0/TilesetWithExpiration/screenshot/screenshot.gif" width="300" height="200"> |
+| [TilesetWithRequestVolume](1.0/TilesetWithRequestVolume) | <img src="1.0/TilesetWithRequestVolume/screenshot/screenshot.gif" width="300" height="200"> |
+| [TilesetWithTreeBillboards](1.0/TilesetWithTreeBillboards) | <img src="1.0/TilesetWithTreeBillboards/screenshot/screenshot.gif" width="300" height="200"> |
 
 
 ### 3D Tiles Next
 
 | Tileset | Screenshot |
 | - | - |
-| [TilesetWithTilesetMetadata](next/TilesetWithTilesetMetadata/README.md) | <img src="next/TilesetWithTilesetMetadata/screenshot/TilesetWithTilesetMetadata.gif" width="300" height="200"> |
-| [TilesetWithTileMetadata](next/TilesetWithTileMetadata/README.md) | <img src="next/TilesetWithTileMetadata/screenshot/TilesetWithTileMetadata.gif" width="300" height="200"> |
-| [TilesetWithGroupMetadata](next/TilesetWithGroupMetadata/README.md) | <img src="next/TilesetWithGroupMetadata/screenshot/TilesetWithGroupMetadata.gif" width="300" height="200"> |
-| [TilesetWithExternalSchema](next/TilesetWithExternalSchema/README.md) | <img src="next/TilesetWithExternalSchema/screenshot/TilesetWithExternalSchema.gif" width="300" height="200"> |
-| [ImplicitTilesetWithTileMetadata](next/ImplicitTilesetWithTileMetadata/README.md) | <img src="next/ImplicitTilesetWithTileMetadata/screenshot/ImplicitWithTileMetadata.gif" width="300" height="200"> |
+| [TilesetWithTilesetMetadata](next/TilesetWithTilesetMetadata) | <img src="next/TilesetWithTilesetMetadata/screenshot/TilesetWithTilesetMetadata.gif" width="300" height="200"> |
+| [TilesetWithTileMetadata](next/TilesetWithTileMetadata) | <img src="next/TilesetWithTileMetadata/screenshot/TilesetWithTileMetadata.gif" width="300" height="200"> |
+| [TilesetWithGroupMetadata](next/TilesetWithGroupMetadata) | <img src="next/TilesetWithGroupMetadata/screenshot/TilesetWithGroupMetadata.gif" width="300" height="200"> |
+| [TilesetWithExternalSchema](next/TilesetWithExternalSchema) | <img src="next/TilesetWithExternalSchema/screenshot/TilesetWithExternalSchema.gif" width="300" height="200"> |
+| [ImplicitTilesetWithTileMetadata](next/ImplicitTilesetWithTileMetadata) | <img src="next/ImplicitTilesetWithTileMetadata/screenshot/ImplicitWithTileMetadata.gif" width="300" height="200"> |
+| [SparseImplicitQuadtree](next/SparseImplicitQuadtree) | <img src="next/SparseImplicitQuadtree/screenshot/SparseImplicitQuadtree.png" width="300" height="200"> |
 
 ## Contributions
 
