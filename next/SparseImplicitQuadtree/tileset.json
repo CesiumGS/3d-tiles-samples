@@ -1,4 +1,7 @@
 {
+  "extensions" : {
+    "3DTILES_content_gltf" : { }
+  },
   "asset" : {
     "version" : "1.0"
   },
@@ -20,9 +23,9 @@
     "geometricError" : 32.0,
     "refine" : "ADD",
     "content" : {
-      "uri" : "content/content_{level}__{x}_{y}.b3dm"
+      "uri" : "content/content_{level}__{x}_{y}.glb"
     }
   },
-  "extensionsUsed" : [ "3DTILES_implicit_tiling" ],
-  "extensionsRequired" : [ "3DTILES_implicit_tiling" ]
+  "extensionsUsed" : [ "3DTILES_implicit_tiling", "3DTILES_content_gltf" ],
+  "extensionsRequired" : [ "3DTILES_implicit_tiling", "3DTILES_content_gltf" ]
 }
