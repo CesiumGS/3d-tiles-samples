@@ -1,0 +1,1318 @@
+{
+  "extensions" : {
+    "3DTILES_metadata" : {
+      "schema" : {
+        "classes" : {
+          "exampleClass" : {
+            "name" : "Full example metadata class",
+            "description" : "An example metadata class with all property types",
+            "properties" : {
+              "example_INT8" : {
+                "name" : "Example INT8 property",
+                "description" : "An example property, with component type INT8",
+                "componentType" : "INT8"
+              },
+              "example_normalized_INT8" : {
+                "name" : "Example normalized INT8 property",
+                "description" : "An example property, with component type INT8, normalized",
+                "componentType" : "INT8",
+                "normalized" : true
+              },
+              "example_UINT8" : {
+                "name" : "Example UINT8 property",
+                "description" : "An example property, with component type UINT8",
+                "componentType" : "UINT8"
+              },
+              "example_normalized_UINT8" : {
+                "name" : "Example normalized UINT8 property",
+                "description" : "An example property, with component type UINT8, normalized",
+                "componentType" : "UINT8",
+                "normalized" : true
+              },
+              "example_INT16" : {
+                "name" : "Example INT16 property",
+                "description" : "An example property, with component type INT16",
+                "componentType" : "INT16"
+              },
+              "example_normalized_INT16" : {
+                "name" : "Example normalized INT16 property",
+                "description" : "An example property, with component type INT16, normalized",
+                "componentType" : "INT16",
+                "normalized" : true
+              },
+              "example_UINT16" : {
+                "name" : "Example UINT16 property",
+                "description" : "An example property, with component type UINT16",
+                "componentType" : "UINT16"
+              },
+              "example_normalized_UINT16" : {
+                "name" : "Example normalized UINT16 property",
+                "description" : "An example property, with component type UINT16, normalized",
+                "componentType" : "UINT16",
+                "normalized" : true
+              },
+              "example_INT32" : {
+                "name" : "Example INT32 property",
+                "description" : "An example property, with component type INT32",
+                "componentType" : "INT32"
+              },
+              "example_normalized_INT32" : {
+                "name" : "Example normalized INT32 property",
+                "description" : "An example property, with component type INT32, normalized",
+                "componentType" : "INT32",
+                "normalized" : true
+              },
+              "example_UINT32" : {
+                "name" : "Example UINT32 property",
+                "description" : "An example property, with component type UINT32",
+                "componentType" : "UINT32"
+              },
+              "example_normalized_UINT32" : {
+                "name" : "Example normalized UINT32 property",
+                "description" : "An example property, with component type UINT32, normalized",
+                "componentType" : "UINT32",
+                "normalized" : true
+              },
+              "example_INT64" : {
+                "name" : "Example INT64 property",
+                "description" : "An example property, with component type INT64",
+                "componentType" : "INT64"
+              },
+              "example_normalized_INT64" : {
+                "name" : "Example normalized INT64 property",
+                "description" : "An example property, with component type INT64, normalized",
+                "componentType" : "INT64",
+                "normalized" : true
+              },
+              "example_UINT64" : {
+                "name" : "Example UINT64 property",
+                "description" : "An example property, with component type UINT64",
+                "componentType" : "UINT64"
+              },
+              "example_normalized_UINT64" : {
+                "name" : "Example normalized UINT64 property",
+                "description" : "An example property, with component type UINT64, normalized",
+                "componentType" : "UINT64",
+                "normalized" : true
+              },
+              "example_FLOAT32" : {
+                "name" : "Example FLOAT32 property",
+                "description" : "An example property, with component type FLOAT32",
+                "componentType" : "FLOAT32"
+              },
+              "example_FLOAT64" : {
+                "name" : "Example FLOAT64 property",
+                "description" : "An example property, with component type FLOAT64",
+                "componentType" : "FLOAT64"
+              },
+              "example_BOOLEAN" : {
+                "name" : "Example BOOLEAN property",
+                "description" : "An example property, with component type BOOLEAN",
+                "componentType" : "BOOLEAN"
+              },
+              "example_STRING" : {
+                "name" : "Example STRING property",
+                "description" : "An example property, with component type STRING",
+                "componentType" : "STRING"
+              },
+              "example_ENUM" : {
+                "name" : "Example ENUM property",
+                "description" : "An example property, with component type ENUM, enum type exampleEnumType",
+                "enumType" : "exampleEnumType",
+                "componentType" : "ENUM"
+              },
+              "example_VEC2_INT8" : {
+                "name" : "Example VEC2 INT8 property",
+                "description" : "An example property, with type VEC2, with component type INT8",
+                "type" : "VEC2",
+                "componentType" : "INT8"
+              },
+              "example_VEC2_normalized_INT8" : {
+                "name" : "Example VEC2 normalized INT8 property",
+                "description" : "An example property, with type VEC2, with component type INT8, normalized",
+                "type" : "VEC2",
+                "componentType" : "INT8",
+                "normalized" : true
+              },
+              "example_VEC2_UINT8" : {
+                "name" : "Example VEC2 UINT8 property",
+                "description" : "An example property, with type VEC2, with component type UINT8",
+                "type" : "VEC2",
+                "componentType" : "UINT8"
+              },
+              "example_VEC2_normalized_UINT8" : {
+                "name" : "Example VEC2 normalized UINT8 property",
+                "description" : "An example property, with type VEC2, with component type UINT8, normalized",
+                "type" : "VEC2",
+                "componentType" : "UINT8",
+                "normalized" : true
+              },
+              "example_VEC2_INT16" : {
+                "name" : "Example VEC2 INT16 property",
+                "description" : "An example property, with type VEC2, with component type INT16",
+                "type" : "VEC2",
+                "componentType" : "INT16"
+              },
+              "example_VEC2_normalized_INT16" : {
+                "name" : "Example VEC2 normalized INT16 property",
+                "description" : "An example property, with type VEC2, with component type INT16, normalized",
+                "type" : "VEC2",
+                "componentType" : "INT16",
+                "normalized" : true
+              },
+              "example_VEC2_UINT16" : {
+                "name" : "Example VEC2 UINT16 property",
+                "description" : "An example property, with type VEC2, with component type UINT16",
+                "type" : "VEC2",
+                "componentType" : "UINT16"
+              },
+              "example_VEC2_normalized_UINT16" : {
+                "name" : "Example VEC2 normalized UINT16 property",
+                "description" : "An example property, with type VEC2, with component type UINT16, normalized",
+                "type" : "VEC2",
+                "componentType" : "UINT16",
+                "normalized" : true
+              },
+              "example_VEC2_INT32" : {
+                "name" : "Example VEC2 INT32 property",
+                "description" : "An example property, with type VEC2, with component type INT32",
+                "type" : "VEC2",
+                "componentType" : "INT32"
+              },
+              "example_VEC2_normalized_INT32" : {
+                "name" : "Example VEC2 normalized INT32 property",
+                "description" : "An example property, with type VEC2, with component type INT32, normalized",
+                "type" : "VEC2",
+                "componentType" : "INT32",
+                "normalized" : true
+              },
+              "example_VEC2_UINT32" : {
+                "name" : "Example VEC2 UINT32 property",
+                "description" : "An example property, with type VEC2, with component type UINT32",
+                "type" : "VEC2",
+                "componentType" : "UINT32"
+              },
+              "example_VEC2_normalized_UINT32" : {
+                "name" : "Example VEC2 normalized UINT32 property",
+                "description" : "An example property, with type VEC2, with component type UINT32, normalized",
+                "type" : "VEC2",
+                "componentType" : "UINT32",
+                "normalized" : true
+              },
+              "example_VEC2_INT64" : {
+                "name" : "Example VEC2 INT64 property",
+                "description" : "An example property, with type VEC2, with component type INT64",
+                "type" : "VEC2",
+                "componentType" : "INT64"
+              },
+              "example_VEC2_normalized_INT64" : {
+                "name" : "Example VEC2 normalized INT64 property",
+                "description" : "An example property, with type VEC2, with component type INT64, normalized",
+                "type" : "VEC2",
+                "componentType" : "INT64",
+                "normalized" : true
+              },
+              "example_VEC2_UINT64" : {
+                "name" : "Example VEC2 UINT64 property",
+                "description" : "An example property, with type VEC2, with component type UINT64",
+                "type" : "VEC2",
+                "componentType" : "UINT64"
+              },
+              "example_VEC2_normalized_UINT64" : {
+                "name" : "Example VEC2 normalized UINT64 property",
+                "description" : "An example property, with type VEC2, with component type UINT64, normalized",
+                "type" : "VEC2",
+                "componentType" : "UINT64",
+                "normalized" : true
+              },
+              "example_VEC2_FLOAT32" : {
+                "name" : "Example VEC2 FLOAT32 property",
+                "description" : "An example property, with type VEC2, with component type FLOAT32",
+                "type" : "VEC2",
+                "componentType" : "FLOAT32"
+              },
+              "example_VEC2_FLOAT64" : {
+                "name" : "Example VEC2 FLOAT64 property",
+                "description" : "An example property, with type VEC2, with component type FLOAT64",
+                "type" : "VEC2",
+                "componentType" : "FLOAT64"
+              },
+              "example_VEC3_INT8" : {
+                "name" : "Example VEC3 INT8 property",
+                "description" : "An example property, with type VEC3, with component type INT8",
+                "type" : "VEC3",
+                "componentType" : "INT8"
+              },
+              "example_VEC3_normalized_INT8" : {
+                "name" : "Example VEC3 normalized INT8 property",
+                "description" : "An example property, with type VEC3, with component type INT8, normalized",
+                "type" : "VEC3",
+                "componentType" : "INT8",
+                "normalized" : true
+              },
+              "example_VEC3_UINT8" : {
+                "name" : "Example VEC3 UINT8 property",
+                "description" : "An example property, with type VEC3, with component type UINT8",
+                "type" : "VEC3",
+                "componentType" : "UINT8"
+              },
+              "example_VEC3_normalized_UINT8" : {
+                "name" : "Example VEC3 normalized UINT8 property",
+                "description" : "An example property, with type VEC3, with component type UINT8, normalized",
+                "type" : "VEC3",
+                "componentType" : "UINT8",
+                "normalized" : true
+              },
+              "example_VEC3_INT16" : {
+                "name" : "Example VEC3 INT16 property",
+                "description" : "An example property, with type VEC3, with component type INT16",
+                "type" : "VEC3",
+                "componentType" : "INT16"
+              },
+              "example_VEC3_normalized_INT16" : {
+                "name" : "Example VEC3 normalized INT16 property",
+                "description" : "An example property, with type VEC3, with component type INT16, normalized",
+                "type" : "VEC3",
+                "componentType" : "INT16",
+                "normalized" : true
+              },
+              "example_VEC3_UINT16" : {
+                "name" : "Example VEC3 UINT16 property",
+                "description" : "An example property, with type VEC3, with component type UINT16",
+                "type" : "VEC3",
+                "componentType" : "UINT16"
+              },
+              "example_VEC3_normalized_UINT16" : {
+                "name" : "Example VEC3 normalized UINT16 property",
+                "description" : "An example property, with type VEC3, with component type UINT16, normalized",
+                "type" : "VEC3",
+                "componentType" : "UINT16",
+                "normalized" : true
+              },
+              "example_VEC3_INT32" : {
+                "name" : "Example VEC3 INT32 property",
+                "description" : "An example property, with type VEC3, with component type INT32",
+                "type" : "VEC3",
+                "componentType" : "INT32"
+              },
+              "example_VEC3_normalized_INT32" : {
+                "name" : "Example VEC3 normalized INT32 property",
+                "description" : "An example property, with type VEC3, with component type INT32, normalized",
+                "type" : "VEC3",
+                "componentType" : "INT32",
+                "normalized" : true
+              },
+              "example_VEC3_UINT32" : {
+                "name" : "Example VEC3 UINT32 property",
+                "description" : "An example property, with type VEC3, with component type UINT32",
+                "type" : "VEC3",
+                "componentType" : "UINT32"
+              },
+              "example_VEC3_normalized_UINT32" : {
+                "name" : "Example VEC3 normalized UINT32 property",
+                "description" : "An example property, with type VEC3, with component type UINT32, normalized",
+                "type" : "VEC3",
+                "componentType" : "UINT32",
+                "normalized" : true
+              },
+              "example_VEC3_INT64" : {
+                "name" : "Example VEC3 INT64 property",
+                "description" : "An example property, with type VEC3, with component type INT64",
+                "type" : "VEC3",
+                "componentType" : "INT64"
+              },
+              "example_VEC3_normalized_INT64" : {
+                "name" : "Example VEC3 normalized INT64 property",
+                "description" : "An example property, with type VEC3, with component type INT64, normalized",
+                "type" : "VEC3",
+                "componentType" : "INT64",
+                "normalized" : true
+              },
+              "example_VEC3_UINT64" : {
+                "name" : "Example VEC3 UINT64 property",
+                "description" : "An example property, with type VEC3, with component type UINT64",
+                "type" : "VEC3",
+                "componentType" : "UINT64"
+              },
+              "example_VEC3_normalized_UINT64" : {
+                "name" : "Example VEC3 normalized UINT64 property",
+                "description" : "An example property, with type VEC3, with component type UINT64, normalized",
+                "type" : "VEC3",
+                "componentType" : "UINT64",
+                "normalized" : true
+              },
+              "example_VEC3_FLOAT32" : {
+                "name" : "Example VEC3 FLOAT32 property",
+                "description" : "An example property, with type VEC3, with component type FLOAT32",
+                "type" : "VEC3",
+                "componentType" : "FLOAT32"
+              },
+              "example_VEC3_FLOAT64" : {
+                "name" : "Example VEC3 FLOAT64 property",
+                "description" : "An example property, with type VEC3, with component type FLOAT64",
+                "type" : "VEC3",
+                "componentType" : "FLOAT64"
+              },
+              "example_VEC4_INT8" : {
+                "name" : "Example VEC4 INT8 property",
+                "description" : "An example property, with type VEC4, with component type INT8",
+                "type" : "VEC4",
+                "componentType" : "INT8"
+              },
+              "example_VEC4_normalized_INT8" : {
+                "name" : "Example VEC4 normalized INT8 property",
+                "description" : "An example property, with type VEC4, with component type INT8, normalized",
+                "type" : "VEC4",
+                "componentType" : "INT8",
+                "normalized" : true
+              },
+              "example_VEC4_UINT8" : {
+                "name" : "Example VEC4 UINT8 property",
+                "description" : "An example property, with type VEC4, with component type UINT8",
+                "type" : "VEC4",
+                "componentType" : "UINT8"
+              },
+              "example_VEC4_normalized_UINT8" : {
+                "name" : "Example VEC4 normalized UINT8 property",
+                "description" : "An example property, with type VEC4, with component type UINT8, normalized",
+                "type" : "VEC4",
+                "componentType" : "UINT8",
+                "normalized" : true
+              },
+              "example_VEC4_INT16" : {
+                "name" : "Example VEC4 INT16 property",
+                "description" : "An example property, with type VEC4, with component type INT16",
+                "type" : "VEC4",
+                "componentType" : "INT16"
+              },
+              "example_VEC4_normalized_INT16" : {
+                "name" : "Example VEC4 normalized INT16 property",
+                "description" : "An example property, with type VEC4, with component type INT16, normalized",
+                "type" : "VEC4",
+                "componentType" : "INT16",
+                "normalized" : true
+              },
+              "example_VEC4_UINT16" : {
+                "name" : "Example VEC4 UINT16 property",
+                "description" : "An example property, with type VEC4, with component type UINT16",
+                "type" : "VEC4",
+                "componentType" : "UINT16"
+              },
+              "example_VEC4_normalized_UINT16" : {
+                "name" : "Example VEC4 normalized UINT16 property",
+                "description" : "An example property, with type VEC4, with component type UINT16, normalized",
+                "type" : "VEC4",
+                "componentType" : "UINT16",
+                "normalized" : true
+              },
+              "example_VEC4_INT32" : {
+                "name" : "Example VEC4 INT32 property",
+                "description" : "An example property, with type VEC4, with component type INT32",
+                "type" : "VEC4",
+                "componentType" : "INT32"
+              },
+              "example_VEC4_normalized_INT32" : {
+                "name" : "Example VEC4 normalized INT32 property",
+                "description" : "An example property, with type VEC4, with component type INT32, normalized",
+                "type" : "VEC4",
+                "componentType" : "INT32",
+                "normalized" : true
+              },
+              "example_VEC4_UINT32" : {
+                "name" : "Example VEC4 UINT32 property",
+                "description" : "An example property, with type VEC4, with component type UINT32",
+                "type" : "VEC4",
+                "componentType" : "UINT32"
+              },
+              "example_VEC4_normalized_UINT32" : {
+                "name" : "Example VEC4 normalized UINT32 property",
+                "description" : "An example property, with type VEC4, with component type UINT32, normalized",
+                "type" : "VEC4",
+                "componentType" : "UINT32",
+                "normalized" : true
+              },
+              "example_VEC4_INT64" : {
+                "name" : "Example VEC4 INT64 property",
+                "description" : "An example property, with type VEC4, with component type INT64",
+                "type" : "VEC4",
+                "componentType" : "INT64"
+              },
+              "example_VEC4_normalized_INT64" : {
+                "name" : "Example VEC4 normalized INT64 property",
+                "description" : "An example property, with type VEC4, with component type INT64, normalized",
+                "type" : "VEC4",
+                "componentType" : "INT64",
+                "normalized" : true
+              },
+              "example_VEC4_UINT64" : {
+                "name" : "Example VEC4 UINT64 property",
+                "description" : "An example property, with type VEC4, with component type UINT64",
+                "type" : "VEC4",
+                "componentType" : "UINT64"
+              },
+              "example_VEC4_normalized_UINT64" : {
+                "name" : "Example VEC4 normalized UINT64 property",
+                "description" : "An example property, with type VEC4, with component type UINT64, normalized",
+                "type" : "VEC4",
+                "componentType" : "UINT64",
+                "normalized" : true
+              },
+              "example_VEC4_FLOAT32" : {
+                "name" : "Example VEC4 FLOAT32 property",
+                "description" : "An example property, with type VEC4, with component type FLOAT32",
+                "type" : "VEC4",
+                "componentType" : "FLOAT32"
+              },
+              "example_VEC4_FLOAT64" : {
+                "name" : "Example VEC4 FLOAT64 property",
+                "description" : "An example property, with type VEC4, with component type FLOAT64",
+                "type" : "VEC4",
+                "componentType" : "FLOAT64"
+              },
+              "example_MAT2_INT8" : {
+                "name" : "Example MAT2 INT8 property",
+                "description" : "An example property, with type MAT2, with component type INT8",
+                "type" : "MAT2",
+                "componentType" : "INT8"
+              },
+              "example_MAT2_normalized_INT8" : {
+                "name" : "Example MAT2 normalized INT8 property",
+                "description" : "An example property, with type MAT2, with component type INT8, normalized",
+                "type" : "MAT2",
+                "componentType" : "INT8",
+                "normalized" : true
+              },
+              "example_MAT2_UINT8" : {
+                "name" : "Example MAT2 UINT8 property",
+                "description" : "An example property, with type MAT2, with component type UINT8",
+                "type" : "MAT2",
+                "componentType" : "UINT8"
+              },
+              "example_MAT2_normalized_UINT8" : {
+                "name" : "Example MAT2 normalized UINT8 property",
+                "description" : "An example property, with type MAT2, with component type UINT8, normalized",
+                "type" : "MAT2",
+                "componentType" : "UINT8",
+                "normalized" : true
+              },
+              "example_MAT2_INT16" : {
+                "name" : "Example MAT2 INT16 property",
+                "description" : "An example property, with type MAT2, with component type INT16",
+                "type" : "MAT2",
+                "componentType" : "INT16"
+              },
+              "example_MAT2_normalized_INT16" : {
+                "name" : "Example MAT2 normalized INT16 property",
+                "description" : "An example property, with type MAT2, with component type INT16, normalized",
+                "type" : "MAT2",
+                "componentType" : "INT16",
+                "normalized" : true
+              },
+              "example_MAT2_UINT16" : {
+                "name" : "Example MAT2 UINT16 property",
+                "description" : "An example property, with type MAT2, with component type UINT16",
+                "type" : "MAT2",
+                "componentType" : "UINT16"
+              },
+              "example_MAT2_normalized_UINT16" : {
+                "name" : "Example MAT2 normalized UINT16 property",
+                "description" : "An example property, with type MAT2, with component type UINT16, normalized",
+                "type" : "MAT2",
+                "componentType" : "UINT16",
+                "normalized" : true
+              },
+              "example_MAT2_INT32" : {
+                "name" : "Example MAT2 INT32 property",
+                "description" : "An example property, with type MAT2, with component type INT32",
+                "type" : "MAT2",
+                "componentType" : "INT32"
+              },
+              "example_MAT2_normalized_INT32" : {
+                "name" : "Example MAT2 normalized INT32 property",
+                "description" : "An example property, with type MAT2, with component type INT32, normalized",
+                "type" : "MAT2",
+                "componentType" : "INT32",
+                "normalized" : true
+              },
+              "example_MAT2_UINT32" : {
+                "name" : "Example MAT2 UINT32 property",
+                "description" : "An example property, with type MAT2, with component type UINT32",
+                "type" : "MAT2",
+                "componentType" : "UINT32"
+              },
+              "example_MAT2_normalized_UINT32" : {
+                "name" : "Example MAT2 normalized UINT32 property",
+                "description" : "An example property, with type MAT2, with component type UINT32, normalized",
+                "type" : "MAT2",
+                "componentType" : "UINT32",
+                "normalized" : true
+              },
+              "example_MAT2_INT64" : {
+                "name" : "Example MAT2 INT64 property",
+                "description" : "An example property, with type MAT2, with component type INT64",
+                "type" : "MAT2",
+                "componentType" : "INT64"
+              },
+              "example_MAT2_normalized_INT64" : {
+                "name" : "Example MAT2 normalized INT64 property",
+                "description" : "An example property, with type MAT2, with component type INT64, normalized",
+                "type" : "MAT2",
+                "componentType" : "INT64",
+                "normalized" : true
+              },
+              "example_MAT2_UINT64" : {
+                "name" : "Example MAT2 UINT64 property",
+                "description" : "An example property, with type MAT2, with component type UINT64",
+                "type" : "MAT2",
+                "componentType" : "UINT64"
+              },
+              "example_MAT2_normalized_UINT64" : {
+                "name" : "Example MAT2 normalized UINT64 property",
+                "description" : "An example property, with type MAT2, with component type UINT64, normalized",
+                "type" : "MAT2",
+                "componentType" : "UINT64",
+                "normalized" : true
+              },
+              "example_MAT2_FLOAT32" : {
+                "name" : "Example MAT2 FLOAT32 property",
+                "description" : "An example property, with type MAT2, with component type FLOAT32",
+                "type" : "MAT2",
+                "componentType" : "FLOAT32"
+              },
+              "example_MAT2_FLOAT64" : {
+                "name" : "Example MAT2 FLOAT64 property",
+                "description" : "An example property, with type MAT2, with component type FLOAT64",
+                "type" : "MAT2",
+                "componentType" : "FLOAT64"
+              },
+              "example_MAT3_INT8" : {
+                "name" : "Example MAT3 INT8 property",
+                "description" : "An example property, with type MAT3, with component type INT8",
+                "type" : "MAT3",
+                "componentType" : "INT8"
+              },
+              "example_MAT3_normalized_INT8" : {
+                "name" : "Example MAT3 normalized INT8 property",
+                "description" : "An example property, with type MAT3, with component type INT8, normalized",
+                "type" : "MAT3",
+                "componentType" : "INT8",
+                "normalized" : true
+              },
+              "example_MAT3_UINT8" : {
+                "name" : "Example MAT3 UINT8 property",
+                "description" : "An example property, with type MAT3, with component type UINT8",
+                "type" : "MAT3",
+                "componentType" : "UINT8"
+              },
+              "example_MAT3_normalized_UINT8" : {
+                "name" : "Example MAT3 normalized UINT8 property",
+                "description" : "An example property, with type MAT3, with component type UINT8, normalized",
+                "type" : "MAT3",
+                "componentType" : "UINT8",
+                "normalized" : true
+              },
+              "example_MAT3_INT16" : {
+                "name" : "Example MAT3 INT16 property",
+                "description" : "An example property, with type MAT3, with component type INT16",
+                "type" : "MAT3",
+                "componentType" : "INT16"
+              },
+              "example_MAT3_normalized_INT16" : {
+                "name" : "Example MAT3 normalized INT16 property",
+                "description" : "An example property, with type MAT3, with component type INT16, normalized",
+                "type" : "MAT3",
+                "componentType" : "INT16",
+                "normalized" : true
+              },
+              "example_MAT3_UINT16" : {
+                "name" : "Example MAT3 UINT16 property",
+                "description" : "An example property, with type MAT3, with component type UINT16",
+                "type" : "MAT3",
+                "componentType" : "UINT16"
+              },
+              "example_MAT3_normalized_UINT16" : {
+                "name" : "Example MAT3 normalized UINT16 property",
+                "description" : "An example property, with type MAT3, with component type UINT16, normalized",
+                "type" : "MAT3",
+                "componentType" : "UINT16",
+                "normalized" : true
+              },
+              "example_MAT3_INT32" : {
+                "name" : "Example MAT3 INT32 property",
+                "description" : "An example property, with type MAT3, with component type INT32",
+                "type" : "MAT3",
+                "componentType" : "INT32"
+              },
+              "example_MAT3_normalized_INT32" : {
+                "name" : "Example MAT3 normalized INT32 property",
+                "description" : "An example property, with type MAT3, with component type INT32, normalized",
+                "type" : "MAT3",
+                "componentType" : "INT32",
+                "normalized" : true
+              },
+              "example_MAT3_UINT32" : {
+                "name" : "Example MAT3 UINT32 property",
+                "description" : "An example property, with type MAT3, with component type UINT32",
+                "type" : "MAT3",
+                "componentType" : "UINT32"
+              },
+              "example_MAT3_normalized_UINT32" : {
+                "name" : "Example MAT3 normalized UINT32 property",
+                "description" : "An example property, with type MAT3, with component type UINT32, normalized",
+                "type" : "MAT3",
+                "componentType" : "UINT32",
+                "normalized" : true
+              },
+              "example_MAT3_INT64" : {
+                "name" : "Example MAT3 INT64 property",
+                "description" : "An example property, with type MAT3, with component type INT64",
+                "type" : "MAT3",
+                "componentType" : "INT64"
+              },
+              "example_MAT3_normalized_INT64" : {
+                "name" : "Example MAT3 normalized INT64 property",
+                "description" : "An example property, with type MAT3, with component type INT64, normalized",
+                "type" : "MAT3",
+                "componentType" : "INT64",
+                "normalized" : true
+              },
+              "example_MAT3_UINT64" : {
+                "name" : "Example MAT3 UINT64 property",
+                "description" : "An example property, with type MAT3, with component type UINT64",
+                "type" : "MAT3",
+                "componentType" : "UINT64"
+              },
+              "example_MAT3_normalized_UINT64" : {
+                "name" : "Example MAT3 normalized UINT64 property",
+                "description" : "An example property, with type MAT3, with component type UINT64, normalized",
+                "type" : "MAT3",
+                "componentType" : "UINT64",
+                "normalized" : true
+              },
+              "example_MAT3_FLOAT32" : {
+                "name" : "Example MAT3 FLOAT32 property",
+                "description" : "An example property, with type MAT3, with component type FLOAT32",
+                "type" : "MAT3",
+                "componentType" : "FLOAT32"
+              },
+              "example_MAT3_FLOAT64" : {
+                "name" : "Example MAT3 FLOAT64 property",
+                "description" : "An example property, with type MAT3, with component type FLOAT64",
+                "type" : "MAT3",
+                "componentType" : "FLOAT64"
+              },
+              "example_MAT4_INT8" : {
+                "name" : "Example MAT4 INT8 property",
+                "description" : "An example property, with type MAT4, with component type INT8",
+                "type" : "MAT4",
+                "componentType" : "INT8"
+              },
+              "example_MAT4_normalized_INT8" : {
+                "name" : "Example MAT4 normalized INT8 property",
+                "description" : "An example property, with type MAT4, with component type INT8, normalized",
+                "type" : "MAT4",
+                "componentType" : "INT8",
+                "normalized" : true
+              },
+              "example_MAT4_UINT8" : {
+                "name" : "Example MAT4 UINT8 property",
+                "description" : "An example property, with type MAT4, with component type UINT8",
+                "type" : "MAT4",
+                "componentType" : "UINT8"
+              },
+              "example_MAT4_normalized_UINT8" : {
+                "name" : "Example MAT4 normalized UINT8 property",
+                "description" : "An example property, with type MAT4, with component type UINT8, normalized",
+                "type" : "MAT4",
+                "componentType" : "UINT8",
+                "normalized" : true
+              },
+              "example_MAT4_INT16" : {
+                "name" : "Example MAT4 INT16 property",
+                "description" : "An example property, with type MAT4, with component type INT16",
+                "type" : "MAT4",
+                "componentType" : "INT16"
+              },
+              "example_MAT4_normalized_INT16" : {
+                "name" : "Example MAT4 normalized INT16 property",
+                "description" : "An example property, with type MAT4, with component type INT16, normalized",
+                "type" : "MAT4",
+                "componentType" : "INT16",
+                "normalized" : true
+              },
+              "example_MAT4_UINT16" : {
+                "name" : "Example MAT4 UINT16 property",
+                "description" : "An example property, with type MAT4, with component type UINT16",
+                "type" : "MAT4",
+                "componentType" : "UINT16"
+              },
+              "example_MAT4_normalized_UINT16" : {
+                "name" : "Example MAT4 normalized UINT16 property",
+                "description" : "An example property, with type MAT4, with component type UINT16, normalized",
+                "type" : "MAT4",
+                "componentType" : "UINT16",
+                "normalized" : true
+              },
+              "example_MAT4_INT32" : {
+                "name" : "Example MAT4 INT32 property",
+                "description" : "An example property, with type MAT4, with component type INT32",
+                "type" : "MAT4",
+                "componentType" : "INT32"
+              },
+              "example_MAT4_normalized_INT32" : {
+                "name" : "Example MAT4 normalized INT32 property",
+                "description" : "An example property, with type MAT4, with component type INT32, normalized",
+                "type" : "MAT4",
+                "componentType" : "INT32",
+                "normalized" : true
+              },
+              "example_MAT4_UINT32" : {
+                "name" : "Example MAT4 UINT32 property",
+                "description" : "An example property, with type MAT4, with component type UINT32",
+                "type" : "MAT4",
+                "componentType" : "UINT32"
+              },
+              "example_MAT4_normalized_UINT32" : {
+                "name" : "Example MAT4 normalized UINT32 property",
+                "description" : "An example property, with type MAT4, with component type UINT32, normalized",
+                "type" : "MAT4",
+                "componentType" : "UINT32",
+                "normalized" : true
+              },
+              "example_MAT4_INT64" : {
+                "name" : "Example MAT4 INT64 property",
+                "description" : "An example property, with type MAT4, with component type INT64",
+                "type" : "MAT4",
+                "componentType" : "INT64"
+              },
+              "example_MAT4_normalized_INT64" : {
+                "name" : "Example MAT4 normalized INT64 property",
+                "description" : "An example property, with type MAT4, with component type INT64, normalized",
+                "type" : "MAT4",
+                "componentType" : "INT64",
+                "normalized" : true
+              },
+              "example_MAT4_UINT64" : {
+                "name" : "Example MAT4 UINT64 property",
+                "description" : "An example property, with type MAT4, with component type UINT64",
+                "type" : "MAT4",
+                "componentType" : "UINT64"
+              },
+              "example_MAT4_normalized_UINT64" : {
+                "name" : "Example MAT4 normalized UINT64 property",
+                "description" : "An example property, with type MAT4, with component type UINT64, normalized",
+                "type" : "MAT4",
+                "componentType" : "UINT64",
+                "normalized" : true
+              },
+              "example_MAT4_FLOAT32" : {
+                "name" : "Example MAT4 FLOAT32 property",
+                "description" : "An example property, with type MAT4, with component type FLOAT32",
+                "type" : "MAT4",
+                "componentType" : "FLOAT32"
+              },
+              "example_MAT4_FLOAT64" : {
+                "name" : "Example MAT4 FLOAT64 property",
+                "description" : "An example property, with type MAT4, with component type FLOAT64",
+                "type" : "MAT4",
+                "componentType" : "FLOAT64"
+              },
+              "example_variable_length_ARRAY_INT8" : {
+                "name" : "Example variable-length ARRAY INT8 property",
+                "description" : "An example property, with type ARRAY, with component type INT8, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "INT8"
+              },
+              "example_variable_length_ARRAY_normalized_INT8" : {
+                "name" : "Example variable-length ARRAY normalized INT8 property",
+                "description" : "An example property, with type ARRAY, with component type INT8, normalized, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "INT8",
+                "normalized" : true
+              },
+              "example_fixed_length_ARRAY_INT8" : {
+                "name" : "Example fixed-length ARRAY INT8 property",
+                "description" : "An example property, with type ARRAY, with component type INT8, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "INT8",
+                "componentCount" : 5
+              },
+              "example_fixed_length_ARRAY_normalized_INT8" : {
+                "name" : "Example fixed-length ARRAY normalized INT8 property",
+                "description" : "An example property, with type ARRAY, with component type INT8, normalized, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "INT8",
+                "componentCount" : 5,
+                "normalized" : true
+              },
+              "example_variable_length_ARRAY_UINT8" : {
+                "name" : "Example variable-length ARRAY UINT8 property",
+                "description" : "An example property, with type ARRAY, with component type UINT8, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT8"
+              },
+              "example_variable_length_ARRAY_normalized_UINT8" : {
+                "name" : "Example variable-length ARRAY normalized UINT8 property",
+                "description" : "An example property, with type ARRAY, with component type UINT8, normalized, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT8",
+                "normalized" : true
+              },
+              "example_fixed_length_ARRAY_UINT8" : {
+                "name" : "Example fixed-length ARRAY UINT8 property",
+                "description" : "An example property, with type ARRAY, with component type UINT8, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT8",
+                "componentCount" : 5
+              },
+              "example_fixed_length_ARRAY_normalized_UINT8" : {
+                "name" : "Example fixed-length ARRAY normalized UINT8 property",
+                "description" : "An example property, with type ARRAY, with component type UINT8, normalized, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT8",
+                "componentCount" : 5,
+                "normalized" : true
+              },
+              "example_variable_length_ARRAY_INT16" : {
+                "name" : "Example variable-length ARRAY INT16 property",
+                "description" : "An example property, with type ARRAY, with component type INT16, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "INT16"
+              },
+              "example_variable_length_ARRAY_normalized_INT16" : {
+                "name" : "Example variable-length ARRAY normalized INT16 property",
+                "description" : "An example property, with type ARRAY, with component type INT16, normalized, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "INT16",
+                "normalized" : true
+              },
+              "example_fixed_length_ARRAY_INT16" : {
+                "name" : "Example fixed-length ARRAY INT16 property",
+                "description" : "An example property, with type ARRAY, with component type INT16, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "INT16",
+                "componentCount" : 5
+              },
+              "example_fixed_length_ARRAY_normalized_INT16" : {
+                "name" : "Example fixed-length ARRAY normalized INT16 property",
+                "description" : "An example property, with type ARRAY, with component type INT16, normalized, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "INT16",
+                "componentCount" : 5,
+                "normalized" : true
+              },
+              "example_variable_length_ARRAY_UINT16" : {
+                "name" : "Example variable-length ARRAY UINT16 property",
+                "description" : "An example property, with type ARRAY, with component type UINT16, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT16"
+              },
+              "example_variable_length_ARRAY_normalized_UINT16" : {
+                "name" : "Example variable-length ARRAY normalized UINT16 property",
+                "description" : "An example property, with type ARRAY, with component type UINT16, normalized, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT16",
+                "normalized" : true
+              },
+              "example_fixed_length_ARRAY_UINT16" : {
+                "name" : "Example fixed-length ARRAY UINT16 property",
+                "description" : "An example property, with type ARRAY, with component type UINT16, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT16",
+                "componentCount" : 5
+              },
+              "example_fixed_length_ARRAY_normalized_UINT16" : {
+                "name" : "Example fixed-length ARRAY normalized UINT16 property",
+                "description" : "An example property, with type ARRAY, with component type UINT16, normalized, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT16",
+                "componentCount" : 5,
+                "normalized" : true
+              },
+              "example_variable_length_ARRAY_INT32" : {
+                "name" : "Example variable-length ARRAY INT32 property",
+                "description" : "An example property, with type ARRAY, with component type INT32, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "INT32"
+              },
+              "example_variable_length_ARRAY_normalized_INT32" : {
+                "name" : "Example variable-length ARRAY normalized INT32 property",
+                "description" : "An example property, with type ARRAY, with component type INT32, normalized, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "INT32",
+                "normalized" : true
+              },
+              "example_fixed_length_ARRAY_INT32" : {
+                "name" : "Example fixed-length ARRAY INT32 property",
+                "description" : "An example property, with type ARRAY, with component type INT32, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "INT32",
+                "componentCount" : 5
+              },
+              "example_fixed_length_ARRAY_normalized_INT32" : {
+                "name" : "Example fixed-length ARRAY normalized INT32 property",
+                "description" : "An example property, with type ARRAY, with component type INT32, normalized, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "INT32",
+                "componentCount" : 5,
+                "normalized" : true
+              },
+              "example_variable_length_ARRAY_UINT32" : {
+                "name" : "Example variable-length ARRAY UINT32 property",
+                "description" : "An example property, with type ARRAY, with component type UINT32, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT32"
+              },
+              "example_variable_length_ARRAY_normalized_UINT32" : {
+                "name" : "Example variable-length ARRAY normalized UINT32 property",
+                "description" : "An example property, with type ARRAY, with component type UINT32, normalized, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT32",
+                "normalized" : true
+              },
+              "example_fixed_length_ARRAY_UINT32" : {
+                "name" : "Example fixed-length ARRAY UINT32 property",
+                "description" : "An example property, with type ARRAY, with component type UINT32, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT32",
+                "componentCount" : 5
+              },
+              "example_fixed_length_ARRAY_normalized_UINT32" : {
+                "name" : "Example fixed-length ARRAY normalized UINT32 property",
+                "description" : "An example property, with type ARRAY, with component type UINT32, normalized, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT32",
+                "componentCount" : 5,
+                "normalized" : true
+              },
+              "example_variable_length_ARRAY_INT64" : {
+                "name" : "Example variable-length ARRAY INT64 property",
+                "description" : "An example property, with type ARRAY, with component type INT64, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "INT64"
+              },
+              "example_variable_length_ARRAY_normalized_INT64" : {
+                "name" : "Example variable-length ARRAY normalized INT64 property",
+                "description" : "An example property, with type ARRAY, with component type INT64, normalized, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "INT64",
+                "normalized" : true
+              },
+              "example_fixed_length_ARRAY_INT64" : {
+                "name" : "Example fixed-length ARRAY INT64 property",
+                "description" : "An example property, with type ARRAY, with component type INT64, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "INT64",
+                "componentCount" : 5
+              },
+              "example_fixed_length_ARRAY_normalized_INT64" : {
+                "name" : "Example fixed-length ARRAY normalized INT64 property",
+                "description" : "An example property, with type ARRAY, with component type INT64, normalized, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "INT64",
+                "componentCount" : 5,
+                "normalized" : true
+              },
+              "example_variable_length_ARRAY_UINT64" : {
+                "name" : "Example variable-length ARRAY UINT64 property",
+                "description" : "An example property, with type ARRAY, with component type UINT64, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT64"
+              },
+              "example_variable_length_ARRAY_normalized_UINT64" : {
+                "name" : "Example variable-length ARRAY normalized UINT64 property",
+                "description" : "An example property, with type ARRAY, with component type UINT64, normalized, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT64",
+                "normalized" : true
+              },
+              "example_fixed_length_ARRAY_UINT64" : {
+                "name" : "Example fixed-length ARRAY UINT64 property",
+                "description" : "An example property, with type ARRAY, with component type UINT64, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT64",
+                "componentCount" : 5
+              },
+              "example_fixed_length_ARRAY_normalized_UINT64" : {
+                "name" : "Example fixed-length ARRAY normalized UINT64 property",
+                "description" : "An example property, with type ARRAY, with component type UINT64, normalized, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "UINT64",
+                "componentCount" : 5,
+                "normalized" : true
+              },
+              "example_variable_length_ARRAY_FLOAT32" : {
+                "name" : "Example variable-length ARRAY FLOAT32 property",
+                "description" : "An example property, with type ARRAY, with component type FLOAT32, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "FLOAT32"
+              },
+              "example_fixed_length_ARRAY_FLOAT32" : {
+                "name" : "Example fixed-length ARRAY FLOAT32 property",
+                "description" : "An example property, with type ARRAY, with component type FLOAT32, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "FLOAT32",
+                "componentCount" : 5
+              },
+              "example_variable_length_ARRAY_FLOAT64" : {
+                "name" : "Example variable-length ARRAY FLOAT64 property",
+                "description" : "An example property, with type ARRAY, with component type FLOAT64, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "FLOAT64"
+              },
+              "example_fixed_length_ARRAY_FLOAT64" : {
+                "name" : "Example fixed-length ARRAY FLOAT64 property",
+                "description" : "An example property, with type ARRAY, with component type FLOAT64, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "FLOAT64",
+                "componentCount" : 5
+              },
+              "example_variable_length_ARRAY_BOOLEAN" : {
+                "name" : "Example variable-length ARRAY BOOLEAN property",
+                "description" : "An example property, with type ARRAY, with component type BOOLEAN, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "BOOLEAN"
+              },
+              "example_fixed_length_ARRAY_BOOLEAN" : {
+                "name" : "Example fixed-length ARRAY BOOLEAN property",
+                "description" : "An example property, with type ARRAY, with component type BOOLEAN, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "BOOLEAN",
+                "componentCount" : 5
+              },
+              "example_variable_length_ARRAY_STRING" : {
+                "name" : "Example variable-length ARRAY STRING property",
+                "description" : "An example property, with type ARRAY, with component type STRING, and variable length ",
+                "type" : "ARRAY",
+                "componentType" : "STRING"
+              },
+              "example_fixed_length_ARRAY_STRING" : {
+                "name" : "Example fixed-length ARRAY STRING property",
+                "description" : "An example property, with type ARRAY, with component type STRING, and fixed length ",
+                "type" : "ARRAY",
+                "componentType" : "STRING",
+                "componentCount" : 5
+              },
+              "example_variable_length_ARRAY_ENUM" : {
+                "name" : "Example variable-length ARRAY ENUM property",
+                "description" : "An example property, with type ARRAY, with component type ENUM, enum type exampleEnumType, and variable length ",
+                "type" : "ARRAY",
+                "enumType" : "exampleEnumType",
+                "componentType" : "ENUM"
+              },
+              "example_fixed_length_ARRAY_ENUM" : {
+                "name" : "Example fixed-length ARRAY ENUM property",
+                "description" : "An example property, with type ARRAY, with component type ENUM, enum type exampleEnumType, and fixed length ",
+                "type" : "ARRAY",
+                "enumType" : "exampleEnumType",
+                "componentType" : "ENUM",
+                "componentCount" : 5
+              }
+            }
+          }
+        },
+        "enums" : {
+          "exampleEnumType" : {
+            "values" : [ {
+              "name" : "ExampleEnumValueA",
+              "value" : 0
+            }, {
+              "name" : "ExampleEnumValueB",
+              "value" : 1
+            }, {
+              "name" : "ExampleEnumValueC",
+              "value" : 2
+            } ]
+          }
+        }
+      },
+      "tileset" : {
+        "class" : "exampleClass",
+        "properties" : {
+          "example_INT8" : -128,
+          "example_normalized_INT8" : -128,
+          "example_UINT8" : 255,
+          "example_normalized_UINT8" : 255,
+          "example_INT16" : -32768,
+          "example_normalized_INT16" : -32768,
+          "example_UINT16" : 65535,
+          "example_normalized_UINT16" : 65535,
+          "example_INT32" : -2147483648,
+          "example_normalized_INT32" : -2147483648,
+          "example_UINT32" : 4294967295,
+          "example_normalized_UINT32" : 4294967295,
+          "example_INT64" : -9223372036854775808,
+          "example_normalized_INT64" : -9223372036854775808,
+          "example_UINT64" : 18446744073709551615,
+          "example_normalized_UINT64" : 18446744073709551615,
+          "example_FLOAT32" : 1.2,
+          "example_FLOAT64" : 12.34,
+          "example_BOOLEAN" : true,
+          "example_STRING" : "An example string",
+          "example_ENUM" : 1,
+          "example_VEC2_INT8" : [ -128, 127 ],
+          "example_VEC2_normalized_INT8" : [ -128, 127 ],
+          "example_VEC2_UINT8" : [ 0, 255 ],
+          "example_VEC2_normalized_UINT8" : [ 0, 255 ],
+          "example_VEC2_INT16" : [ -32768, 32767 ],
+          "example_VEC2_normalized_INT16" : [ -32768, 32767 ],
+          "example_VEC2_UINT16" : [ 0, 65535 ],
+          "example_VEC2_normalized_UINT16" : [ 0, 65535 ],
+          "example_VEC2_INT32" : [ -2147483648, 2147483647 ],
+          "example_VEC2_normalized_INT32" : [ -2147483648, 2147483647 ],
+          "example_VEC2_UINT32" : [ 0, 4294967295 ],
+          "example_VEC2_normalized_UINT32" : [ 0, 4294967295 ],
+          "example_VEC2_INT64" : [ -9223372036854775808, 9223372036854775807 ],
+          "example_VEC2_normalized_INT64" : [ -9223372036854775808, 9223372036854775807 ],
+          "example_VEC2_UINT64" : [ 0, 18446744073709551615 ],
+          "example_VEC2_normalized_UINT64" : [ 0, 18446744073709551615 ],
+          "example_VEC2_FLOAT32" : [ -1.0, 1.0 ],
+          "example_VEC2_FLOAT64" : [ -1.0, 1.0 ],
+          "example_VEC3_INT8" : [ -128, 0, 127 ],
+          "example_VEC3_normalized_INT8" : [ -128, 0, 127 ],
+          "example_VEC3_UINT8" : [ 0, 127, 255 ],
+          "example_VEC3_normalized_UINT8" : [ 0, 127, 255 ],
+          "example_VEC3_INT16" : [ -32768, 0, 32767 ],
+          "example_VEC3_normalized_INT16" : [ -32768, 0, 32767 ],
+          "example_VEC3_UINT16" : [ 0, 32767, 65535 ],
+          "example_VEC3_normalized_UINT16" : [ 0, 32767, 65535 ],
+          "example_VEC3_INT32" : [ -2147483648, 0, 2147483647 ],
+          "example_VEC3_normalized_INT32" : [ -2147483648, 0, 2147483647 ],
+          "example_VEC3_UINT32" : [ 0, 2147483647, 4294967295 ],
+          "example_VEC3_normalized_UINT32" : [ 0, 2147483647, 4294967295 ],
+          "example_VEC3_INT64" : [ -9223372036854775808, 0, 9223372036854775807 ],
+          "example_VEC3_normalized_INT64" : [ -9223372036854775808, 0, 9223372036854775807 ],
+          "example_VEC3_UINT64" : [ 0, 9223372036854775807, 18446744073709551615 ],
+          "example_VEC3_normalized_UINT64" : [ 0, 9223372036854775807, 18446744073709551615 ],
+          "example_VEC3_FLOAT32" : [ -1.0, 0.0, 1.0 ],
+          "example_VEC3_FLOAT64" : [ -1.0, 0.0, 1.0 ],
+          "example_VEC4_INT8" : [ -128, -43, 42, 127 ],
+          "example_VEC4_normalized_INT8" : [ -128, -43, 42, 127 ],
+          "example_VEC4_UINT8" : [ 0, 84, 170, 255 ],
+          "example_VEC4_normalized_UINT8" : [ 0, 84, 170, 255 ],
+          "example_VEC4_INT16" : [ -32768, -10923, 10922, 32767 ],
+          "example_VEC4_normalized_INT16" : [ -32768, -10923, 10922, 32767 ],
+          "example_VEC4_UINT16" : [ 0, 21844, 43690, 65535 ],
+          "example_VEC4_normalized_UINT16" : [ 0, 21844, 43690, 65535 ],
+          "example_VEC4_INT32" : [ -2147483648, -715827883, 715827882, 2147483647 ],
+          "example_VEC4_normalized_INT32" : [ -2147483648, -715827883, 715827882, 2147483647 ],
+          "example_VEC4_UINT32" : [ 0, 1431655764, 2863311530, 4294967295 ],
+          "example_VEC4_normalized_UINT32" : [ 0, 1431655764, 2863311530, 4294967295 ],
+          "example_VEC4_INT64" : [ -9223372036854775808, -3074457346233150072, 3074457346233150071, 9223372036854775807 ],
+          "example_VEC4_normalized_INT64" : [ -9223372036854775808, -3074457346233150072, 3074457346233150071, 9223372036854775807 ],
+          "example_VEC4_UINT64" : [ 0, 6148914690621625735, 12297829383087925879, 18446744073709551615 ],
+          "example_VEC4_normalized_UINT64" : [ 0, 6148914690621625735, 12297829383087925879, 18446744073709551615 ],
+          "example_VEC4_FLOAT32" : [ -1.0, -0.3333333334, 0.3333333334, 1.0 ],
+          "example_VEC4_FLOAT64" : [ -1.0, -0.3333333334, 0.3333333334, 1.0 ],
+          "example_MAT2_INT8" : [ -128, -43, 42, 127 ],
+          "example_MAT2_normalized_INT8" : [ -128, -43, 42, 127 ],
+          "example_MAT2_UINT8" : [ 0, 84, 170, 255 ],
+          "example_MAT2_normalized_UINT8" : [ 0, 84, 170, 255 ],
+          "example_MAT2_INT16" : [ -32768, -10923, 10922, 32767 ],
+          "example_MAT2_normalized_INT16" : [ -32768, -10923, 10922, 32767 ],
+          "example_MAT2_UINT16" : [ 0, 21844, 43690, 65535 ],
+          "example_MAT2_normalized_UINT16" : [ 0, 21844, 43690, 65535 ],
+          "example_MAT2_INT32" : [ -2147483648, -715827883, 715827882, 2147483647 ],
+          "example_MAT2_normalized_INT32" : [ -2147483648, -715827883, 715827882, 2147483647 ],
+          "example_MAT2_UINT32" : [ 0, 1431655764, 2863311530, 4294967295 ],
+          "example_MAT2_normalized_UINT32" : [ 0, 1431655764, 2863311530, 4294967295 ],
+          "example_MAT2_INT64" : [ -9223372036854775808, -3074457346233150072, 3074457346233150071, 9223372036854775807 ],
+          "example_MAT2_normalized_INT64" : [ -9223372036854775808, -3074457346233150072, 3074457346233150071, 9223372036854775807 ],
+          "example_MAT2_UINT64" : [ 0, 6148914690621625735, 12297829383087925879, 18446744073709551615 ],
+          "example_MAT2_normalized_UINT64" : [ 0, 6148914690621625735, 12297829383087925879, 18446744073709551615 ],
+          "example_MAT2_FLOAT32" : [ -1.0, -0.3333333334, 0.3333333334, 1.0 ],
+          "example_MAT2_FLOAT64" : [ -1.0, -0.3333333334, 0.3333333334, 1.0 ],
+          "example_MAT3_INT8" : [ -128, -96, -64, -32, 0, 31, 63, 95, 127 ],
+          "example_MAT3_normalized_INT8" : [ -128, -96, -64, -32, 0, 31, 63, 95, 127 ],
+          "example_MAT3_UINT8" : [ 0, 31, 63, 95, 127, 159, 191, 223, 255 ],
+          "example_MAT3_normalized_UINT8" : [ 0, 31, 63, 95, 127, 159, 191, 223, 255 ],
+          "example_MAT3_INT16" : [ -32768, -24576, -16384, -8192, 0, 8191, 16383, 24575, 32767 ],
+          "example_MAT3_normalized_INT16" : [ -32768, -24576, -16384, -8192, 0, 8191, 16383, 24575, 32767 ],
+          "example_MAT3_UINT16" : [ 0, 8191, 16383, 24575, 32767, 40959, 49151, 57343, 65535 ],
+          "example_MAT3_normalized_UINT16" : [ 0, 8191, 16383, 24575, 32767, 40959, 49151, 57343, 65535 ],
+          "example_MAT3_INT32" : [ -2147483648, -1610612736, -1073741824, -536870912, 0, 536870911, 1073741823, 1610612735, 2147483647 ],
+          "example_MAT3_normalized_INT32" : [ -2147483648, -1610612736, -1073741824, -536870912, 0, 536870911, 1073741823, 1610612735, 2147483647 ],
+          "example_MAT3_UINT32" : [ 0, 536870911, 1073741823, 1610612735, 2147483647, 2684354559, 3221225471, 3758096383, 4294967295 ],
+          "example_MAT3_normalized_UINT32" : [ 0, 536870911, 1073741823, 1610612735, 2147483647, 2684354559, 3221225471, 3758096383, 4294967295 ],
+          "example_MAT3_INT64" : [ -9223372036854775808, -6917529027641081856, -4611686018427387904, -2305843009213693952, 0, 2305843009213693951, 4611686018427387903, 6917529027641081855, 9223372036854775807 ],
+          "example_MAT3_normalized_INT64" : [ -9223372036854775808, -6917529027641081856, -4611686018427387904, -2305843009213693952, 0, 2305843009213693951, 4611686018427387903, 6917529027641081855, 9223372036854775807 ],
+          "example_MAT3_UINT64" : [ 0, 2305843009213693951, 4611686018427387903, 6917529027641081855, 9223372036854775807, 11529215046068469759, 13835058055282163711, 16140901064495857663, 18446744073709551615 ],
+          "example_MAT3_normalized_UINT64" : [ 0, 2305843009213693951, 4611686018427387903, 6917529027641081855, 9223372036854775807, 11529215046068469759, 13835058055282163711, 16140901064495857663, 18446744073709551615 ],
+          "example_MAT3_FLOAT32" : [ -1.0, -0.75, -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1.0 ],
+          "example_MAT3_FLOAT64" : [ -1.0, -0.75, -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1.0 ],
+          "example_MAT4_INT8" : [ -128, -110, -94, -77, -59, -43, -26, -8, 7, 25, 42, 58, 76, 93, 109, 127 ],
+          "example_MAT4_normalized_INT8" : [ -128, -110, -94, -77, -59, -43, -26, -8, 7, 25, 42, 58, 76, 93, 109, 127 ],
+          "example_MAT4_UINT8" : [ 0, 17, 33, 51, 68, 84, 102, 119, 135, 153, 170, 186, 204, 221, 237, 255 ],
+          "example_MAT4_normalized_UINT8" : [ 0, 17, 33, 51, 68, 84, 102, 119, 135, 153, 170, 186, 204, 221, 237, 255 ],
+          "example_MAT4_INT16" : [ -32768, -28398, -24030, -19661, -15291, -10923, -6554, -2184, 2183, 6553, 10922, 15290, 19660, 24029, 28397, 32767 ],
+          "example_MAT4_normalized_INT16" : [ -32768, -28398, -24030, -19661, -15291, -10923, -6554, -2184, 2183, 6553, 10922, 15290, 19660, 24029, 28397, 32767 ],
+          "example_MAT4_UINT16" : [ 0, 4369, 8737, 13107, 17476, 21844, 26214, 30583, 34951, 39321, 43690, 48058, 52428, 56797, 61165, 65535 ],
+          "example_MAT4_normalized_UINT16" : [ 0, 4369, 8737, 13107, 17476, 21844, 26214, 30583, 34951, 39321, 43690, 48058, 52428, 56797, 61165, 65535 ],
+          "example_MAT4_INT32" : [ -2147483648, -1861152494, -1574821342, -1288490189, -1002159035, -715827883, -429496730, -143165576, 143165575, 429496729, 715827882, 1002159034, 1288490188, 1574821341, 1861152493, 2147483647 ],
+          "example_MAT4_normalized_INT32" : [ -2147483648, -1861152494, -1574821342, -1288490189, -1002159035, -715827883, -429496730, -143165576, 143165575, 429496729, 715827882, 1002159034, 1288490188, 1574821341, 1861152493, 2147483647 ],
+          "example_MAT4_UINT32" : [ 0, 286331153, 572662305, 858993459, 1145324612, 1431655764, 1717986918, 2004318071, 2290649223, 2576980377, 2863311530, 3149642682, 3435973836, 3722304989, 4008636141, 4294967295 ],
+          "example_MAT4_normalized_UINT32" : [ 0, 286331153, 572662305, 858993459, 1145324612, 1431655764, 1717986918, 2004318071, 2290649223, 2576980377, 2863311530, 3149642682, 3435973836, 3722304989, 4008636141, 4294967295 ],
+          "example_MAT4_INT64" : [ -9223372036854775808, -7993589097992580897, -6763806160975060395, -5534023222112865485, -4304240283250670574, -3074457346233150072, -1844674407370955162, -614891468508760251, 614891468508760250, 1844674407370955161, 3074457346233150071, 4304240283250670573, 5534023222112865484, 6763806160975060394, 7993589097992580896, 9223372036854775807 ],
+          "example_MAT4_normalized_INT64" : [ -9223372036854775808, -7993589097992580897, -6763806160975060395, -5534023222112865485, -4304240283250670574, -3074457346233150072, -1844674407370955162, -614891468508760251, 614891468508760250, 1844674407370955161, 3074457346233150071, 4304240283250670573, 5534023222112865484, 6763806160975060394, 7993589097992580896, 9223372036854775807 ],
+          "example_MAT4_UINT64" : [ 0, 1229782938862194910, 2459565875879715412, 3689348814741910323, 4919131753604105233, 6148914690621625735, 7378697629483820646, 8608480568346015556, 9838263505363536058, 11068046444225730969, 12297829383087925879, 13527612320105446381, 14757395258967641292, 15987178197829836202, 17216961134847356704, 18446744073709551615 ],
+          "example_MAT4_normalized_UINT64" : [ 0, 1229782938862194910, 2459565875879715412, 3689348814741910323, 4919131753604105233, 6148914690621625735, 7378697629483820646, 8608480568346015556, 9838263505363536058, 11068046444225730969, 12297829383087925879, 13527612320105446381, 14757395258967641292, 15987178197829836202, 17216961134847356704, 18446744073709551615 ],
+          "example_MAT4_FLOAT32" : [ -1.0, -0.8666666666, -0.7333333334, -0.6, -0.4666666666, -0.3333333334, -0.2, -0.0666666666, 0.0666666666, 0.2, 0.3333333334, 0.4666666666, 0.6, 0.7333333334, 0.8666666666, 1.0 ],
+          "example_MAT4_FLOAT64" : [ -1.0, -0.8666666666, -0.7333333334, -0.6, -0.4666666666, -0.3333333334, -0.2, -0.0666666666, 0.0666666666, 0.2, 0.3333333334, 0.4666666666, 0.6, 0.7333333334, 0.8666666666, 1.0 ],
+          "example_variable_length_ARRAY_INT8" : [ -128, -43, 42, 127 ],
+          "example_variable_length_ARRAY_normalized_INT8" : [ -128, -43, 42, 127 ],
+          "example_fixed_length_ARRAY_INT8" : [ -128, -64, 0, 63, 127 ],
+          "example_fixed_length_ARRAY_normalized_INT8" : [ -128, -64, 0, 63, 127 ],
+          "example_variable_length_ARRAY_UINT8" : [ 0, 84, 170, 255 ],
+          "example_variable_length_ARRAY_normalized_UINT8" : [ 0, 84, 170, 255 ],
+          "example_fixed_length_ARRAY_UINT8" : [ 0, 63, 127, 191, 255 ],
+          "example_fixed_length_ARRAY_normalized_UINT8" : [ 0, 63, 127, 191, 255 ],
+          "example_variable_length_ARRAY_INT16" : [ -32768, -10923, 10922, 32767 ],
+          "example_variable_length_ARRAY_normalized_INT16" : [ -32768, -10923, 10922, 32767 ],
+          "example_fixed_length_ARRAY_INT16" : [ -32768, -16384, 0, 16383, 32767 ],
+          "example_fixed_length_ARRAY_normalized_INT16" : [ -32768, -16384, 0, 16383, 32767 ],
+          "example_variable_length_ARRAY_UINT16" : [ 0, 21844, 43690, 65535 ],
+          "example_variable_length_ARRAY_normalized_UINT16" : [ 0, 21844, 43690, 65535 ],
+          "example_fixed_length_ARRAY_UINT16" : [ 0, 16383, 32767, 49151, 65535 ],
+          "example_fixed_length_ARRAY_normalized_UINT16" : [ 0, 16383, 32767, 49151, 65535 ],
+          "example_variable_length_ARRAY_INT32" : [ -2147483648, -715827883, 715827882, 2147483647 ],
+          "example_variable_length_ARRAY_normalized_INT32" : [ -2147483648, -715827883, 715827882, 2147483647 ],
+          "example_fixed_length_ARRAY_INT32" : [ -2147483648, -1073741824, 0, 1073741823, 2147483647 ],
+          "example_fixed_length_ARRAY_normalized_INT32" : [ -2147483648, -1073741824, 0, 1073741823, 2147483647 ],
+          "example_variable_length_ARRAY_UINT32" : [ 0, 1431655764, 2863311530, 4294967295 ],
+          "example_variable_length_ARRAY_normalized_UINT32" : [ 0, 1431655764, 2863311530, 4294967295 ],
+          "example_fixed_length_ARRAY_UINT32" : [ 0, 1073741823, 2147483647, 3221225471, 4294967295 ],
+          "example_fixed_length_ARRAY_normalized_UINT32" : [ 0, 1073741823, 2147483647, 3221225471, 4294967295 ],
+          "example_variable_length_ARRAY_INT64" : [ -9223372036854775808, -3074457346233150072, 3074457346233150071, 9223372036854775807 ],
+          "example_variable_length_ARRAY_normalized_INT64" : [ -9223372036854775808, -3074457346233150072, 3074457346233150071, 9223372036854775807 ],
+          "example_fixed_length_ARRAY_INT64" : [ -9223372036854775808, -4611686018427387904, 0, 4611686018427387903, 9223372036854775807 ],
+          "example_fixed_length_ARRAY_normalized_INT64" : [ -9223372036854775808, -4611686018427387904, 0, 4611686018427387903, 9223372036854775807 ],
+          "example_variable_length_ARRAY_UINT64" : [ 0, 6148914690621625735, 12297829383087925879, 18446744073709551615 ],
+          "example_variable_length_ARRAY_normalized_UINT64" : [ 0, 6148914690621625735, 12297829383087925879, 18446744073709551615 ],
+          "example_fixed_length_ARRAY_UINT64" : [ 0, 4611686018427387903, 9223372036854775807, 13835058055282163711, 18446744073709551615 ],
+          "example_fixed_length_ARRAY_normalized_UINT64" : [ 0, 4611686018427387903, 9223372036854775807, 13835058055282163711, 18446744073709551615 ],
+          "example_variable_length_ARRAY_FLOAT32" : [ -1.0, -0.3333333334, 0.3333333334, 1.0 ],
+          "example_fixed_length_ARRAY_FLOAT32" : [ -1.0, -0.5, 0.0, 0.5, 1.0 ],
+          "example_variable_length_ARRAY_FLOAT64" : [ -1.0, -0.3333333334, 0.3333333334, 1.0 ],
+          "example_fixed_length_ARRAY_FLOAT64" : [ -1.0, -0.5, 0.0, 0.5, 1.0 ],
+          "example_variable_length_ARRAY_BOOLEAN" : [ true, false, true, false ],
+          "example_fixed_length_ARRAY_BOOLEAN" : [ true, false, true, false, true ],
+          "example_variable_length_ARRAY_STRING" : [ "This", "is", "an", "example" ],
+          "example_fixed_length_ARRAY_STRING" : [ "This", "is", "an", "example", "string" ],
+          "example_variable_length_ARRAY_ENUM" : [ 0, 1, 2, 0 ],
+          "example_fixed_length_ARRAY_ENUM" : [ 0, 1, 2, 0, 1 ]
+        }
+      }
+    }
+  },
+  "asset" : {
+    "version" : "1.0"
+  },
+  "geometricError" : 2.0,
+  "root" : {
+    "boundingVolume" : {
+      "box" : [ 0.5, 0.5, 0.5, 0.5, 0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.5 ]
+    },
+    "geometricError" : 1.0
+  },
+  "extensionsUsed" : [ "3DTILES_metadata" ]
+}
