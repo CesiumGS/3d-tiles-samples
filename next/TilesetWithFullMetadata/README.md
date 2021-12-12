@@ -54,7 +54,7 @@ tileset.readyPromise.then(function() {
           // Obtain the value of each property from the
           // metadata entity, and print it to the console
           var value = tilesetMetadataEntity.getProperty(metadataClassPropertyId);
-          console.log("Property with name '" + metadataClassPropertyId + "'" +
+          console.log("Property with name '" + metadataClassPropertyId + "' " +
                       "has value " + value, value);
         }
       }
