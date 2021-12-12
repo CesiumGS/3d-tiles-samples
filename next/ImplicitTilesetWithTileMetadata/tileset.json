@@ -3,9 +3,12 @@
     "version": "1.0"
   },
   "extensionsUsed": [
+    "3DTILES_metadata",
+    "3DTILES_content_gltf",
     "3DTILES_implicit_tiling"
   ],
   "extensionsRequired": [
+    "3DTILES_content_gltf",
     "3DTILES_implicit_tiling"
   ],
   "extensions": {
