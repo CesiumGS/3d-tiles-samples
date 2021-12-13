@@ -1149,7 +1149,7 @@
           "example_FLOAT64" : 12.34,
           "example_BOOLEAN" : true,
           "example_STRING" : "An example string",
-          "example_ENUM" : 1,
+          "example_ENUM" : "ExampleEnumValueB",
           "example_VEC2_INT8" : [ -128, 127 ],
           "example_VEC2_normalized_INT8" : [ -128, 127 ],
           "example_VEC2_UINT8" : [ 0, 255 ],
@@ -1298,8 +1298,8 @@
           "example_fixed_length_ARRAY_BOOLEAN" : [ true, false, true, false, true ],
           "example_variable_length_ARRAY_STRING" : [ "This", "is", "an", "example" ],
           "example_fixed_length_ARRAY_STRING" : [ "This", "is", "an", "example", "string" ],
-          "example_variable_length_ARRAY_ENUM" : [ 0, 1, 2, 0 ],
-          "example_fixed_length_ARRAY_ENUM" : [ 0, 1, 2, 0, 1 ]
+          "example_variable_length_ARRAY_ENUM" : [ "ExampleEnumValueA", "ExampleEnumValueB", "ExampleEnumValueC", "ExampleEnumValueA" ],
+          "example_fixed_length_ARRAY_ENUM" : [ "ExampleEnumValueA", "ExampleEnumValueB", "ExampleEnumValueC", "ExampleEnumValueA", "ExampleEnumValueB" ]
         }
       }
     }
