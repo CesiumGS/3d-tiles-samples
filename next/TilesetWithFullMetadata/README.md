@@ -17,14 +17,11 @@ The example contains metadata for the tileset, containing all possible property 
 The following sandcastle iterates over all properties of this tileset, and prints the property values:
 
 ```
-// Enable the experimental model features for metadata support
-Cesium.ExperimentalFeatures.enableModelExperimental = true;
-
 var viewer = new Cesium.Viewer('cesiumContainer');
 
 // Load the tileset from a local server
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-    url : 'http://localhost:8003/TilesetWithFullSchema.json',
+    url : 'http://localhost:8003/tileset.json',
 }));
 
 // Wait until the tileset and its associated metadata are loaded
