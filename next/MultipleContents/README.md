@@ -30,7 +30,7 @@ var pointsContent;
 
 // Load the tileset from a local server
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-    url : 'http://localhost:8003/tleset.json'
+    url : 'http://localhost:8003/tileset.json'
 }));
 
 // Attach the listener that will be notified when a tile is loaded.
