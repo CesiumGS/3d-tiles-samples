@@ -25,7 +25,8 @@ Sample tilesets for learning how to use [3D Tiles 1.0](https://github.com/Cesium
 | [TilesetWithGroupMetadata](next/TilesetWithGroupMetadata) | <img src="next/TilesetWithGroupMetadata/screenshot/TilesetWithGroupMetadata.gif" width="300" height="200"> |
 | [TilesetWithExternalSchema](next/TilesetWithExternalSchema) | <img src="next/TilesetWithExternalSchema/screenshot/TilesetWithExternalSchema.gif" width="300" height="200"> |
 | [ImplicitTilesetWithTileMetadata](next/ImplicitTilesetWithTileMetadata) | <img src="next/ImplicitTilesetWithTileMetadata/screenshot/ImplicitWithTileMetadata.gif" width="300" height="200"> |
-| [SparseImplicitQuadtree](next/SparseImplicitQuadtree) | <img src="next/SparseImplicitQuadtree/screenshot/SparseImplicitQuadtree.png" width="300" height="200"> |
+| [SparseImplicitQuadtree](next/SparseImplicitQuadtree) | <img src="next/SparseImplicitQuadtree/screenshot/SparseImplicitQuadtree.png" width="300"> |
+| [MultipleContents](next/MultipleContents) | <img src="next/MultipleContents/screenshot/MultipleContents.gif" width="300"> |
 
 ## Contributions
 
