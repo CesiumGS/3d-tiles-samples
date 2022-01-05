@@ -28,10 +28,16 @@ var showPoints = true;
 var trianglesContent;
 var pointsContent;
 
+// Position the tileset on the globe.
+var position = Cesium.Cartesian3.fromDegrees(-75.1596759, 39.9509025, 0.25);
+var modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(position);
+
 // Load the tileset from a local server
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-    url : 'http://localhost:8003/tileset.json'
+    url : 'http://localhost:8003/tileset.json',
+    modelMatrix : modelMatrix
 }));
+viewer.zoomTo(tileset);
 
 // Attach the listener that will be notified when a tile is loaded.
 // It will store the 'trianglesContent' and 'pointsContent' from
