@@ -51,15 +51,6 @@ tileset.tileLoad.addEventListener(function(tile) {
   }
 });
 
-// Wait until the tileset is loaded, move it to a certain position
-// on the globe, and center the tileset in the viewer
-tileset.readyPromise.then(function() {
-  tileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
-    Cesium.Cartographic.toCartesian(
-      Cesium.Cartographic.fromDegrees(-75.1596759, 39.9509025, 0)));
-  viewer.zoomTo(tileset);
-});
-
 // The toggle buttons for the Sandcastle, to show/hide the triangles-
 // and points-based representation
 Sandcastle.addToggleButton("Show triangles", showTriangles, function (checked) {
