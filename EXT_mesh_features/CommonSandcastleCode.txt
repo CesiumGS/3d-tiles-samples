@@ -1,0 +1,71 @@
+// Enable experimental features for metadata access
+Cesium.ExperimentalFeatures.enableModelExperimental = true;
+
+var viewer = new Cesium.Viewer('cesiumContainer');
+
+var testCase = "";
+//testCase = "ExplicitFeatureIds";
+//testCase = "ExplicitFeatureIdsAndSimpleProperty";
+//testCase = "ImplicitFeatureIds";
+//testCase = "ImplicitFeatureIdsAndSimpleProperty";
+testCase = "MultipleFeatureIdsAndProperties";
+
+
+// Create the tileset, and set its model matrix to move it
+// to a certain position on the globe
+var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+    url : 'http://localhost:8003/tilesets/EXT_mesh_features/' + testCase + '/tileset.json',
+    debugShowBoundingVolume: true
+}));
+tileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
+  Cesium.Cartesian3.fromDegrees(-75.1596759, 39.9509025, 0));
+viewer.zoomTo(tileset);
+
+// Create the label that will display metadata information
+var labelEntity = viewer.entities.add({
+  label: {
+    showBackground: true,
+    font: "14px monospace",
+    horizontalOrigin: Cesium.HorizontalOrigin.LEFT,
+    verticalOrigin: Cesium.VerticalOrigin.TOP,
+    pixelOffset: new Cesium.Cartesian2(15, 0),
+  },
+});
+
+// The function that receives the picked Cesium3DTileFeature,
+// and updates the label entity text with information about
+// the metadata of this feature
+var updateLabelForFeature = function(feature) {
+  var propertyNames = feature.getPropertyNames();
+  if (Cesium.defined(propertyNames)) {
+    for (var i=0; i<propertyNames.length; i++) {
+      if (i > 0)
+      {
+        labelEntity.label.text += "\u00B0";
+      }
+      var propertyName = propertyNames[i];
+      var propertyValue = feature.getProperty(propertyName);          
+      labelEntity.label.text += propertyName + ": "+ propertyValue;
+    }
+  }
+};
+
+// Install the handler that will perform picking when the 
+// mouse is moved, and update the label entity when the 
+// mouse is over a Cesium3DTileFeature
+var handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+handler.setInputAction(function (movement) {
+  labelEntity.label.text = "";
+  var picked = viewer.scene.pick(movement.endPosition);
+  if (!Cesium.defined(picked)) {
+    return;
+  }
+  var cartesian = viewer.scene.pickPosition(movement.endPosition);
+  labelEntity.position = cartesian;  
+  if (!(picked instanceof Cesium.Cesium3DTileFeature)) {
+    return;
+  }
+  updateLabelForFeature(picked);
+}, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+
+
