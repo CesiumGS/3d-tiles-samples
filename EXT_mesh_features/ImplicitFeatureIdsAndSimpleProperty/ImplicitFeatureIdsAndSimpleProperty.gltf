@@ -23,7 +23,7 @@
         "count" : 4,
         "properties" : {
           "example_VEC3_FLOAT32" : {
-            "bufferView" : 2
+            "bufferView" : 3
           }
         }
       } ]
