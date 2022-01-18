@@ -8,8 +8,8 @@ var testCase = "";
 //testCase = "ExplicitFeatureIdsAndSimpleProperty";
 //testCase = "ImplicitFeatureIds";
 //testCase = "ImplicitFeatureIdsAndSimpleProperty";
-//testCase = "MultipleFeatureIdsAndProperties";
-testCase = "TwoPrimitivesOnePropertyTable";
+testCase = "MultipleFeatureIdsAndProperties";
+//testCase = "TwoPrimitivesOnePropertyTable";
 
 
 // Create the tileset, and set its model matrix to move it
@@ -42,11 +42,12 @@ var updateLabelForFeature = function(feature) {
     for (var i=0; i<propertyNames.length; i++) {
       if (i > 0)
       {
-        labelEntity.label.text += "\u00B0";
+        labelEntity.label.text += "\u000A";
       }
       var propertyName = propertyNames[i];
       var propertyValue = feature.getProperty(propertyName);          
       labelEntity.label.text += propertyName + ": "+ propertyValue;
+      //console.log("propertyValue", propertyValue);
     }
   }
 };
