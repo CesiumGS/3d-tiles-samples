@@ -29,11 +29,11 @@
         "count" : 4,
         "properties" : {
           "example_VEC3_FLOAT32" : {
-            "bufferView" : 5
+            "bufferView" : 4
           },
           "example_STRING" : {
-            "bufferView" : 6,
-            "stringOffsetBufferView" : 7
+            "bufferView" : 5,
+            "stringOffsetBufferView" : 6
           }
         }
       } ]
@@ -72,22 +72,14 @@
     "type" : "SCALAR",
     "max" : [ 3 ],
     "min" : [ 0 ]
-  }, {
-    "bufferView" : 4,
-    "byteOffset" : 0,
-    "componentType" : 5121,
-    "count" : 16,
-    "type" : "SCALAR",
-    "max" : [ 3 ],
-    "min" : [ 0 ]
   } ],
   "asset" : {
     "generator" : "JglTF from https://github.com/javagl/JglTF",
     "version" : "2.0"
   },
   "buffers" : [ {
-    "uri" : "data:application/gltf-buffer;base64,AAABAAIAAQADAAIABAAFAAYABQAHAAYACAAJAAoACQALAAoADAANAA4ADQAPAA4AAAAAAAAAAAAAAAAAZmbmPgAAAAAAAAAAAAAAAGZm5j4AAAAAZmbmPmZm5j4AAAAAzcwMPwAAAAAAAAAAAACAPwAAAAAAAAAAzcwMP2Zm5j4AAAAAAACAP2Zm5j4AAAAAAAAAAM3MDD8AAAAAZmbmPs3MDD8AAAAAAAAAAAAAgD8AAAAAZmbmPgAAgD8AAAAAzcwMP83MDD8AAAAAAACAP83MDD8AAAAAzcwMPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAEAAAACAAAAAgAAAAIAAAACAAAAAwAAAAMAAAADAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAgAAAAIAAAACAAAAAgAAAAMAAAADAAAAAwAAAAMAAAA=",
-    "byteLength" : 560
+    "uri" : "data:application/gltf-buffer;base64,AAABAAIAAQADAAIABAAFAAYABQAHAAYACAAJAAoACQALAAoADAANAA4ADQAPAA4AAAAAAAAAAAAAAAAAZmbmPgAAAAAAAAAAAAAAAGZm5j4AAAAAZmbmPmZm5j4AAAAAzcwMPwAAAAAAAAAAAACAPwAAAAAAAAAAzcwMP2Zm5j4AAAAAAACAP2Zm5j4AAAAAAAAAAM3MDD8AAAAAZmbmPs3MDD8AAAAAAAAAAAAAgD8AAAAAZmbmPgAAgD8AAAAAzcwMP83MDD8AAAAAAACAP83MDD8AAAAAzcwMPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AwAAAAMAAAADAAAAAwAAAAIAAAACAAAAAgAAAAIAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "byteLength" : 496
   }, {
     "uri" : "data:application/gltf-buffer;base64,AAAAAM3MzD3NzEw+AACAP83MjD+amZk/AAAAQGZmBkDNzAxAAABAQGZmRkDNzExAUmFpbiDwn4ynVGh1bmRlciDim4hTdW4g4piAU25vdyDwn4yoAAAAAAkAAAAUAAAAGwAAACQAAAA=",
     "byteLength" : 104
@@ -110,12 +102,6 @@
   }, {
     "buffer" : 0,
     "byteOffset" : 432,
-    "byteLength" : 64,
-    "byteStride" : 4,
-    "target" : 34962
-  }, {
-    "buffer" : 0,
-    "byteOffset" : 496,
     "byteLength" : 64,
     "byteStride" : 4,
     "target" : 34962
@@ -146,9 +132,10 @@
       "extensions" : {
         "EXT_mesh_features" : {
           "featureIds" : [ {
-            "attribute" : 0
+            "offset" : 0,
+            "repeat" : 4
           }, {
-            "attribute" : 1
+            "attribute" : 0
           } ],
           "propertyTables" : [ 0, 0 ]
         }
@@ -156,8 +143,7 @@
       "attributes" : {
         "POSITION" : 1,
         "NORMAL" : 2,
-        "FEATURE_ID_0" : 3,
-        "FEATURE_ID_1" : 4
+        "FEATURE_ID_0" : 3
       },
       "indices" : 0,
       "material" : 0,
