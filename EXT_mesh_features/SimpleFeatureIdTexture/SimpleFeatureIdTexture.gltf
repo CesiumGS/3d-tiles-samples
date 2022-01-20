@@ -1,0 +1,175 @@
+{
+  "extensions" : {
+    "EXT_mesh_features" : {
+      "schema" : {
+        "classes" : {
+          "buildingComponents" : {
+            "name" : "Building components",
+            "properties" : {
+              "component" : {
+                "name" : "Component",
+                "componentType" : "STRING"
+              },
+              "yearBuilt" : {
+                "name" : "Year Built",
+                "componentType" : "INT16"
+              }
+            }
+          }
+        }
+      },
+      "propertyTables" : [ {
+        "name" : "Example property table",
+        "class" : "buildingComponents",
+        "count" : 4,
+        "properties" : {
+          "component" : {
+            "bufferView" : 4,
+            "stringOffsetBufferView" : 5
+          },
+          "yearBuilt" : {
+            "bufferView" : 6
+          }
+        }
+      } ]
+    }
+  },
+  "extensionsUsed" : [ "EXT_mesh_features" ],
+  "accessors" : [ {
+    "bufferView" : 0,
+    "byteOffset" : 0,
+    "componentType" : 5123,
+    "count" : 6,
+    "type" : "SCALAR",
+    "max" : [ 3 ],
+    "min" : [ 0 ]
+  }, {
+    "bufferView" : 1,
+    "byteOffset" : 0,
+    "componentType" : 5126,
+    "count" : 4,
+    "type" : "VEC3",
+    "max" : [ 1.0, 1.0, 0.0 ],
+    "min" : [ 0.0, 0.0, 0.0 ]
+  }, {
+    "bufferView" : 2,
+    "byteOffset" : 0,
+    "componentType" : 5126,
+    "count" : 4,
+    "type" : "VEC3",
+    "max" : [ 0.0, 0.0, 1.0 ],
+    "min" : [ 0.0, 0.0, 1.0 ]
+  }, {
+    "bufferView" : 3,
+    "byteOffset" : 0,
+    "componentType" : 5126,
+    "count" : 4,
+    "type" : "VEC2",
+    "max" : [ 1.0, 1.0 ],
+    "min" : [ 0.0, 0.0 ]
+  } ],
+  "asset" : {
+    "generator" : "JglTF from https://github.com/javagl/JglTF",
+    "version" : "2.0"
+  },
+  "buffers" : [ {
+    "uri" : "data:application/gltf-buffer;base64,AAABAAIAAQADAAIAAAAAAAAAAAAAAAAAAACAPwAAAAAAAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAAA=",
+    "byteLength" : 140
+  }, {
+    "uri" : "data:application/gltf-buffer;base64,V2FsbERvb3JSb29mV2luZG93AAAAAAAABAAAAAgAAAAMAAAAEgAAAKgHzAfBB9IH",
+    "byteLength" : 48
+  } ],
+  "bufferViews" : [ {
+    "buffer" : 0,
+    "byteOffset" : 0,
+    "byteLength" : 12,
+    "target" : 34963
+  }, {
+    "buffer" : 0,
+    "byteOffset" : 12,
+    "byteLength" : 48,
+    "target" : 34962
+  }, {
+    "buffer" : 0,
+    "byteOffset" : 60,
+    "byteLength" : 48,
+    "target" : 34962
+  }, {
+    "buffer" : 0,
+    "byteOffset" : 108,
+    "byteLength" : 32,
+    "target" : 34962
+  }, {
+    "buffer" : 1,
+    "byteOffset" : 0,
+    "byteLength" : 18
+  }, {
+    "buffer" : 1,
+    "byteOffset" : 20,
+    "byteLength" : 20
+  }, {
+    "buffer" : 1,
+    "byteOffset" : 40,
+    "byteLength" : 8
+  } ],
+  "images" : [ {
+    "uri" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAAH0lEQVR42mP4z8CABzEQkGYgrB3OI0uaeLc1gAF9pAFQB2el6kHeQwAAAABJRU5ErkJggg==",
+    "mimeType" : "image/png"
+  }, {
+    "uri" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAAHUlEQVR42mNgYGDCiwhJEwbMMESWNAmAEYzoIQ0AO/8AQ0CRD5UAAAAASUVORK5CYII=",
+    "mimeType" : "image/png"
+  } ],
+  "materials" : [ {
+    "pbrMetallicRoughness" : {
+      "baseColorFactor" : [ 1.0, 1.0, 1.0, 1.0 ],
+      "baseColorTexture" : {
+        "index" : 0,
+        "texCoord" : 0
+      },
+      "metallicFactor" : 0.0,
+      "roughnessFactor" : 1.0
+    },
+    "alphaMode" : "OPAQUE",
+    "doubleSided" : true
+  } ],
+  "meshes" : [ {
+    "primitives" : [ {
+      "extensions" : {
+        "EXT_mesh_features" : {
+          "featureIds" : [ {
+            "index" : 1,
+            "texCoord" : 0,
+            "channel" : 0
+          } ],
+          "propertyTables" : [ 0 ]
+        }
+      },
+      "attributes" : {
+        "POSITION" : 1,
+        "NORMAL" : 2,
+        "TEXCOORD_0" : 3
+      },
+      "indices" : 0,
+      "material" : 0,
+      "mode" : 4
+    } ]
+  } ],
+  "nodes" : [ {
+    "mesh" : 0
+  } ],
+  "samplers" : [ {
+    "magFilter" : 9728,
+    "minFilter" : 9728
+  } ],
+  "scene" : 0,
+  "scenes" : [ {
+    "nodes" : [ 0 ]
+  } ],
+  "textures" : [ {
+    "sampler" : 0,
+    "source" : 0
+  }, {
+    "sampler" : 0,
+    "source" : 1
+  } ]
+}
