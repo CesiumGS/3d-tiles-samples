@@ -6,7 +6,7 @@ The sample contains a glTF asset with a single mesh primitive. The mesh primitiv
 
 The following image shows the mesh primitive with its vertices, their indices, and their feature IDs:
 
-![Image](/screenshot/EXT_mesh_features-quads.png)
+![Image](screenshot/EXT_mesh_features-quads.png)
 
 
 ## Example sandcastle
