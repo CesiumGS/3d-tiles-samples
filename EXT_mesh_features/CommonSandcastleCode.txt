@@ -4,22 +4,32 @@ Cesium.ExperimentalFeatures.enableModelExperimental = true;
 var viewer = new Cesium.Viewer('cesiumContainer');
 
 var testCase = "";
-//testCase = "ExplicitFeatureIds";
-//testCase = "ExplicitFeatureIdsAndSimpleProperty";
-//testCase = "ImplicitFeatureIds";
-//testCase = "ImplicitFeatureIdsAndSimpleProperty";
-testCase = "MultipleFeatureIdsAndProperties";
-//testCase = "TwoPrimitivesOnePropertyTable";
+//testCase = "next/ImplicitTilesetWithTileMetadata";
+//testCase = "next/TilesetWithExternalSchema";
+//testCase = "next/TilesetWithGroupMetadata";
+//testCase = "next/TilesetWithTileMetadata";
+//testCase = "next/TilesetWithTilesetMetadata";
+//testCase = "EXT_mesh_features/ExplicitFeatureIds";
+//testCase = "EXT_mesh_features/ExplicitFeatureIdsAndSimpleProperty";
+//testCase = "EXT_mesh_features/ImplicitFeatureIds";
+//testCase = "EXT_mesh_features/ImplicitFeatureIdsAndSimpleProperty";
+//testCase = "EXT_mesh_features/MultipleFeatureIdsAndProperties";
+//testCase = "EXT_mesh_features/TwoPrimitivesOnePropertyTable";
+testCase = "EXT_mesh_features/ComplexExample";
 
-
-// Create the tileset, and set its model matrix to move it
-// to a certain position on the globe
+// Create the tileset
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-    url : 'http://localhost:8003/tilesets/EXT_mesh_features/' + testCase + '/tileset.json',
+    url : 'http://localhost:8003/' + testCase + '/tileset.json',
     debugShowBoundingVolume: true
 }));
-tileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
-  Cesium.Cartesian3.fromDegrees(-75.1596759, 39.9509025, 0));
+
+// For EXT_mesh_features examples: Move the tileset to a 
+// certain position on the globe
+if (testCase.startsWith("EXT_mesh_features")) {
+  tileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
+    Cesium.Cartesian3.fromDegrees(-75.1596759, 39.9509025, 0));
+}
+
 viewer.zoomTo(tileset);
 
 // Create the label that will display metadata information
@@ -28,33 +38,152 @@ var labelEntity = viewer.entities.add({
     showBackground: true,
     font: "14px monospace",
     horizontalOrigin: Cesium.HorizontalOrigin.LEFT,
-    verticalOrigin: Cesium.VerticalOrigin.TOP,
-    pixelOffset: new Cesium.Cartesian2(15, 0),
+    verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+    pixelOffset: new Cesium.Cartesian2(10, -10),
+    // Workaround to always render label on top:
+    disableDepthTestDistance: Number.POSITIVE_INFINITY,
   },
 });
 
-// The function that receives the picked Cesium3DTileFeature,
-// and updates the label entity text with information about
-// the metadata of this feature
-var updateLabelForFeature = function(feature) {
-  var propertyNames = feature.getPropertyNames();
-  if (Cesium.defined(propertyNames)) {
-    for (var i=0; i<propertyNames.length; i++) {
-      if (i > 0)
-      {
-        labelEntity.label.text += "\u000A";
-      }
-      var propertyName = propertyNames[i];
-      var propertyValue = feature.getProperty(propertyName);          
-      labelEntity.label.text += propertyName + ": "+ propertyValue;
-      //console.log("propertyValue", propertyValue);
-    }
+// Returns an array of strings that each can be used for calling
+// 'getProperty' on the given object. This is the result of 
+// calling 'getPropertyIds' or 'getPropertyNames' on the 
+// given object, if either of these functions exist. 
+// Otherwise, returns an empty array.
+var getPropertyKeys = function(metadata) {
+  if (typeof(metadata.getPropertyIds) === "function") {
+    return metadata.getPropertyIds();
   }
+  if (typeof(metadata.getPropertyNames) === "function") {
+    return metadata.getPropertyNames();
+  }
+  return [];
+};
+
+// Adds metadata information to the label, with 
+// the given title indicating which granularity
+// of metadata this is. The given metadata object
+// can be a TilesetMetadata, TileMetadata, 
+// ImplicitTileMetadata, or GroupMetadata.
+// It's all just metadata, eventually...
+var addMetadataToLabel = function(title, metadata) {
+  if (!Cesium.defined(metadata)) {
+    labelEntity.label.text += "(No " + title + ")\n";
+    return;
+  }
+  var propertyKeys = getPropertyKeys(metadata);
+  if (!Cesium.defined(propertyKeys)) {
+    labelEntity.label.text += "(No properties for " + title + ")\n";
+  }
+  labelEntity.label.text += title + ":\n";
+  for (var i=0; i<propertyKeys.length; i++) {
+    var propertyKey = propertyKeys[i];
+    var propertyValue = metadata.getProperty(propertyKey);          
+    //console.log("propertyKey", propertyKey);
+    //console.log("propertyValue", propertyValue);
+    labelEntity.label.text += propertyKey + ": "+ propertyValue;
+    labelEntity.label.text += "\n";
+  }
+};
+
+// (NOTE: The way how metadata is obtained may be refactored,
+// see https://github.com/CesiumGS/cesium/issues/10015 )
+
+// Given an object that was obtained via Scene#pick, examine it 
+// to see whether it contains tile metadata.
+// If the object contains TileMetadata or ImplicitTileMetadata, 
+// then this metadata is returned. 
+// Otherwise, 'undefined' is returned.
+var obtainTileMetadata = function(picked) {
+  if (!Cesium.defined(picked)) {
+    return undefined;
+  }
+  if (!Cesium.defined(picked.content)) {
+    return undefined;
+  }
+  if (!Cesium.defined(picked.content.tile)) {
+    return undefined;
+  }
+  if (!Cesium.defined(picked.content.tile.metadata)) {
+    return undefined;
+  }
+  var metadata = picked.content.tile.metadata;
+  var isTileMetadata = metadata instanceof Cesium.TileMetadata;
+  var isImplicitTileMetadata = metadata instanceof Cesium.ImplicitTileMetadata;
+  if (!isTileMetadata && !isImplicitTileMetadata) {
+    return undefined;
+  }
+  return metadata;
+};
+
+// Given an object that was obtained via Scene#pick, examine it 
+// to see whether it contains tileset metadata.
+// If the object contains TilesetMetadata, then this metadata 
+// is returned. 
+// Otherwise, 'undefined' is returned.
+var obtainTilesetMetadata = function(picked) {
+  if (!Cesium.defined(picked)) {
+    return undefined;
+  }
+  if (!Cesium.defined(picked.content)) {
+    return undefined;
+  }
+  if (!Cesium.defined(picked.content.tileset)) {
+    return undefined;
+  }
+  if (!Cesium.defined(picked.content.tileset.metadata)) {
+    return undefined;
+  }
+  var metadata = picked.content.tileset.metadata.tileset;
+  var isTilesetMetadata = metadata instanceof Cesium.TilesetMetadata;
+  if (!isTilesetMetadata) {
+    return undefined;
+  }
+  return metadata;
+};
+
+// Given an object that was obtained via Scene#pick, examine it 
+// to see whether it contains group metadata.
+// If the object contains GroupMetadata, then this metadata 
+// is returned. 
+// Otherwise, 'undefined' is returned.
+var obtainGroupMetadata = function(picked) {
+  if (!Cesium.defined(picked)) {
+    return undefined;
+  }
+  if (!Cesium.defined(picked.content)) {
+    return undefined;
+  }
+  if (!Cesium.defined(picked.content.groupMetadata)) {
+    return undefined;
+  }
+  var metadata = picked.content.groupMetadata;
+  var isGroupMetadata = metadata instanceof Cesium.GroupMetadata;
+  if (!isGroupMetadata) {
+    return undefined;
+  }
+  return metadata;
+};
+
+// Given an object that was obtained via Scene#pick, examine it 
+// to see whether it contains feature metadata.
+// If the object is a Cesium3DTileFeature, then it is returned.
+// Otherwise, 'undefined' is returned.
+var obtainFeatureMetadata = function(picked) {
+  if (!Cesium.defined(picked)) {
+    return undefined;
+  }
+  var metadata = picked;
+  var isFeatureMetadata = metadata instanceof Cesium.Cesium3DTileFeature;
+  if (!isFeatureMetadata) {
+    return undefined;
+  }
+  return metadata;
 };
 
 // Install the handler that will perform picking when the 
 // mouse is moved, and update the label entity when the 
-// mouse is over a Cesium3DTileFeature
+// mouse is over something that contains metadata.
 var handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
 handler.setInputAction(function (movement) {
   labelEntity.label.text = "";
@@ -62,14 +191,46 @@ handler.setInputAction(function (movement) {
   
   console.log("picked ", picked);
   
-  if (!Cesium.defined(picked)) {
-    return;
-  }
+  picked._content._model._featureIdIndex = 1;
+  picked._content._model._featureTableId = 1;
+  
+  //debugger;
+  
+  var tilesetMetadata = obtainTilesetMetadata(picked);
+  addMetadataToLabel("Tileset metadata", tilesetMetadata);
+
+  var tileMetadata = obtainTileMetadata(picked);
+  addMetadataToLabel("Tile metadata", tileMetadata);
+  
+  var groupMetadata = obtainGroupMetadata(picked);
+  addMetadataToLabel("Group metadata", groupMetadata);
+  
+  var featureMetadata = obtainFeatureMetadata(picked);
+  addMetadataToLabel("Feature metadata", featureMetadata);
+  
   var cartesian = viewer.scene.pickPosition(movement.endPosition);
   labelEntity.position = cartesian;  
-  if (!(picked instanceof Cesium.Cesium3DTileFeature)) {
-    return;
-  }
-  updateLabelForFeature(picked);
+  
 }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+
+
+// TODO Preliminary/experimental selection of feature ID index
+var options = [
+  {
+    text: "FEATURE_ID_0",
+    onselect: function () {
+      tileset.featureIdIndex = 0;
+    },
+  },
+  {
+    text: "FEATURE_ID_1",
+    onselect: function () {
+      tileset.featureIdIndex = 1;
+    },
+  },
+];
+
+Sandcastle.addToolbarMenu(options);
+
+
 
