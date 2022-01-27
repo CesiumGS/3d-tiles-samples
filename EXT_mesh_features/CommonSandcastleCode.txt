@@ -15,7 +15,12 @@ var testCase = "";
 //testCase = "EXT_mesh_features/ImplicitFeatureIdsAndSimpleProperty";
 //testCase = "EXT_mesh_features/MultipleFeatureIdsAndProperties";
 //testCase = "EXT_mesh_features/TwoPrimitivesOnePropertyTable";
-testCase = "EXT_mesh_features/ComplexExample";
+//testCase = "EXT_mesh_features/SimpleFeatureIdTexture";
+//testCase = "EXT_mesh_features/ComplexExample";
+testCase = "SampleData/Cesium3DTiles/PointCloud/PointCloudBatched";
+//testCase = "SampleData/Cesium3DTiles/Instanced/InstancedWithBatchTable";
+//testCase = "SampleData/Cesium3DTiles/Batched/BatchedWithBatchTable";
+
 
 // Create the tileset
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
@@ -200,9 +205,16 @@ handler.setInputAction(function (movement) {
   
   var groupMetadata = obtainGroupMetadata(picked);
   addMetadataToLabel("Group metadata", groupMetadata);
-  
+
   var featureMetadata = obtainFeatureMetadata(picked);
-  addMetadataToLabel("Feature metadata", featureMetadata);
+  var featureMetadataTitle = "Feature metadata";
+  // TODO This could/should show the feature ID, even when
+  // no metadata is associated with this ID...
+  if (Cesium.defined(featureMetadata) &&
+      picked instanceof Cesium.Cesium3DTileFeature) {
+    featureMetadataTitle += " for feature ID " + picked.featureId;
+  }
+  addMetadataToLabel(featureMetadataTitle, featureMetadata);
   
   var cartesian = viewer.scene.pickPosition(movement.endPosition);
   labelEntity.position = cartesian;  
