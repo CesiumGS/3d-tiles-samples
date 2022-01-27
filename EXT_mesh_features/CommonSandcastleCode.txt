@@ -190,10 +190,6 @@ handler.setInputAction(function (movement) {
   var picked = viewer.scene.pick(movement.endPosition);
   
   console.log("picked ", picked);
-  
-  picked._content._model._featureIdIndex = 1;
-  picked._content._model._featureTableId = 1;
-  
   //debugger;
   
   var tilesetMetadata = obtainTilesetMetadata(picked);
