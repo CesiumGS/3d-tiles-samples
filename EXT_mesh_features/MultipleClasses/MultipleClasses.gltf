@@ -7,17 +7,15 @@
             "name" : "Example metadata class A",
             "description" : "First example metadata class",
             "properties" : {
-              "example_VEC3_FLOAT32" : {
-                "name" : "Example VEC3 FLOAT32 property",
-                "description" : "An example property, with type VEC3, with component type FLOAT32",
-                "type" : "VEC3",
+              "example_FLOAT32" : {
+                "name" : "Example FLOAT32 property",
+                "description" : "An example property, with component type FLOAT32",
                 "componentType" : "FLOAT32"
               },
-              "example_STRING" : {
-                "name" : "Example STRING property",
-                "description" : "An example property, with component type STRING",
-                "type" : "SINGLE",
-                "componentType" : "STRING"
+              "example_INT64" : {
+                "name" : "Example INT64 property",
+                "description" : "An example property, with component type INT64",
+                "componentType" : "INT64"
               }
             }
           },
@@ -25,20 +23,15 @@
             "name" : "Example metadata class B",
             "description" : "Second example metadata class",
             "properties" : {
-              "example_variable_length_ARRAY_normalized_UINT8" : {
-                "name" : "Example variable-length ARRAY normalized INT8 property",
-                "description" : "An example property, with type ARRAY, with component type UINT8, normalized, and variable length ",
-                "type" : "ARRAY",
-                "componentType" : "UINT8",
-                "normalized" : true
+              "example_UINT16" : {
+                "name" : "Example UINT16 property",
+                "description" : "An example property, with component type UINT16",
+                "componentType" : "UINT16"
               },
-              "example_fixed_length_ARRAY_ENUM" : {
-                "name" : "Example fixed-length ARRAY ENUM property",
-                "description" : "An example property, with type ARRAY, with component type ENUM, enum type exampleEnumType, and fixed length ",
-                "type" : "ARRAY",
-                "enumType" : "exampleEnumType",
-                "componentType" : "ENUM",
-                "componentCount" : 2
+              "example_FLOAT64" : {
+                "name" : "Example FLOAT64 property",
+                "description" : "An example property, with component type FLOAT64",
+                "componentType" : "FLOAT64"
               }
             }
           }
@@ -59,30 +52,27 @@
         }
       },
       "propertyTables" : [ {
-        "name" : "Example property table",
+        "name" : "First example property table",
         "class" : "exampleMetadataClassA",
         "count" : 4,
         "properties" : {
-          "example_VEC3_FLOAT32" : {
+          "example_FLOAT32" : {
             "bufferView" : 4
           },
-          "example_STRING" : {
-            "bufferView" : 5,
-            "stringOffsetBufferView" : 6
+          "example_INT64" : {
+            "bufferView" : 5
           }
         }
       }, {
-        "name" : "Example property table",
+        "name" : "Second example property table",
         "class" : "exampleMetadataClassB",
         "count" : 4,
         "properties" : {
-          "example_variable_length_ARRAY_normalized_UINT8" : {
-            "bufferView" : 7,
-            "arrayOffsetBufferView" : 8
+          "example_UINT16" : {
+            "bufferView" : 6
           },
-          "example_fixed_length_ARRAY_ENUM" : {
-            "bufferView" : 9,
-            "arrayOffsetBufferView" : 10
+          "example_FLOAT64" : {
+            "bufferView" : 7
           }
         }
       } ]
@@ -130,11 +120,11 @@
     "uri" : "data:application/gltf-buffer;base64,AAABAAIAAQADAAIABAAFAAYABQAHAAYACAAJAAoACQALAAoADAANAA4ADQAPAA4AAAAAAAAAAAAAAAAAZmbmPgAAAAAAAAAAAAAAAGZm5j4AAAAAZmbmPmZm5j4AAAAAzcwMPwAAAAAAAAAAAACAPwAAAAAAAAAAzcwMP2Zm5j4AAAAAAACAP2Zm5j4AAAAAAAAAAM3MDD8AAAAAZmbmPs3MDD8AAAAAAAAAAAAAgD8AAAAAZmbmPgAAgD8AAAAAzcwMP83MDD8AAAAAAACAP83MDD8AAAAAzcwMPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AwAAAAMAAAADAAAAAwAAAAIAAAACAAAAAgAAAAIAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA==",
     "byteLength" : 496
   }, {
-    "uri" : "data:application/gltf-buffer;base64,AAAAAM3MzD3NzEw+AACAP83MjD+amZk/AAAAQGZmBkDNzAxAAABAQGZmRkDNzExAUmFpbiDwn4ynVGh1bmRlciDim4hTdW4g4piAU25vdyDwn4yoAAAAAAkAAAAUAAAAGwAAACQAAAA=",
-    "byteLength" : 104
+    "uri" : "data:application/gltf-buffer;base64,zcyMP83MDEAzM1NAzcyMQIfWEgAAAAAAzsojAAAAAAAVvzQAAAAAAFKzRQAAAAAA",
+    "byteLength" : 48
   }, {
-    "uri" : "data:application/gltf-buffer;base64,AP8AgP8AVar/AECAwP8AAAAAAAACAAAABQAAAAkAAAAOAAAAAAABAAEAAgAAAAAAAQACAAAAAAACAAAABAAAAAYAAAAIAAAA",
-    "byteLength" : 72
+    "uri" : "data:application/gltf-buffer;base64,ECcgTjB1QJyHiJtTycDzP9GSx9PywwJAX2HB/YCnC0Da5sb0hEUSQA==",
+    "byteLength" : 40
   } ],
   "bufferViews" : [ {
     "buffer" : 0,
@@ -160,31 +150,19 @@
   }, {
     "buffer" : 1,
     "byteOffset" : 0,
-    "byteLength" : 48
+    "byteLength" : 16
   }, {
     "buffer" : 1,
-    "byteOffset" : 48,
-    "byteLength" : 36
-  }, {
-    "buffer" : 1,
-    "byteOffset" : 84,
-    "byteLength" : 20
+    "byteOffset" : 16,
+    "byteLength" : 32
   }, {
     "buffer" : 2,
     "byteOffset" : 0,
-    "byteLength" : 14
+    "byteLength" : 8
   }, {
     "buffer" : 2,
-    "byteOffset" : 16,
-    "byteLength" : 20
-  }, {
-    "buffer" : 2,
-    "byteOffset" : 36,
-    "byteLength" : 16
-  }, {
-    "buffer" : 2,
-    "byteOffset" : 52,
-    "byteLength" : 20
+    "byteOffset" : 8,
+    "byteLength" : 32
   } ],
   "materials" : [ {
     "pbrMetallicRoughness" : {

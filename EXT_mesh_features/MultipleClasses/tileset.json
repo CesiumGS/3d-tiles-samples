@@ -5,7 +5,7 @@
   "geometricError" : 2.0,
   "root" : {
     "content" : {
-      "uri" : "ComplexExample.gltf"
+      "uri" : "MultipleClasses.gltf"
     },
     "boundingVolume" : {
       "box" : [ 

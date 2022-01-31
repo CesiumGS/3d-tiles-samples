@@ -16,8 +16,10 @@ var testCase = "";
 //testCase = "EXT_mesh_features/MultipleFeatureIdsAndProperties";
 //testCase = "EXT_mesh_features/TwoPrimitivesOnePropertyTable";
 //testCase = "EXT_mesh_features/SimpleFeatureIdTexture";
-//testCase = "EXT_mesh_features/ComplexExample";
-testCase = "SampleData/Cesium3DTiles/PointCloud/PointCloudBatched";
+//testCase = "EXT_mesh_features/SimplePropertyTexture";
+//testCase = "EXT_mesh_features/ComplexTypes";
+testCase = "EXT_mesh_features/MultipleClasses";
+//testCase = "SampleData/Cesium3DTiles/PointCloud/PointCloudBatched";
 //testCase = "SampleData/Cesium3DTiles/Instanced/InstancedWithBatchTable";
 //testCase = "SampleData/Cesium3DTiles/Batched/BatchedWithBatchTable";
 
@@ -196,7 +198,7 @@ handler.setInputAction(function (movement) {
   
   console.log("picked ", picked);
   //debugger;
-  
+/*  
   var tilesetMetadata = obtainTilesetMetadata(picked);
   addMetadataToLabel("Tileset metadata", tilesetMetadata);
 
@@ -205,7 +207,7 @@ handler.setInputAction(function (movement) {
   
   var groupMetadata = obtainGroupMetadata(picked);
   addMetadataToLabel("Group metadata", groupMetadata);
-
+*/
   var featureMetadata = obtainFeatureMetadata(picked);
   var featureMetadataTitle = "Feature metadata";
   // TODO This could/should show the feature ID, even when

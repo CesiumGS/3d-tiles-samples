@@ -1,12 +1,12 @@
-# Explicit Feature IDs and Simple Property
+# Implicit Feature IDs and Simple Property
 
 This sample demonstrates usage of the [`EXT_mesh_features`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features) extension for storing feature IDs and properties associated with vertices of a mesh.
 
 ### Feature IDs
 
-The basic structure and definition of the feature IDs for this example is the same as for the [ExplicitFeatureIds](../ExplicitFeatureIds#feature-ids) example.
+The basic structure and definition of the feature IDs for this example is the same as for the [ImplicitFeatureIds](../ImplicitFeatureIds#feature-ids) example.
 
-Additionally, this sample defines metadata that is associated with the feature IDs. The metadata in this example is the same as in the [ImplicitFeatureIdsAndSimpleProperty](../ImplicitFeatureIdsAndSimpleProperty/) example.
+Additionally, this sample defines metadata that is associated with the feature IDs. The metadata in this example is the same as in the [ExplicitFeatureIdsAndSimpleProperty](../ExplicitFeatureIdsAndSimpleProperty/) example.
 
 ### Metadata Structure
 
@@ -43,7 +43,7 @@ var viewer = new Cesium.Viewer('cesiumContainer');
 
 // Create the tileset
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-    url : 'http://localhost:8003/EXT_mesh_features/ExplicitFeatureIdsAndSimpleProperty/tileset.json',
+    url : 'http://localhost:8003/EXT_mesh_features/ImplicitFeatureIdsAndSimpleProperty/tileset.json',
     debugShowBoundingVolume: true
 }));
 

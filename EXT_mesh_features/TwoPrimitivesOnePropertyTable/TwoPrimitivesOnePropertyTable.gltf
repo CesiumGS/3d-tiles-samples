@@ -151,8 +151,7 @@
   }, {
     "buffer" : 1,
     "byteOffset" : 0,
-    "byteLength" : 48,
-    "target" : 34962
+    "byteLength" : 48
   } ],
   "materials" : [ {
     "pbrMetallicRoughness" : {
