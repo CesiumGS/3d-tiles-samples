@@ -3,41 +3,33 @@ Cesium.ExperimentalFeatures.enableModelExperimental = true;
 
 var viewer = new Cesium.Viewer('cesiumContainer');
 
-var testCase = "";
-//testCase = "next/ImplicitTilesetWithTileMetadata";
-//testCase = "next/TilesetWithExternalSchema";
-//testCase = "next/TilesetWithGroupMetadata";
-//testCase = "next/TilesetWithTileMetadata";
-//testCase = "next/TilesetWithTilesetMetadata";
-//testCase = "EXT_mesh_features/ExplicitFeatureIds";
-//testCase = "EXT_mesh_features/ExplicitFeatureIdsAndSimpleProperty";
-//testCase = "EXT_mesh_features/ImplicitFeatureIds";
-//testCase = "EXT_mesh_features/ImplicitFeatureIdsAndSimpleProperty";
-//testCase = "EXT_mesh_features/MultipleFeatureIdsAndProperties";
-//testCase = "EXT_mesh_features/TwoPrimitivesOnePropertyTable";
-//testCase = "EXT_mesh_features/SimpleFeatureIdTexture";
-//testCase = "EXT_mesh_features/SimplePropertyTexture";
-//testCase = "EXT_mesh_features/ComplexTypes";
-testCase = "EXT_mesh_features/MultipleClasses";
-//testCase = "SampleData/Cesium3DTiles/PointCloud/PointCloudBatched";
-//testCase = "SampleData/Cesium3DTiles/Instanced/InstancedWithBatchTable";
-//testCase = "SampleData/Cesium3DTiles/Batched/BatchedWithBatchTable";
+// Stores the tileset that is currently selected
+var currentTileset;
 
+// Stores the currently selected feature ID index, which
+// is the index of `FEATURE_ID_n`
+var currentActiveFeatureIdSetIndex = 0;
 
-// Create the tileset
-var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-    url : 'http://localhost:8003/' + testCase + '/tileset.json',
-    debugShowBoundingVolume: true
-}));
-
-// For EXT_mesh_features examples: Move the tileset to a 
-// certain position on the globe
-if (testCase.startsWith("EXT_mesh_features")) {
-  tileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
+// Creates the tileset for the sample with the given name.
+var createTileset = function(exampleName) {
+  if (Cesium.defined(currentTileset)) {
+    viewer.scene.primitives.remove(currentTileset);
+    currentTileset = undefined;
+  }
+  // Create the tileset, and move it to a certain position on the globe
+  currentTileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+      url : 'http://localhost:8003/EXT_mesh_features/'+exampleName+'/tileset.json',
+      debugShowBoundingVolume: true
+  }));
+  currentTileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
     Cesium.Cartesian3.fromDegrees(-75.1596759, 39.9509025, 0));
-}
+  viewer.zoomTo(currentTileset);
+  
+  // Make sure that picking refers to the FEATURE_ID index that
+  // is currently selected in the UI
+  currentTileset.featureIdIndex = currentActiveFeatureIdSetIndex;
+};
 
-viewer.zoomTo(tileset);
 
 // Create the label that will display metadata information
 var labelEntity = viewer.entities.add({
@@ -52,37 +44,21 @@ var labelEntity = viewer.entities.add({
   },
 });
 
-// Returns an array of strings that each can be used for calling
-// 'getProperty' on the given object. This is the result of 
-// calling 'getPropertyIds' or 'getPropertyNames' on the 
-// given object, if either of these functions exist. 
-// Otherwise, returns an empty array.
-var getPropertyKeys = function(metadata) {
-  if (typeof(metadata.getPropertyIds) === "function") {
-    return metadata.getPropertyIds();
-  }
-  if (typeof(metadata.getPropertyNames) === "function") {
-    return metadata.getPropertyNames();
-  }
-  return [];
-};
 
 // Adds metadata information to the label, with 
 // the given title indicating which granularity
 // of metadata this is. The given metadata object
-// can be a TilesetMetadata, TileMetadata, 
-// ImplicitTileMetadata, or GroupMetadata.
-// It's all just metadata, eventually...
-var addMetadataToLabel = function(title, metadata) {
+// must be a Cesium3DTileFeature
+var addFeatureMetadataToLabel = function(title, metadata) {
   if (!Cesium.defined(metadata)) {
     labelEntity.label.text += "(No " + title + ")\n";
     return;
   }
-  var propertyKeys = getPropertyKeys(metadata);
-  if (!Cesium.defined(propertyKeys)) {
-    labelEntity.label.text += "(No properties for " + title + ")\n";
-  }
-  labelEntity.label.text += title + ":\n";
+  var propertyKeys = metadata.getPropertyNames();
+  labelEntity.label.text += title + 
+    " for feature ID " + metadata.featureId + 
+    " (based on feature ID set " + currentTileset.featureIdIndex + ")" +
+    ":\n";
   for (var i=0; i<propertyKeys.length; i++) {
     var propertyKey = propertyKeys[i];
     var propertyValue = metadata.getProperty(propertyKey);          
@@ -93,88 +69,8 @@ var addMetadataToLabel = function(title, metadata) {
   }
 };
 
-// (NOTE: The way how metadata is obtained may be refactored,
-// see https://github.com/CesiumGS/cesium/issues/10015 )
-
-// Given an object that was obtained via Scene#pick, examine it 
-// to see whether it contains tile metadata.
-// If the object contains TileMetadata or ImplicitTileMetadata, 
-// then this metadata is returned. 
-// Otherwise, 'undefined' is returned.
-var obtainTileMetadata = function(picked) {
-  if (!Cesium.defined(picked)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.tile)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.tile.metadata)) {
-    return undefined;
-  }
-  var metadata = picked.content.tile.metadata;
-  var isTileMetadata = metadata instanceof Cesium.TileMetadata;
-  var isImplicitTileMetadata = metadata instanceof Cesium.ImplicitTileMetadata;
-  if (!isTileMetadata && !isImplicitTileMetadata) {
-    return undefined;
-  }
-  return metadata;
-};
-
-// Given an object that was obtained via Scene#pick, examine it 
-// to see whether it contains tileset metadata.
-// If the object contains TilesetMetadata, then this metadata 
-// is returned. 
-// Otherwise, 'undefined' is returned.
-var obtainTilesetMetadata = function(picked) {
-  if (!Cesium.defined(picked)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.tileset)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.tileset.metadata)) {
-    return undefined;
-  }
-  var metadata = picked.content.tileset.metadata.tileset;
-  var isTilesetMetadata = metadata instanceof Cesium.TilesetMetadata;
-  if (!isTilesetMetadata) {
-    return undefined;
-  }
-  return metadata;
-};
-
-// Given an object that was obtained via Scene#pick, examine it 
-// to see whether it contains group metadata.
-// If the object contains GroupMetadata, then this metadata 
-// is returned. 
-// Otherwise, 'undefined' is returned.
-var obtainGroupMetadata = function(picked) {
-  if (!Cesium.defined(picked)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.groupMetadata)) {
-    return undefined;
-  }
-  var metadata = picked.content.groupMetadata;
-  var isGroupMetadata = metadata instanceof Cesium.GroupMetadata;
-  if (!isGroupMetadata) {
-    return undefined;
-  }
-  return metadata;
-};
-
-// Given an object that was obtained via Scene#pick, examine it 
-// to see whether it contains feature metadata.
-// If the object is a Cesium3DTileFeature, then it is returned.
+// Given an object that was obtained via Scene#pick: If it is 
+// a Cesium3DTileFeature, then it is returned.
 // Otherwise, 'undefined' is returned.
 var obtainFeatureMetadata = function(picked) {
   if (!Cesium.defined(picked)) {
@@ -196,27 +92,11 @@ handler.setInputAction(function (movement) {
   labelEntity.label.text = "";
   var picked = viewer.scene.pick(movement.endPosition);
   
-  console.log("picked ", picked);
+  //console.log("picked ", picked);
   //debugger;
-/*  
-  var tilesetMetadata = obtainTilesetMetadata(picked);
-  addMetadataToLabel("Tileset metadata", tilesetMetadata);
 
-  var tileMetadata = obtainTileMetadata(picked);
-  addMetadataToLabel("Tile metadata", tileMetadata);
-  
-  var groupMetadata = obtainGroupMetadata(picked);
-  addMetadataToLabel("Group metadata", groupMetadata);
-*/
   var featureMetadata = obtainFeatureMetadata(picked);
-  var featureMetadataTitle = "Feature metadata";
-  // TODO This could/should show the feature ID, even when
-  // no metadata is associated with this ID...
-  if (Cesium.defined(featureMetadata) &&
-      picked instanceof Cesium.Cesium3DTileFeature) {
-    featureMetadataTitle += " for feature ID " + picked.featureId;
-  }
-  addMetadataToLabel(featureMetadataTitle, featureMetadata);
+  addFeatureMetadataToLabel("Feature metadata", featureMetadata);
   
   var cartesian = viewer.scene.pickPosition(movement.endPosition);
   labelEntity.position = cartesian;  
@@ -224,23 +104,103 @@ handler.setInputAction(function (movement) {
 }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 
 
-// TODO Preliminary/experimental selection of feature ID index
-var options = [
-  {
-    text: "FEATURE_ID_0",
-    onselect: function () {
-      tileset.featureIdIndex = 0;
-    },
-  },
-  {
-    text: "FEATURE_ID_1",
-    onselect: function () {
-      tileset.featureIdIndex = 1;
-    },
-  },
-];
 
-Sandcastle.addToolbarMenu(options);
+//============================================================================
+// Sandcastle UI setup:
+
+// Create a label that will show some information for
+// the currently selected example
+var infoTextDisplay = document.createElement("div");
+infoTextDisplay.style.background = "rgba(42, 42, 42, 0.7)";
+infoTextDisplay.style.padding = "5px 10px";
+infoTextDisplay.style.marginTop = "5px";
+var setInfoText = function(infoText) {
+  infoTextDisplay.textContent = infoText;
+};
+
+// Create one entry for the list of examples that can
+// be selected in the dropdown menu. Selecting one of
+// these will load the tileset for the sample with the
+// given name, and display the given info text in the
+// infoTexDisplay
+var createSampleOption = function(name, infoText) {
+  return {
+    text: name,
+    onselect: function () {
+      createTileset(name);
+      setInfoText(infoText);
+    },
+  };
+};
+
+// Create the list of available samples, and add them
+// to the sandcastle toolbar
+var sampleOptions = [
+  createSampleOption("ExplicitFeatureIds",
+    "Explicit feature IDs for the vertices, " +
+    "without associated properties"),
+  
+  createSampleOption("ExplicitFeatureIdsAndSimpleProperty",
+    "Explicit feature IDs for the vertices," +
+    "where each ID is associated with a 3D float vector property"),
+  
+  createSampleOption("ImplicitFeatureIds", 
+    "Implicit feature IDs for the vertices, " +
+    "without associated properties"),
+  
+  createSampleOption("ImplicitFeatureIdsAndSimpleProperty", 
+    "Implicit feature IDs for the vertices," +
+    "where each ID is associated with a 3D float vector property"),
+
+  createSampleOption("MultipleFeatureIdsAndProperties", 
+    "Multiple feature IDs that can be activated separately, " +
+    "and are associated with metadata containing multiple properties"),
+
+  createSampleOption("TwoPrimitivesOnePropertyTable", 
+    "Two mesh primitives that define feature IDs, where both refer " +
+    "to the same property table"),
+  
+  createSampleOption("MultipleClasses", 
+    "Multiple feature IDs that can be activated separately, " +
+    "and are associated with different metadata classes"),
+  
+  createSampleOption("ComplexTypes", 
+    "Features that contain properties with more complex types"),
+
+  createSampleOption("SimpleFeatureIdTexture", 
+    "Feature IDs that are defined using a feature ID texture, " + 
+    "and associated with example metadata stored in a property table"),
+  
+  createSampleOption("SimplePropertyTexture", 
+    "Properties that are stored in a texture, without feature IDs"),
+  
+];
+Sandcastle.addToolbarMenu(sampleOptions);
+
+// Creates an option for selecting the active feature ID set
+// with the given index
+var createFeatureIdSetOption = function(index) {
+  return {
+    text: 'Active feature ID set: FEATURE_ID_' + index,
+    onselect: function () {
+      currentActiveFeatureIdSetIndex = index;
+      currentTileset.featureIdIndex = index;
+    },
+  };
+};
+
+// Create the list of available feature ID sets, and add them
+// to the sandcastle toolbar
+var featureIdSetOptions = [
+  createFeatureIdSetOption(0),
+  createFeatureIdSetOption(1)
+];
+Sandcastle.addToolbarMenu(featureIdSetOptions);
+
+// Add the component that will dispplay the info text
+// to the sandcastle toolbar
+document.getElementById("toolbar").appendChild(infoTextDisplay);
+
 
 
 
