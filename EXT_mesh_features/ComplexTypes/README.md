@@ -63,7 +63,7 @@ Notes:
 
 ## Example Sandcastle
 
-(This will be added soon)
+This example can be viewn with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
 
 
 ## License

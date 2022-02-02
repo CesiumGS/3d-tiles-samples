@@ -4,7 +4,7 @@ This sample demonstrates usage of the [`EXT_mesh_features`](https://github.com/C
 
 The sample contains a glTF asset with two mesh primitives. Both mesh primitives have the same structure, which is shown in this image, including the vertex indices and the feature IDs of the vertices:
 
-![Image](screenshot/EXT_mesh_features-quads.png)
+![Image](../EXT_mesh_features-quads.png)
 
 ### Metadata Structure and Instances
 
@@ -12,7 +12,7 @@ The structure and instances of the metadata in this example are the same as in t
 
 ## Example Sandcastle
 
-(This will be added soon)
+This example can be viewn with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
 
 
 ## License

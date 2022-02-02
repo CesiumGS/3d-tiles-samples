@@ -56,9 +56,9 @@ Based on the type information from the metadata class, the contents of this buff
 ]
 ```
 
-## Example sandcastle
+## Example Sandcastle
 
-(This will be added soon)
+This example can be viewn with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
 
 
 ## License

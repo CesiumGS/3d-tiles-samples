@@ -17,13 +17,12 @@ In this example, with `offset=0` and `repeat=4`, the vertices of each quad recei
 
 The following image shows the mesh primitive with its vertices, their indices, and their feature IDs:
 
-![Image](screenshot/EXT_mesh_features-quads.png)
+![Image](../EXT_mesh_features-quads.png)
 
 
 ## Example Sandcastle
 
-(This will be added soon)
-
+This example can be viewn with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
 
 ## License
 

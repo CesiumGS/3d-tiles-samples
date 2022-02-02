@@ -12,12 +12,12 @@ The mesh primitive contains a `FEATURE_ID_0` attribute. This attribute refers to
 
 The following image shows the mesh primitive with its vertices, their indices, and their feature IDs:
 
-![Image](screenshot/EXT_mesh_features-quads.png)
+![Image](../EXT_mesh_features-quads.png)
 
 
 ## Example Sandcastle
 
-(This will be added soon)
+This example can be viewn with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
 
 
 ## License
