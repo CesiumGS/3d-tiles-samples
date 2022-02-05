@@ -47,7 +47,8 @@ var createTileset = function(exampleName) {
   }));
   currentTileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
     Cesium.Cartesian3.fromDegrees(-75.1596759, 39.9509025, 0));
-  viewer.zoomTo(currentTileset);
+  var offset = new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-22.5), 4.0);
+  viewer.zoomTo(currentTileset, offset);
   
   // Make sure that picking refers to the FEATURE_ID index that
   // is currently selected in the UI
