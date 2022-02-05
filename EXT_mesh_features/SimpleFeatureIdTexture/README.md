@@ -37,12 +37,3 @@ This example can be viewed with the [common `EXT_mesh_features` sandcastle](../#
 ## License
 
 [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/)
-
-
-
-
-
-
-
-
-
