@@ -17,7 +17,7 @@ The following image shows the mesh primitive with its vertices, their indices, a
 
 ## Example Sandcastle
 
-This example can be viewn with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
+This example can be viewed with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
 
 
 ## License

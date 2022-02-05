@@ -31,7 +31,7 @@ The metadata in this example consists of a single example class inside an [`EXT_
 
 ## Example Sandcastle
 
-This example can be viewn with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
+This example can be viewed with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
 
 
 ## License

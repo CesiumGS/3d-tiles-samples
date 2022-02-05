@@ -12,7 +12,7 @@ The structure and instances of the metadata in this example are the same as in t
 
 ## Example Sandcastle
 
-This example can be viewn with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
+This example can be viewed with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
 
 
 ## License

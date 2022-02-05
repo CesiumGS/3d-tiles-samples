@@ -17,7 +17,7 @@ The following is a list of samples that present different features of the `EXT_m
 - [`SimplePropertyTexture`](SimplePropertyTexture): Properties that are stored in a texture, without feature IDs
 
 
-Each directory contains a dedicated `.gltf` file that contains the actual glTF asset. Additionally, each directory also contains a simple `tileset.json` file that is a [3D Tiles](https://github.com/CesiumGS/3d-tiles) tileset which just contains the respective glTF asset as its only content. These tilesets can be viewn in CesiumJS, by hosting the base directory of this repository on a local server, and using the following Cesium Sandcastle code:
+Each directory contains a dedicated `.gltf` file that contains the actual glTF asset. Additionally, each directory also contains a simple `tileset.json` file that is a [3D Tiles](https://github.com/CesiumGS/3d-tiles) tileset which just contains the respective glTF asset as its only content. These tilesets can be viewed in CesiumJS, by hosting the base directory of this repository on a local server, and using the following Cesium Sandcastle code:
 
 ## Common Sandcastle Code
 

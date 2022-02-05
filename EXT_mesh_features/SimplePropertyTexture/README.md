@@ -12,7 +12,7 @@ The values for the class properties are stored in a [property texture](https://g
 
 ## Example Sandcastle
 
-This example can be viewn with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
+This example can be viewed with the [common `EXT_mesh_features` sandcastle](../#common-sandcastle-code)
 
 
 ## License
