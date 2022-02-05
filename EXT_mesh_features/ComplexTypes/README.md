@@ -19,9 +19,9 @@ The structure of the metadata is defined with an [`EXT_mesh_features` schema](ht
 
 The latter refer to a simple example `ENUM` class that is also defined in the schema.
 
-### Metadata Instances
+### Metadata Entities
 
-The actual instances of this class, which are associated with the feature IDs, are defined with a [property table](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features#property-tables). The rows of this table correspond to the feature IDs. The columns of this table correspond to the properties of the class. The data for each column is stored in a standard glTF `bufferView`. 
+The metadata entities are the actual instances of this class. They are defined with a [property table](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features#property-tables). The rows of this table correspond to the feature IDs. The columns of this table correspond to the properties of the class. The data for each column is stored in a standard glTF `bufferView`. 
 
 Based on the type information from the metadata class, the contents of these buffer views is interpreted as follows:
 

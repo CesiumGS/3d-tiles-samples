@@ -6,9 +6,9 @@ The sample contains a glTF asset with two mesh primitives. Both mesh primitives 
 
 ![Image](../EXT_mesh_features-quads.png)
 
-### Metadata Structure and Instances
+### Metadata Structure and Entities
 
-The structure and instances of the metadata in this example are the same as in the [ExplicitFeatureIdsAndSimpleProperty](../ExplicitFeatureIdsAndSimpleProperty#metadata-structure) example. But in this case, the _single_ property table is associated with the feature IDs for _both_ mesh primitives, showing that it is possible to re-use properties across multiple primitives in a single glTF asset. 
+The structure and entities of the metadata in this example are the same as in the [ExplicitFeatureIdsAndSimpleProperty](../ExplicitFeatureIdsAndSimpleProperty#metadata-structure) example. But in this case, the _single_ property table is associated with the feature IDs for _both_ mesh primitives, showing that it is possible to re-use properties across multiple primitives in a single glTF asset. 
 
 ## Example Sandcastle
 

@@ -12,9 +12,9 @@ The example also defines a standard texture that is used for _rendering_ the qua
 
 ![Image](screenshot/featureIdTexture_documentation.png)
 
-### Metadata Structure and Instances
+### Metadata Structure and Entities
 
-The metadata in this example consists of a single example class inside an [`EXT_mesh_features` schema](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features#schema-definitions), where the instances are defined with a [property table](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features#property-tables). The class defines a `component` property that contains `STRING` elements indicating the component of the building, and a `yearBuilt` property that contains `INT16` elements, indicating the year when each component was built:
+The metadata in this example consists of a single example class inside an [`EXT_mesh_features` schema](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features#schema-definitions). The entities are the actual instances of this class, and are defined with a [property table](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features#property-tables). The class defines a `component` property that contains `STRING` elements indicating the component of the building, and a `yearBuilt` property that contains `INT16` elements, indicating the year when each component was built:
 
 ```JSON
 "component" : [ 
