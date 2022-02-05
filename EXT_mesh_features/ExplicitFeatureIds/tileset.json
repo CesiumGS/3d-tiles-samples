@@ -17,5 +17,10 @@
     "geometricError" : 1.0
   },
   "extensionsUsed" : [ "3DTILES_content_gltf" ],
-  "extensionsRequired" : [ "3DTILES_content_gltf" ]
+  "extensionsRequired" : [ "3DTILES_content_gltf" ],
+  "extensions": {
+    "3DTILES_content_gltf": {
+      "extensionsUsed": ["EXT_mesh_features"]
+    }
+  }
 }
