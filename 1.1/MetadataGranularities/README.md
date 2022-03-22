@@ -15,7 +15,6 @@ var viewer = new Cesium.Viewer('cesiumContainer');
 // to a certain position on the globe
 var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
     url : 'http://localhost:8003/1.1/MetadataGranularities/tileset.json',
-    maximumScreenSpaceError: 1,
     debugShowBoundingVolume: true
 }));
 tileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
