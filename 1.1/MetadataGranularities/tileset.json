@@ -76,14 +76,14 @@
     "class" : "exampleGroupMetadataClass",
     "properties" : {
       "color" : [ 64, 64, 255 ],
-      "priority" : "1"
+      "priority" : 1
     },
     "id" : "buildings"
   }, {
     "class" : "exampleGroupMetadataClass",
     "properties" : {
       "color" : [ 64, 255, 64 ],
-      "priority" : "2"
+      "priority" : 2
     },
     "id" : "trees"
   } ],
@@ -162,7 +162,7 @@
         "class" : "exampleTileMetadataClass",
         "properties" : {
           "district" : "Callowhill",
-          "population" : "12"
+          "population" : 12
         }
       }
     }, {
@@ -226,7 +226,7 @@
         "class" : "exampleTileMetadataClass",
         "properties" : {
           "district" : "Museum District",
-          "population" : "23"
+          "population" : 23
         }
       }
     }, {
@@ -290,7 +290,7 @@
         "class" : "exampleTileMetadataClass",
         "properties" : {
           "district" : "Old City",
-          "population" : "15"
+          "population" : 15
         }
       }
     }, {
@@ -354,7 +354,7 @@
         "class" : "exampleTileMetadataClass",
         "properties" : {
           "district" : "Market East",
-          "population" : "18"
+          "population" : 18
         }
       }
     } ]
