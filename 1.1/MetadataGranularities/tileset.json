@@ -1,0 +1,362 @@
+{
+  "asset" : {
+    "version" : "1.1"
+  },
+  "schema" : {
+    "classes" : {
+      "exampleTilesetMetadataClass" : {
+        "name" : "Example tileset metadata class",
+        "description" : "An example metadata class for a tileset",
+        "properties" : {
+          "author" : {
+            "description" : "The person or entity that made the tileset",
+            "type" : "STRING"
+          },
+          "date" : {
+            "description" : "Date of tileset creation in YYYY-MM-DD format",
+            "type" : "STRING"
+          },
+          "tileCount" : {
+            "description" : "Total number of tiles in the tileset",
+            "type" : "SCALAR",
+            "componentType" : "UINT8"
+          }
+        }
+      },
+      "exampleTileMetadataClass" : {
+        "name" : "Example tile metadata class",
+        "description" : "An example metadata class for a tile",
+        "properties" : {
+          "district" : {
+            "description" : "The district that the elements of this tile belong to",
+            "type" : "STRING"
+          },
+          "population" : {
+            "description" : "The population of the area covered by this tile",
+            "type" : "SCALAR",
+            "componentType" : "UINT32"
+          }
+        }
+      },
+      "exampleGroupMetadataClass" : {
+        "name" : "Example group metadata class",
+        "description" : "An example metadata class for tile content groups",
+        "properties" : {
+          "color" : {
+            "description" : "The color with which the group should be rendered",
+            "type" : "VEC3",
+            "componentType" : "UINT8"
+          },
+          "priority" : {
+            "description" : "A priority for rendering the group",
+            "type" : "SCALAR",
+            "componentType" : "UINT32"
+          }
+        }
+      },
+      "exampleContentMetadataClass" : {
+        "name" : "Example content metadata class",
+        "description" : "An example metadata class for tile content",
+        "properties" : {
+          "vertices" : {
+            "description" : "The number of vertices in the geometry",
+            "type" : "SCALAR",
+            "componentType" : "UINT32"
+          },
+          "materials" : {
+            "description" : "The number of materials in the geometry",
+            "type" : "SCALAR",
+            "componentType" : "UINT16"
+          }
+        }
+      }
+    }
+  },
+  "groups" : [ {
+    "class" : "exampleGroupMetadataClass",
+    "properties" : {
+      "color" : [ 64, 64, 255 ],
+      "priority" : "1"
+    },
+    "id" : "buildings"
+  }, {
+    "class" : "exampleGroupMetadataClass",
+    "properties" : {
+      "color" : [ 64, 255, 64 ],
+      "priority" : "2"
+    },
+    "id" : "trees"
+  } ],
+  "metadata" : {
+    "class" : "exampleTilesetMetadataClass",
+    "properties" : {
+      "author" : "Cesium",
+      "date" : "2022-03-21",
+      "tileCount" : 4
+    }
+  },
+  "geometricError" : 2.0,
+  "root" : {
+    "boundingVolume" : {
+      "box" : [ 0.2524109, 9.536743E-7, 4.5, 16.257824, 0.0, 0.0, 0.0, -19.717258, 0.0, 0.0, 0.0, 4.5 ]
+    },
+    "geometricError" : 1.0,
+    "children" : [ {
+      "boundingVolume" : {
+        "box" : [ -10.0, 12.988594, 4.0, 6.005413, 0.0, 0.0, 0.0, -6.2098656, 0.0, 0.0, 0.0, 4.0 ]
+      },
+      "geometricError" : 0.0,
+      "refine" : "REPLACE",
+      "contents" : [ {
+        "uri" : "house-3-0.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 1032,
+            "materials" : 5
+          }
+        },
+        "group" : 0
+      }, {
+        "uri" : "tree-spruce-0-0.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 675,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-spruce-0-1.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 675,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-spruce-0-2.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 675,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-spruce-0-3.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 675,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      } ],
+      "metadata" : {
+        "class" : "exampleTileMetadataClass",
+        "properties" : {
+          "district" : "Callowhill",
+          "population" : "12"
+        }
+      }
+    }, {
+      "boundingVolume" : {
+        "box" : [ -10.257616, -12.953957, 4.0, 5.544254, 0.0, 0.0, 0.0, -6.678105, 0.0, 0.0, 0.0, 4.0 ]
+      },
+      "geometricError" : 0.0,
+      "refine" : "REPLACE",
+      "contents" : [ {
+        "uri" : "house1-1.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 684,
+            "materials" : 5
+          }
+        },
+        "group" : 0
+      }, {
+        "uri" : "tree-beech-1-0.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 498,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-beech-1-1.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 498,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-beech-1-2.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 498,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-beech-1-3.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 498,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      } ],
+      "metadata" : {
+        "class" : "exampleTileMetadataClass",
+        "properties" : {
+          "district" : "Museum District",
+          "population" : "23"
+        }
+      }
+    }, {
+      "boundingVolume" : {
+        "box" : [ 10.253603, 12.995412, 3.0, 5.4854355, 0.0, 0.0, 0.0, -6.7218466, 0.0, 0.0, 0.0, 3.0 ]
+      },
+      "geometricError" : 0.0,
+      "refine" : "REPLACE",
+      "contents" : [ {
+        "uri" : "house-4-2.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 468,
+            "materials" : 5
+          }
+        },
+        "group" : 0
+      }, {
+        "uri" : "tree-lime-2-0.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 2757,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-lime-2-1.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 2757,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-lime-2-2.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 2757,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-lime-2-3.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 2757,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      } ],
+      "metadata" : {
+        "class" : "exampleTileMetadataClass",
+        "properties" : {
+          "district" : "Old City",
+          "population" : "15"
+        }
+      }
+    }, {
+      "boundingVolume" : {
+        "box" : [ 10.0, -12.972918, 4.5, 6.510235, 0.0, 0.0, 0.0, -6.7443395, 0.0, 0.0, 0.0, 4.5 ]
+      },
+      "geometricError" : 0.0,
+      "refine" : "REPLACE",
+      "contents" : [ {
+        "uri" : "house-5-3.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 1155,
+            "materials" : 5
+          }
+        },
+        "group" : 0
+      }, {
+        "uri" : "tree-lime-3-0.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 2757,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-lime-3-1.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 2757,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-lime-3-2.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 2757,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      }, {
+        "uri" : "tree-lime-3-3.glb",
+        "metadata" : {
+          "class" : "exampleContentMetadataClass",
+          "properties" : {
+            "vertices" : 2757,
+            "materials" : 1
+          }
+        },
+        "group" : 1
+      } ],
+      "metadata" : {
+        "class" : "exampleTileMetadataClass",
+        "properties" : {
+          "district" : "Market East",
+          "population" : "18"
+        }
+      }
+    } ]
+  }
+}
