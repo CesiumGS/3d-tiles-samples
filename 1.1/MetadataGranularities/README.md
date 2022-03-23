@@ -23,164 +23,75 @@ tileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
   Cesium.Cartesian3.fromDegrees(-75.152325, 39.94704, 0.0)
 );
 
-// Create the label that will display metadata information
-const labelEntity = viewer.entities.add({
-  label: {
-    showBackground: true,
-    font: "14px monospace",
-    horizontalOrigin: Cesium.HorizontalOrigin.LEFT,
-    verticalOrigin: Cesium.VerticalOrigin.TOP,
-    pixelOffset: new Cesium.Cartesian2(15, 0),
-    // Workaround to always render label on top:
-    disableDepthTestDistance: Number.POSITIVE_INFINITY,
-  },
-});
+// Create an HTML element that will serve as the
+// tooltip that displays the metadata information
+function createTooltip() {
+  const tooltip = document.createElement("div");
+  viewer.container.appendChild(tooltip);
+  tooltip.style.backgroundColor = "black";
+  tooltip.style.position = "absolute";
+  tooltip.style.left = "0";
+  tooltip.style.top = "0";
+  tooltip.style.padding = "14px";
+  tooltip.style["pointer-events"] = "none";
+  tooltip.style["block-size"] = "fit-content";
+  return tooltip;
+}
+const tooltip = createTooltip();
 
-// Adds metadata information to the label, with
-// the given title indicating which granularity
-// of metadata this is. The given metadata object
-// can be a TilesetMetadata, TileMetadata,
-// GroupMetadata, or ContentMetadata.
-const addMetadataToLabel = function (title, metadata) {
+// Show the given HTML content in the tooltip
+// at the given screen position
+function showTooltip(screenX, screenY, htmlContent) {
+  tooltip.style.display = "block";
+  tooltip.style.left = `${screenX}px`;
+  tooltip.style.top = `${screenY}px`;
+  tooltip.innerHTML = htmlContent;
+}
+
+// Create an HTML string that contains information
+// about the given metadata, under the given title
+function createMetadataHtml(title, metadata) {
   if (!Cesium.defined(metadata)) {
-    labelEntity.label.text += `(No ${title})\n`;
-    return;
+    return `(No ${title})<br>`;
   }
   const propertyKeys = metadata.getPropertyIds();
   if (!Cesium.defined(propertyKeys)) {
-    labelEntity.label.text += `(No properties for ${title})\n`;
+    return `(No properties for ${title})<br>`;
   }
-  labelEntity.label.text += `${title}:\n`;
-  for (var i = 0; i < propertyKeys.length; i++) {
+  var html = `<b>${title}:</b><br>`;
+  for (let i = 0; i < propertyKeys.length; i++) {
     const propertyKey = propertyKeys[i];
     const propertyValue = metadata.getProperty(propertyKey);
-    labelEntity.label.text += `  ${propertyKey} : ${propertyValue}\n`;
+    html += `&nbsp;&nbsp;${propertyKey} : ${propertyValue}<br>`;
   }
-};
-
-// (NOTE: The way how metadata is obtained may be refactored,
-// see https://github.com/CesiumGS/cesium/issues/10015 )
-
-// Given an object that was obtained via Scene#pick, examine it
-// to see whether it contains tile metadata.
-// If the object contains TileMetadata, then this metadata
-// is returned.
-// Otherwise, 'undefined' is returned.
-const obtainTileMetadata = function (picked) {
-  if (!Cesium.defined(picked)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.tile)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.tile.metadata)) {
-    return undefined;
-  }
-  const metadata = picked.content.tile.metadata;
-  const isTileMetadata = metadata instanceof Cesium.TileMetadata;
-  if (!isTileMetadata) {
-    return undefined;
-  }
-  return metadata;
-};
-
-// Given an object that was obtained via Scene#pick, examine it
-// to see whether it contains tileset metadata.
-// If the object contains TilesetMetadata, then this metadata
-// is returned.
-// Otherwise, 'undefined' is returned.
-const obtainTilesetMetadata = function (picked) {
-  if (!Cesium.defined(picked)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.tileset)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.tileset.metadata)) {
-    return undefined;
-  }
-  const metadata = picked.content.tileset.metadata.tileset;
-  const isTilesetMetadata = metadata instanceof Cesium.TilesetMetadata;
-  if (!isTilesetMetadata) {
-    return undefined;
-  }
-  return metadata;
-};
-
-// Given an object that was obtained via Scene#pick, examine it
-// to see whether it contains group metadata.
-// If the object contains GroupMetadata, then this metadata
-// is returned.
-// Otherwise, 'undefined' is returned.
-const obtainGroupMetadata = function (picked) {
-  if (!Cesium.defined(picked)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.groupMetadata)) {
-    return undefined;
-  }
-  const metadata = picked.content.groupMetadata;
-  const isGroupMetadata = metadata instanceof Cesium.GroupMetadata;
-  if (!isGroupMetadata) {
-    return undefined;
-  }
-  return metadata;
-};
-
-// Given an object that was obtained via Scene#pick, examine it
-// to see whether it contains content metadata.
-// If the object contains ContentMetadata, then this metadata
-// is returned.
-// Otherwise, 'undefined' is returned.
-const obtainContentMetadata = function (picked) {
-  if (!Cesium.defined(picked)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content)) {
-    return undefined;
-  }
-  if (!Cesium.defined(picked.content.metadata)) {
-    return undefined;
-  }
-  const metadata = picked.content.metadata;
-  const isContentMetadata = metadata instanceof Cesium.ContentMetadata;
-  if (!isContentMetadata) {
-    return undefined;
-  }
-  return metadata;
-};
+  return html;
+}
 
 // Install the handler that will check the element that is
 // under the mouse cursor when the mouse is moved, and
 // add any metadata that it contains to the label.
 const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
 handler.setInputAction(function (movement) {
-  labelEntity.label.text = "";
+  var tooltipText = "";
   const picked = viewer.scene.pick(movement.endPosition);
 
-  const tilesetMetadata = obtainTilesetMetadata(picked);
-  addMetadataToLabel("Tileset metadata", tilesetMetadata);
+  const tilesetMetadata = picked?.content?.tileset?.metadata?.tileset;
+  tooltipText += createMetadataHtml("Tileset metadata", tilesetMetadata);
 
-  const tileMetadata = obtainTileMetadata(picked);
-  addMetadataToLabel("Tile metadata", tileMetadata);
+  const tileMetadata = picked?.content?.tile?.metadata;
+  tooltipText += createMetadataHtml("Tile metadata", tileMetadata);
 
-  const groupMetadata = obtainGroupMetadata(picked);
-  addMetadataToLabel("Group metadata", groupMetadata);
+  const groupMetadata = picked?.content?.groupMetadata;
+  tooltipText += createMetadataHtml("Group metadata", groupMetadata);
 
-  const contentMetadata = obtainContentMetadata(picked);
-  addMetadataToLabel("Content metadata", contentMetadata);
+  const contentMetadata = picked?.content?.metadata;  
+  tooltipText += createMetadataHtml("Content metadata", contentMetadata);
 
-  const cartesian = viewer.scene.pickPosition(movement.endPosition);
-  labelEntity.position = cartesian;
+  const screenX = movement.endPosition.x;
+  const screenY = movement.endPosition.y;
+  showTooltip(screenX, screenY, tooltipText);
+  
+
 }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 
 // Zoom to the tileset, with a small offset so that it
