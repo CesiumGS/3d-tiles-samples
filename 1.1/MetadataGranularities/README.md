@@ -58,7 +58,7 @@ function createMetadataHtml(title, metadata) {
   if (!Cesium.defined(propertyKeys)) {
     return `(No properties for ${title})<br>`;
   }
-  var html = `<b>${title}:</b><br>`;
+  let html = `<b>${title}:</b><br>`;
   for (let i = 0; i < propertyKeys.length; i++) {
     const propertyKey = propertyKeys[i];
     const propertyValue = metadata.getProperty(propertyKey);
@@ -72,26 +72,24 @@ function createMetadataHtml(title, metadata) {
 // add any metadata that it contains to the label.
 const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
 handler.setInputAction(function (movement) {
-  var tooltipText = "";
+  let tooltipText = "";
   const picked = viewer.scene.pick(movement.endPosition);
 
-  const tilesetMetadata = picked?.content?.tileset?.metadata?.tileset;
+  const tilesetMetadata = picked?.content?.tileset?.metadata;
   tooltipText += createMetadataHtml("Tileset metadata", tilesetMetadata);
 
   const tileMetadata = picked?.content?.tile?.metadata;
   tooltipText += createMetadataHtml("Tile metadata", tileMetadata);
 
-  const groupMetadata = picked?.content?.groupMetadata;
+  const groupMetadata = picked?.content?.group?.metadata;
   tooltipText += createMetadataHtml("Group metadata", groupMetadata);
 
-  const contentMetadata = picked?.content?.metadata;  
+  const contentMetadata = picked?.content?.metadata;
   tooltipText += createMetadataHtml("Content metadata", contentMetadata);
 
   const screenX = movement.endPosition.x;
   const screenY = movement.endPosition.y;
   showTooltip(screenX, screenY, tooltipText);
-  
-
 }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 
 // Zoom to the tileset, with a small offset so that it
