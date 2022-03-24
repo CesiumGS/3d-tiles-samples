@@ -12,7 +12,5 @@
     "content" : {
       "uri" : "2_0_0-4_1_1.glb"
     }
-  },
-  "extensionsUsed" : [ "3DTILES_content_gltf" ],
-  "extensionsRequired" : [ "3DTILES_content_gltf" ]
+  }
 }

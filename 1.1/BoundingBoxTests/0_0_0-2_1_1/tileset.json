@@ -1,6 +1,6 @@
 {
   "asset" : {
-    "version" : "1.0"
+    "version" : "1.1"
   },
   "geometricError" : 1.0,
   "root" : {
@@ -12,7 +12,5 @@
     "content" : {
       "uri" : "0_0_0-2_1_1.glb"
     }
-  },
-  "extensionsUsed" : [ "3DTILES_content_gltf" ],
-  "extensionsRequired" : [ "3DTILES_content_gltf" ]
+  }
 }
