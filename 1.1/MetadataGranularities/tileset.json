@@ -101,12 +101,12 @@
       "box" : [ 0.2524109, 9.536743E-7, 4.5, 16.257824, 0.0, 0.0, 0.0, -19.717258, 0.0, 0.0, 0.0, 4.5 ]
     },
     "geometricError" : 512.0,
+    "refine" : "ADD",
     "children" : [ {
       "boundingVolume" : {
         "box" : [ -10.0, 12.988594, 4.0, 6.005413, 0.0, 0.0, 0.0, -6.2098656, 0.0, 0.0, 0.0, 4.0 ]
       },
       "geometricError" : 0.0,
-      "refine" : "REPLACE",
       "contents" : [ {
         "uri" : "house-3-0.glb",
         "metadata" : {
@@ -170,7 +170,6 @@
         "box" : [ -10.257616, -12.953957, 4.0, 5.544254, 0.0, 0.0, 0.0, -6.678105, 0.0, 0.0, 0.0, 4.0 ]
       },
       "geometricError" : 0.0,
-      "refine" : "REPLACE",
       "contents" : [ {
         "uri" : "house1-1.glb",
         "metadata" : {
@@ -234,7 +233,6 @@
         "box" : [ 10.253603, 12.995412, 3.0, 5.4854355, 0.0, 0.0, 0.0, -6.7218466, 0.0, 0.0, 0.0, 3.0 ]
       },
       "geometricError" : 0.0,
-      "refine" : "REPLACE",
       "contents" : [ {
         "uri" : "house-4-2.glb",
         "metadata" : {
@@ -298,7 +296,6 @@
         "box" : [ 10.0, -12.972918, 4.5, 6.510235, 0.0, 0.0, 0.0, -6.7443395, 0.0, 0.0, 0.0, 4.5 ]
       },
       "geometricError" : 0.0,
-      "refine" : "REPLACE",
       "contents" : [ {
         "uri" : "house-5-3.glb",
         "metadata" : {
