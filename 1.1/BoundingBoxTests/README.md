@@ -2,9 +2,11 @@
 
 Sample tilesets that embed single, simple glTF models into a tileset, and showing the appropriate tileset bounding volumes for the respective glTF bounding volumes.
 
+## Screenshot
+
 ![BoundingBoxTests](screenshot/BoundingBoxTests.gif)
 
-### Structure
+## Structure
 
 The directory contains six different tilesets, each with a single glTF asset. The assets and directories are named based on the bounding volumes of the models, given as the minimum- and maximum points:
 
@@ -15,7 +17,7 @@ The directory contains six different tilesets, each with a single glTF asset. Th
 - (0,2,0) - (1,4,1)
 - (2,0,0) - (4,1,1)
 
-### Conversion
+## Conversion
 
 The code for computing the tile- or tileset bounding volume from the mimimum- and maximum point of a glTF asset, taking into account the [y-up-to-z-up conversion](https://github.com/CesiumGS/3d-tiles/tree/main/specification#y-up-to-z-up), is shown here:
 
@@ -108,7 +110,7 @@ function createBoundingBoxFromGltf(
 ```
 
 
-### Sandcastle Code
+## Sandcastle Code
 
 The Sandcastle code that can be used to view the test cases:
 
