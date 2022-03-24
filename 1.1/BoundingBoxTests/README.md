@@ -1,6 +1,6 @@
 # Bounding Box Tests
 
-Sample tilesets that use the [`3DTILES_content_gltf`](https://github.com/CesiumGS/3d-tiles/tree/main/extensions/3DTILES_content_gltf) extension to embed single, simple glTF models into a tileset, and showing the appropriate tileset bounding volumes for the respective glTF bounding volumes.
+Sample tilesets that embed single, simple glTF models into a tileset, and showing the appropriate tileset bounding volumes for the respective glTF bounding volumes.
 
 ![BoundingBoxTests](screenshot/BoundingBoxTests.gif)
 
@@ -21,13 +21,13 @@ The code for computing the tile- or tileset bounding volume from the mimimum- an
 
 ```JavaScript
 /**
- * Creates a bounding box for a tileset- or tile bounding volume. 
+ * Creates a bounding box for a tileset- or tile bounding volume.
  *
- * This is the center- and half-axis representation of the 
- * `boundingVolume.box` that is described at 
+ * This is the center- and half-axis representation of the
+ * `boundingVolume.box` that is described at
  * https://github.com/CesiumGS/3d-tiles/tree/main/specification#box,
  * computed from the minimum- and maximum point of a box.
- * 
+ *
  * @param minX The minimum x
  * @param minY The minimum y
  * @param minZ The minimum z
@@ -36,10 +36,10 @@ The code for computing the tile- or tileset bounding volume from the mimimum- an
  * @param maxZ The maximum z
  * @return The `boundingVolume.box`
  */
-const createBoundingBox = function(
-  minX, minY, minZ,
-  maxX, maxY, maxZ)
-{
+function createBoundingBox(
+    minX, minY, minZ, 
+    maxX, maxY, maxZ) {
+
   // The size of the box
   const dx = maxX - minX;
   const dy = maxY - minY;
@@ -66,24 +66,22 @@ const createBoundingBox = function(
   const hzz = dz * 0.5;
 
   const box = [
-    cx, cy, cz,
-    hxx, hxy, hxz,
-    hyx, hyy, hyz,
-    hzx, hzy, hzz,
-  ];
+    cx, cy, cz, 
+    hxx, hxy, hxz, 
+    hyx, hyy, hyz, 
+    hzx, hzy, hzz];
   return box;
-};
-
+}
 
 /**
  * Creates a bounding box for a tileset- or tile bounding volume
  * from the minimum- and maximum point of a glTF asset.
  *
- * This is the center- and half-axis representation of the 
- * `boundingVolume.box` that is described at 
+ * This is the center- and half-axis representation of the
+ * `boundingVolume.box` that is described at
  * https://github.com/CesiumGS/3d-tiles/tree/main/specification#box,
  * computed from the minimum- and maximum point of a box.
- * 
+ *
  * @param minX The minimum x
  * @param minY The minimum y
  * @param minZ The minimum z
@@ -93,9 +91,9 @@ const createBoundingBox = function(
  * @return The `boundingVolume.box`
  */
 function createBoundingBoxFromGltf(
-  minX, minY, minZ,
-  maxX, maxY, maxZ)
-{
+    minX, minY, minZ, 
+    maxX, maxY, maxZ) {
+        
   // Take into account the y-up-to-z-up transform:
   const tMinX = minX;
   const tMinY = -minZ;
@@ -103,7 +101,9 @@ function createBoundingBoxFromGltf(
   const tMaxX = maxX;
   const tMaxY = -maxZ;
   const tMaxZ = maxY;
-  return createBoundingBox(tMinX, tMinY, tMinZ, tMaxX, tMaxY, tMaxZ);
+  return createBoundingBox(
+      tMinX, tMinY, tMinZ, 
+      tMaxX, tMaxY, tMaxZ);
 }
 ```
 
@@ -113,29 +113,34 @@ function createBoundingBoxFromGltf(
 The Sandcastle code that can be used to view the test cases:
 
 ```JavaScript
-var viewer = new Cesium.Viewer('cesiumContainer');
+const viewer = new Cesium.Viewer("cesiumContainer");
 
 // Stores the tileset that is currently selected
-var currentTileset;
+let currentTileset;
 
 // Creates the tileset for the sample with the given name.
-var createTileset = function(exampleName) {
+function createTileset(exampleName) {
   if (Cesium.defined(currentTileset)) {
     viewer.scene.primitives.remove(currentTileset);
     currentTileset = undefined;
   }
   // Create the tileset, and move it to a certain position on the globe
-  currentTileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-      url : 'http://localhost:8003/next/BoundingBoxTests/'+exampleName+'/tileset.json',
-      debugShowBoundingVolume: true
-  }));
+  currentTileset = viewer.scene.primitives.add(
+    new Cesium.Cesium3DTileset({
+      url: `http://localhost:8003/1.1/BoundingBoxTests/${exampleName}/tileset.json`,
+      debugShowBoundingVolume: true,
+    })
+  );
   currentTileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
-    Cesium.Cartesian3.fromDegrees(-75.152325, 39.94704, 0));
-  var offset = new Cesium.HeadingPitchRange(
-    Cesium.Math.toRadians(-22.5), 
-    Cesium.Math.toRadians(-22.5), 12.0);
+    Cesium.Cartesian3.fromDegrees(-75.152325, 39.94704, 0)
+  );
+  const offset = new Cesium.HeadingPitchRange(
+    Cesium.Math.toRadians(-22.5),
+    Cesium.Math.toRadians(-22.5),
+    12.0
+  );
   viewer.zoomTo(currentTileset, offset);
-};
+}
 
 //============================================================================
 // Sandcastle UI setup:
@@ -145,18 +150,18 @@ var createTileset = function(exampleName) {
 // these will load the tileset for the sample with the
 // given name, and display the given info text in the
 // infoTexDisplay
-var createSampleOption = function(name, infoText) {
+function createSampleOption(name, infoText) {
   return {
     text: name,
     onselect: function () {
       createTileset(name);
     },
   };
-};
+}
 
 // Create the list of available samples, and add them
 // to the sandcastle toolbar
-var sampleOptions = [
+const sampleOptions = [
   createSampleOption("0_0_0-1_1_2", "0_0_0-1_1_2"),
   createSampleOption("0_0_0-1_2_1", "0_0_0-1_2_1"),
   createSampleOption("0_0_0-2_1_1", "0_0_0-2_1_1"),
