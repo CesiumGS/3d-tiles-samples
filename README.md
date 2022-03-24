@@ -18,7 +18,6 @@ Sample tilesets for learning how to use [3D Tiles](https://github.com/CesiumGS/3
 | Tileset | Screenshot |
 | - | - |
 | [TilesetWithDiscreteLOD](1.0/TilesetWithDiscreteLOD) | <img src="1.0/TilesetWithDiscreteLOD/screenshot/screenshot.gif" width="300"> |
-| [TilesetWithExpiration](1.0/TilesetWithExpiration) | <img src="1.0/TilesetWithExpiration/screenshot/screenshot.gif" width="300"> |
 | [TilesetWithRequestVolume](1.0/TilesetWithRequestVolume) | <img src="1.0/TilesetWithRequestVolume/screenshot/screenshot.gif" width="300"> |
 | [TilesetWithTreeBillboards](1.0/TilesetWithTreeBillboards) | <img src="1.0/TilesetWithTreeBillboards/screenshot/screenshot.gif" width="300"> |
 
