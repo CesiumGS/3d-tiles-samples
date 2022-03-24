@@ -5,6 +5,8 @@
 
 Sample tilesets for learning how to use [3D Tiles](https://github.com/CesiumGS/3d-tiles).
 
+See [INSTRUCTIONS.md](INSTRUCTIONS.md) for details of how to host these examples with a local sever.
+
 ### 3D Tiles 1.1
 
 | Tileset | Screenshot |
