@@ -77,15 +77,13 @@
     "properties" : {
       "color" : [ 64, 64, 255 ],
       "priority" : 1
-    },
-    "id" : "buildings"
+    }
   }, {
     "class" : "exampleGroupMetadataClass",
     "properties" : {
       "color" : [ 64, 255, 64 ],
       "priority" : 2
-    },
-    "id" : "trees"
+    }
   } ],
   "metadata" : {
     "class" : "exampleTilesetMetadataClass",
