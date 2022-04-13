@@ -172,6 +172,12 @@ const sampleOptions = [
     "Feature IDs for vertices, based on a feature ID texture, and a simple property table containing metadata"
   ),
   
+  createSampleOption(
+    "MultipleFeatureIdsAndProperties",
+    "glTF/EXT_structural_metadata/MultipleFeatureIdsAndProperties",
+    "A mesh primitive with two sets of feature IDs, each associated with metadata with multiple properties"
+  ),
+  
 ];
 Sandcastle.addToolbarMenu(sampleOptions);
 

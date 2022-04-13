@@ -12,7 +12,7 @@ Additionally, this sample defines metadata that is associated with the feature I
 
 ### Metadata Structure and Entities
 
-The metadata in this example consists of a single example class inside an [`EXT_structural_metadata` schema](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata#schema-definitions). The entities are the actual instances of this class, and are defined with a [property table](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata#property-tables). The class defines a `component` property that contains `STRING` elements indicating the component of the building, and a `yearBuilt` property that contains `INT16` elements, indicating the year when each component was built:
+The metadata in this example consists of a single example class inside an [`EXT_structural_metadata` schema](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata/README.MD#schema-definitions). The entities are the actual instances of this class, and are defined with a [property table](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata/README.MD#property-tables). The class defines a `component` property that contains `STRING` elements indicating the component of the building, and a `yearBuilt` property that contains `INT16` elements, indicating the year when each component was built:
 
 ```JSON
 "component" : [ 
