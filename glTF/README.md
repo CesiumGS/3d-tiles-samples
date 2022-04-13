@@ -13,11 +13,11 @@ The [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-n
 - [`FeatureIdTextureAndPropertyTable`](EXT_structural_metadata/FeatureIdTextureAndPropertyTable): Feature IDs for the texels, defined with a feature ID texture, where each ID is associated with a 3D float vector property using a property table
 - [`MultipleFeatureIdsAndProperties`](EXT_structural_metadata/MultipleFeatureIdsAndProperties): Multiple feature IDs that can be activated separately, and are associated with metadata containing multiple properties
 - [`TwoPrimitivesOnePropertyTable`](EXT_structural_metadata/TwoPrimitivesOnePropertyTable): Two mesh primitives that define feature IDs, where both refer to the same property table
+- [`MultipleClasses`](MultipleClasses): Multiple feature IDs that can be activated separately, and are associated with different metadata classes
+- [`ComplexTypes`](ComplexTypes): Features that contain properties with more complex types
 
 **TODO**: This is the old list
 
-> - [`MultipleClasses`](MultipleClasses): Multiple feature IDs that can be activated separately, and are associated with different metadata classes
-> - [`ComplexTypes`](ComplexTypes): Features that contain properties with more complex types
 > - [`SimplePropertyTexture`](SimplePropertyTexture): Properties that are stored in a texture, without feature IDs
 
 Each directory contains a dedicated `.gltf` file that contains the actual glTF asset. Additionally, each directory also contains a simple `tileset.json` file that is a [3D Tiles](https://github.com/CesiumGS/3d-tiles) tileset which just contains the respective glTF asset as its only content. These tilesets can be viewed in CesiumJS, by hosting the base directory of this repository on a local server, and using the following Cesium Sandcastle code:

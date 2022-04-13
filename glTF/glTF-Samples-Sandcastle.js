@@ -187,7 +187,13 @@ const sampleOptions = [
   createSampleOption(
     "MultipleClasses",
     "glTF/EXT_structural_metadata/MultipleClasses",
-    "A mesh with multiple feature ID sets that can be activated separately, and are associated with different metadata classes"
+    "A mesh primitive with multiple feature ID sets that can be activated separately, and are associated with different metadata classes"
+  ),
+  
+  createSampleOption(
+    "ComplexTypes",
+    "glTF/EXT_structural_metadata/ComplexTypes",
+    "A mesh primitive with fetaure IDs that are associated with metadata that contains complex, structured types"
   ),
   
 ];
