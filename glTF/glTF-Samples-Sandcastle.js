@@ -196,6 +196,12 @@ const sampleOptions = [
     "A mesh primitive with fetaure IDs that are associated with metadata that contains complex, structured types"
   ),
   
+  createSampleOption(
+    "SimplePropertyTexture",
+    "glTF/EXT_structural_metadata/SimplePropertyTexture",
+    "A mesh primitive where metadata is stored in a texture"
+  ),
+  
 ];
 Sandcastle.addToolbarMenu(sampleOptions);
 
