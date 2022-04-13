@@ -133,7 +133,7 @@ function setInfoText(infoText) {
 // Create one entry for the list of examples that can
 // be selected in the dropdown menu. Selecting one of
 // these will load the tileset for the sample in the
-// given directory, and display the given info text in 
+// given directory, and display the given info text in
 // the infoTexDisplay
 function createSampleOption(name, directory, infoText) {
   return {
@@ -159,7 +159,7 @@ const sampleOptions = [
     "glTF/EXT_mesh_features/FeatureIdTexture",
     "Feature IDs for texels, using a feature ID texture"
   ),
-  
+
   createSampleOption(
     "FeatureIdAttributeAndPropertyTable",
     "glTF/EXT_structural_metadata/FeatureIdAttributeAndPropertyTable",
@@ -171,37 +171,36 @@ const sampleOptions = [
     "glTF/EXT_structural_metadata/FeatureIdTextureAndPropertyTable",
     "Feature IDs for vertices, based on a feature ID texture, and a simple property table containing metadata"
   ),
-  
+
   createSampleOption(
     "MultipleFeatureIdsAndProperties",
     "glTF/EXT_structural_metadata/MultipleFeatureIdsAndProperties",
     "A mesh primitive with two sets of feature IDs, each associated with metadata with multiple properties"
   ),
-  
+
   createSampleOption(
     "TwoPrimitivesOnePropertyTable",
     "glTF/EXT_structural_metadata/TwoPrimitivesOnePropertyTable",
     "A mesh with two mesh primitives, each having a set of feature IDs, that refer to the same property table"
   ),
-  
+
   createSampleOption(
     "MultipleClasses",
     "glTF/EXT_structural_metadata/MultipleClasses",
     "A mesh primitive with multiple feature ID sets that can be activated separately, and are associated with different metadata classes"
   ),
-  
+
   createSampleOption(
     "ComplexTypes",
     "glTF/EXT_structural_metadata/ComplexTypes",
     "A mesh primitive with fetaure IDs that are associated with metadata that contains complex, structured types"
   ),
-  
+
   createSampleOption(
     "SimplePropertyTexture",
     "glTF/EXT_structural_metadata/SimplePropertyTexture",
     "A mesh primitive where metadata is stored in a texture"
   ),
-  
 ];
 Sandcastle.addToolbarMenu(sampleOptions);
 
