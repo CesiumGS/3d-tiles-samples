@@ -184,6 +184,12 @@ const sampleOptions = [
     "A mesh with two mesh primitives, each having a set of feature IDs, that refer to the same property table"
   ),
   
+  createSampleOption(
+    "MultipleClasses",
+    "glTF/EXT_structural_metadata/MultipleClasses",
+    "A mesh with multiple feature ID sets that can be activated separately, and are associated with different metadata classes"
+  ),
+  
 ];
 Sandcastle.addToolbarMenu(sampleOptions);
 
