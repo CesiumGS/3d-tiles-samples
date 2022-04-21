@@ -1,6 +1,6 @@
 # Multiple Classes
 
-This sample demonstrates usage of the [`EXT_mesh_features`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features) extension for storing feature IDs that are associated with vertices of a mesh, and the [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata) extension for storing a property table with metadata that is looked up based on the feature IDs. 
+This sample demonstrates usage of the [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata) extension for storing a property table with metadata that is looked up based on feature IDs. 
 
 The sample contains a glTF asset with a single mesh primitive. The mesh primitive consists of 4 quads (each formed by 2 triangles). The vertices in this mesh primitive have the usual `POSITION` and `NORMAL` vertex attributes. 
 
@@ -11,7 +11,7 @@ This example uses the same feature IDs as the the [MultipleFeatureIdsAndProperti
 
 ### Metadata Structure
 
-The structure of the metadata is defined with an [`EXT_structural_metadata` schema](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata/README.md#schema-definitions) that contains two classes:
+The structure of the metadata is defined with an `EXT_structural_metadata` _schema_ that contains two classes:
 
 - The first class is called `exampleMetadataClassA`, and has the following properties:
   - a property `"example_FLOAT32"`, with `FLOAT32` components
@@ -24,7 +24,7 @@ The structure of the metadata is defined with an [`EXT_structural_metadata` sche
 
 ### Metadata Entities
 
-The metadata entities are the actual instances of this class. They are defined with a [property table](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata/README.md#property-tables) for each class. The rows of this table correspond to the feature IDs. The columns of this table correspond to the properties of the respective class. The data for each column is stored in a standard glTF `bufferView`. 
+The metadata entities are the actual instances of this class. They are defined with an `EXT_structural_metadata` _property table_ for each class. The rows of this table correspond to the feature IDs. The columns of this table correspond to the properties of the respective class. The data for each column is stored in a standard glTF `bufferView`. 
 
 Based on the type information from the metadata classes, the contents of these buffer views are interpreted as follows:
 
@@ -46,6 +46,10 @@ The values for the property table for `exampleMetadataClassB`:
     1.234567, 2.345678, 3.456789, 4.567890
 ]
 ```
+
+## Screenshot
+
+![Screenshot](screenshot/MultipleClasses.gif)
 
 ## Example Sandcastle
 

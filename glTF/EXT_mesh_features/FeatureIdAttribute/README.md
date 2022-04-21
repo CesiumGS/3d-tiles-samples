@@ -14,6 +14,10 @@ The following image shows the mesh primitive with its vertices, their indices, a
 
 ![Image](../../figures/EXT_mesh_features-quads.png)
 
+## Screenshot
+
+![Screenshot](screenshot/FeatureIdAttribute.gif)
+
 ## Example Sandcastle
 
 This example can be viewed with the [common sandcastle code](../../README.md#common-sandcastle-code).

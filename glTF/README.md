@@ -21,7 +21,9 @@ Each directory contains a dedicated `.gltf` file that contains the actual glTF a
 
 ## Common Sandcastle Code
 
-The sandcastle code for viewing these samples is shown in [glTF-Samples-Sandcastle.js](glTF-Samples-Sandcastle.js)
+The sandcastle code for viewing the `EXT_mesh_features` samples is shown in [glTF-Mesh-Features-Samples-Sandcastle.js](glTF-Mesh-Features-Samples-Sandcastle.js)
+
+The sandcastle code for viewing the `EXT_structural_metadata` samples is shown in [glTF-Structural-Metadata-Samples-Sandcastle.js](glTF-Structural-Metadata-Samples-Sandcastle.js)
 
 
 ## Screenshot

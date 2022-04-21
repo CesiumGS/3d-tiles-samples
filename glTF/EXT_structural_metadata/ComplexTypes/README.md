@@ -1,18 +1,18 @@
 # Complex Types
 
-This sample demonstrates usage of the [`EXT_mesh_features`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features) extension for storing feature IDs that are associated with vertices of a mesh, and the [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata) extension for storing a property table with metadata that is looked up based on the feature IDs. 
+This sample demonstrates usage of the [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata) extension for storing a property table with metadata that is looked up based on feature IDs. 
 
 The sample contains a glTF asset with a single mesh primitive. The mesh primitive consists of a quad (the unit square), formed by 2 triangles. The vertices in this mesh primitive have the usual `POSITION` and `NORMAL` attributes. 
 
 ### Feature IDs
 
-The basic structure and definition of the feature IDs for this example is the same as for the [FeatureIdAttribute](../../EXT_mesh_features/FeatureIdAttribute/README.md#feature-ids) example.
+The sample uses the [`EXT_mesh_features`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features) extension for storing feature IDs that are associated with vertices of a mesh. The basic structure and definition of the feature IDs for this example is the same as for the [FeatureIdAttribute](../../EXT_mesh_features/FeatureIdAttribute/README.md#feature-ids) example.
 
 Additionally, this sample defines metadata that is associated with the feature IDs. 
 
 ### Metadata Structure
 
-The structure of the metadata is defined with an [`EXT_structural_metadata` schema](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata/README.md#schema-definitions) that contains a single class. The class contains several properties:
+The structure of the metadata is defined with an `EXT_structural_metadata` _schema_ that contains a single class. The class contains several properties:
 
 - a variable-length `ARRAY` property with _normalized_ `UINT8` values
 - a fixed-length `ARRAY` property with `BOOLEAN` values
@@ -23,7 +23,7 @@ The latter refer to a simple example `ENUM` class that is also defined in the sc
 
 ### Metadata Entities
 
-The metadata entities are the actual instances of this class. They are defined with a [property table](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata/README.md#property-tables). The rows of this table correspond to the feature IDs. The columns of this table correspond to the properties of the class. The data for each column is stored in a standard glTF `bufferView`. 
+The metadata entities are the actual instances of this class. They are defined with an `EXT_structural_metadata` _property table_. The rows of this table correspond to the feature IDs. The columns of this table correspond to the properties of the class. The data for each column is stored in a standard glTF `bufferView`. 
 
 Based on the type information from the metadata class, the contents of these buffer views is interpreted as follows:
 
@@ -61,7 +61,7 @@ Notes:
 
 ## Screenshot
 
-![Screenshot](screenshot/ComplexTypes_screenshot.png)
+![Screenshot](screenshot/ComplexTypes.png)
 
 ## Example Sandcastle
 

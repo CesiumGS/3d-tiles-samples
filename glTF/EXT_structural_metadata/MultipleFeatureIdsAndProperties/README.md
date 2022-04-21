@@ -1,12 +1,12 @@
 # Multiple Feature IDs and Properties
 
-This sample demonstrates usage of the [`EXT_mesh_features`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features) extension for storing feature IDs that are associated with vertices of a mesh, and the [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata) extension for storing a property table with metadata that is looked up based on the feature IDs. 
+This sample demonstrates usage of the [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata) extension for storing a property table with metadata that is looked up based on different feature IDs. 
 
 The sample contains a glTF asset with a single mesh primitive. The mesh primitive consists of 4 quads (each formed by 2 triangles). The vertices in this mesh primitive have the usual `POSITION` and `NORMAL` vertex attributes. 
 
 ### Feature IDs
 
-Each vertex has two _feature IDs_. The first feature ID set is the same as for the [FeatureIdAttribute](../../EXT_mesh_features/FeatureIdAttribute/README.md#feature-ids) example. The second feature ID set simply contains the feature IDs in reverse order for demonstration purposes. So the vertex indices and their feature IDs are listed in this table:
+The sample uses the [`EXT_mesh_features`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features) extension for storing feature IDs that are associated with vertices of a mesh. Each vertex has two _feature IDs_. The first feature ID set is the same as for the [FeatureIdAttribute](../../EXT_mesh_features/FeatureIdAttribute/README.md#feature-ids) example. The second feature ID set simply contains the feature IDs in reverse order for demonstration purposes. So the vertex indices and their feature IDs are listed in this table:
 
 Vertex Index | Feature ID 0 | Feature ID 1
 |----|---|---|
@@ -31,11 +31,11 @@ Additionally, this sample defines metadata that is associated with the feature I
 
 ### Metadata Structure
 
-The structure of the metadata is defined with an [`EXT_structural_metadata` schema](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata/README.MD#schema-definitions) that contains a single class. The class contains two properties. The first one called `example_VEC3_FLOAT32`, and is a 3D vector with 32 bit floating-point components. The second one is called `example_STRING`, and represents a single string.
+The structure of the metadata is defined with an `EXT_structural_metadata` _schema_ that contains a single class. The class contains two properties. The first one called `example_VEC3_FLOAT32`, and is a 3D vector with 32 bit floating-point components. The second one is called `example_STRING`, and represents a single string.
 
 ### Metadata Entities
 
-The metadata entities are the actual instances of this class. They are defined with a [property table](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata/README.MD#property-tables). The rows of this table correspond to the feature IDs. The columns of this table correspond to the properties of the class. The data for each column is stored in a standard glTF `bufferView`. 
+The metadata entities are the actual instances of this class. They are defined with an `EXT_structural_metadata` _property table_. The rows of this table correspond to the feature IDs. The columns of this table correspond to the properties of the class. The data for each column is stored in a standard glTF `bufferView`. 
 
 Based on the type information from the metadata class, the contents of this buffer view is interpreted as four 3D vectors with 32 bit floating point components, and four strings, respectively:
 
@@ -53,6 +53,10 @@ Based on the type information from the metadata class, the contents of this buff
     "Snow 🌨"
 ]
 ```
+
+## Screenshot
+
+![Screenshot](screenshot/MultipleFeatureIdsAndProperties.gif)
 
 ## Example Sandcastle
 
