@@ -29,7 +29,7 @@ Based on the type information from the metadata class, the contents of this buff
 
 ## Screenshot
 
-![Image](screenshot/screenshot.png)
+![Image](screenshot/FeatureIdAttributeAndPropertyTable.png)
 
 ## Example Sandcastle
 
