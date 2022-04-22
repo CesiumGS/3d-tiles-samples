@@ -13,16 +13,23 @@ function createCustomShader() {
       void fragmentMain(FragmentInput fsInput, inout czm_modelMaterial material) {
         int id = fsInput.featureIds.featureId_0;
         vec3 color = vec3(0.0, 0.0, 0.0);
-        if      (id == 0) color = vec3(0.0, 1.0, 0.0);
-        else if (id == 1) color = vec3(0.5, 0.5, 0.5);
-        else if (id == 2) color = vec3(1.0, 0.0, 0.0);
-        else if (id == 3) color = vec3(0.0, 0.0, 1.0);
+        if (id == 0) {
+          color = vec3(0.0, 1.0, 0.0);
+        } else if (id == 1) {
+          color = vec3(0.5, 0.5, 0.5);
+        } else if (id == 2) {
+          color = vec3(1.0, 0.0, 0.0);
+        } else if (id == 3) {
+          color = vec3(0.0, 0.0, 1.0);
+        }
         material.diffuse = color;
       }
     `,
   });
   return customShader;
 }
+
+
 
 // Creates the tileset from the tileset.json in the given subdirectory
 function createTileset(subdirectory) {
