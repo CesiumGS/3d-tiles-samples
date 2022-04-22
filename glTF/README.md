@@ -11,9 +11,9 @@ The [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-n
 
 - [`FeatureIdAttributeAndPropertyTable`](EXT_structural_metadata/FeatureIdAttributeAndPropertyTable): Feature IDs for the vertices, defined with a feature ID attribute, where each ID is associated with a 3D float vector property using a property table
 - [`FeatureIdTextureAndPropertyTable`](EXT_structural_metadata/FeatureIdTextureAndPropertyTable): Feature IDs for the texels, defined with a feature ID texture, where each ID is associated with a 3D float vector property using a property table
-- [`MultipleFeatureIdsAndProperties`](EXT_structural_metadata/MultipleFeatureIdsAndProperties): Multiple feature IDs that can be activated separately, and are associated with metadata containing multiple properties
-- [`TwoPrimitivesOnePropertyTable`](EXT_structural_metadata/TwoPrimitivesOnePropertyTable): Two mesh primitives that define feature IDs, where both refer to the same property table
-- [`MultipleClasses`](EXT_structural_metadata/MultipleClasses): Multiple feature IDs that can be activated separately, and are associated with different metadata classes
+- [`MultipleFeatureIdsAndProperties`](EXT_structural_metadata/MultipleFeatureIdsAndProperties): Multiple feature ID sets that can be selected separately, and are associated with metadata containing multiple properties
+- [`SharedPropertyTable`](EXT_structural_metadata/SharedPropertyTable): Two mesh primitives that define feature IDs, where both refer to the same property table
+- [`MultipleClasses`](EXT_structural_metadata/MultipleClasses): Multiple feature ID sets that can be selected separately, and are associated with different metadata classes
 - [`ComplexTypes`](EXT_structural_metadata/ComplexTypes): Features that contain properties with more complex types
 - [`SimplePropertyTexture`](EXT_structural_metadata/SimplePropertyTexture): Properties that are stored in a texture
 
