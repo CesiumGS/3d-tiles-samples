@@ -36,7 +36,7 @@ function createTileset(subdirectory) {
 }
 
 // Create an HTML element that will serve as the
-// tooltip that displays the metadata information
+// tooltip that displays the feature information
 function createTooltip() {
   const tooltip = document.createElement("div");
   viewer.container.appendChild(tooltip);
@@ -61,19 +61,19 @@ function showTooltip(screenX, screenY, htmlContent) {
 }
 
 // Create an HTML string that contains information
-// about the given metadata, under the given title
-function createMetadataHtml(title, metadata) {
-  if (!Cesium.defined(metadata)) {
+// about the given feature, under the given title
+function createFeatureHtml(title, feature) {
+  if (!Cesium.defined(feature)) {
     return `(No ${title})<br>`;
   }
-  const propertyKeys = metadata.getPropertyNames();
+  const propertyKeys = feature.getPropertyNames();
   if (!Cesium.defined(propertyKeys)) {
     return `(No properties for ${title})<br>`;
   }
   let html = `<b>${title}:</b><br>`;
   for (let i = 0; i < propertyKeys.length; i++) {
     const propertyKey = propertyKeys[i];
-    const propertyValue = metadata.getProperty(propertyKey);
+    const propertyValue = feature.getProperty(propertyKey);
     html += `&nbsp;&nbsp;${propertyKey} : ${propertyValue}<br>`;
   }
   return html;
@@ -82,21 +82,20 @@ function createMetadataHtml(title, metadata) {
 // Given an object that was obtained via Scene#pick: If it is
 // a Cesium3DTileFeature, then it is returned.
 // Otherwise, 'undefined' is returned.
-function obtainFeatureMetadata(picked) {
+function obtainFeature(picked) {
   if (!Cesium.defined(picked)) {
     return undefined;
   }
-  const metadata = picked;
-  const isFeatureMetadata = metadata instanceof Cesium.Cesium3DTileFeature;
-  if (!isFeatureMetadata) {
+  const isFeature = picked instanceof Cesium.Cesium3DTileFeature;
+  if (!isFeature) {
     return undefined;
   }
-  return metadata;
+  return picked;
 }
 
 // Install the handler that will perform picking when the
 // mouse is moved, and update the label entity when the
-// mouse is over something that contains metadata.
+// mouse is over a Cesium3DTileFeature
 const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
 handler.setInputAction(function (movement) {
   let tooltipText = "";
@@ -105,8 +104,8 @@ handler.setInputAction(function (movement) {
   console.log("picked ", picked);
   //debugger;
 
-  const featureMetadata = obtainFeatureMetadata(picked);
-  tooltipText += createMetadataHtml("Feature Metadata", featureMetadata);
+  const feature = obtainFeature(picked);
+  tooltipText += createFeatureHtml("Feature", feature);
 
   const screenX = movement.endPosition.x;
   const screenY = movement.endPosition.y;
@@ -148,18 +147,6 @@ function createSampleOption(name, directory, infoText) {
 // Create the list of available samples, and add them
 // to the sandcastle toolbar
 const sampleOptions = [
-  createSampleOption(
-    "FeatureIdAttribute",
-    "glTF/EXT_mesh_features/FeatureIdAttribute",
-    "Feature IDs for the vertices, using a feature ID attribute"
-  ),
-
-  createSampleOption(
-    "FeatureIdTexture",
-    "glTF/EXT_mesh_features/FeatureIdTexture",
-    "Feature IDs for texels, using a feature ID texture"
-  ),
-
   createSampleOption(
     "FeatureIdAttributeAndPropertyTable",
     "glTF/EXT_structural_metadata/FeatureIdAttributeAndPropertyTable",
