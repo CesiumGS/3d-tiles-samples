@@ -134,7 +134,7 @@ function setInfoText(infoText) {
 // be selected in the dropdown menu. Selecting one of
 // these will load the tileset for the sample in the
 // given directory, and display the given info text in
-// the infoTexDisplay
+// the infoTextDisplay
 function createSampleOption(name, directory, infoText) {
   return {
     text: name,
@@ -179,8 +179,8 @@ const sampleOptions = [
   ),
 
   createSampleOption(
-    "TwoPrimitivesOnePropertyTable",
-    "glTF/EXT_structural_metadata/TwoPrimitivesOnePropertyTable",
+    "SharedPropertyTable",
+    "glTF/EXT_structural_metadata/SharedPropertyTable",
     "A mesh with two mesh primitives, each having a set of feature IDs, that refer to the same property table"
   ),
 

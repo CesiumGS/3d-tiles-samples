@@ -151,7 +151,7 @@ function createTileset(exampleName) {
 // be selected in the dropdown menu. Selecting one of
 // these will load the tileset for the sample with the
 // given name, and display the given info text in the
-// infoTexDisplay
+// infoTextDisplay
 function createSampleOption(name, infoText) {
   return {
     text: name,

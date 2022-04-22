@@ -72,7 +72,7 @@ function setInfoText(infoText) {
 // be selected in the dropdown menu. Selecting one of
 // these will load the tileset for the sample in the
 // given directory, and display the given info text in
-// the infoTexDisplay
+// the infoTextDisplay
 function createSampleOption(name, directory, infoText) {
   return {
     text: name,
