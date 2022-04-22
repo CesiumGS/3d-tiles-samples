@@ -8,7 +8,7 @@ The structure and entities of the metadata in this example are the same as in th
 
 ## Screenshot
 
-![Screenshot](screenshot/TwoPrimitivesOnePropertyTable.png)
+![Screenshot](screenshot/SharedPropertyTable.png)
 
 ## Example Sandcastle
 
