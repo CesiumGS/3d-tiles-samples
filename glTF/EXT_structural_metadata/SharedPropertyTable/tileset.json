@@ -5,7 +5,7 @@
   "geometricError" : 100.0,
   "root" : {
     "content" : {
-      "uri" : "TwoPrimitivesOnePropertyTable.gltf"
+      "uri" : "SharedPropertyTable.gltf"
     },
     "boundingVolume" : {
       "box" : [ 
