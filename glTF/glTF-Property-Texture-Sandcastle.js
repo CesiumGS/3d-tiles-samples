@@ -1,7 +1,7 @@
 const viewer = new Cesium.Viewer("cesiumContainer");
 
 // Create the tileset, and move it to a certain position on the globe
-let tileset = viewer.scene.primitives.add(
+const tileset = viewer.scene.primitives.add(
   new Cesium.Cesium3DTileset({
     url: `http://localhost:8003/glTF/EXT_structural_metadata/SimplePropertyTexture/tileset.json`,
     debugShowBoundingVolume: true,
