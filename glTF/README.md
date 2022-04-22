@@ -29,7 +29,3 @@ The sandcastle code for viewing the `EXT_mesh_features` samples is shown in [glT
 The sandcastle code for viewing the `EXT_structural_metadata` samples is shown in [glTF-Structural-Metadata-Samples-Sandcastle.js](glTF-Structural-Metadata-Samples-Sandcastle.js)
 
 
-## Screenshot
-
-![Image](figures/EXT_mesh_features_sandcastle_screenshot.png)
-
