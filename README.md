@@ -24,6 +24,11 @@ See [INSTRUCTIONS.md](INSTRUCTIONS.md) for details of how to host these examples
 | [TilesetWithTreeBillboards](1.0/TilesetWithTreeBillboards) | <img src="1.0/TilesetWithTreeBillboards/screenshot/screenshot.gif" width="300"> |
 
 
+### [glTF extensions](glTF)
+
+Samples demonstrating the use of the [`EXT_mesh_features`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features) and [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata) glTF extensions.
+
+
 ## Contributions
 
 Pull requests are appreciated!  Please use the same [Contributor License Agreement (CLA)](https://github.com/CesiumGS/cesium/blob/main/CONTRIBUTING.md) and [Coding Guide](https://github.com/CesiumGS/cesium/blob/main/Documentation/Contributors/CodingGuide/README.md) used for [CesiumJS](https://cesium.com/cesiumjs/).
