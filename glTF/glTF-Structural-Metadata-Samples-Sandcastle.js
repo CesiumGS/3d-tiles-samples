@@ -101,9 +101,6 @@ handler.setInputAction(function (movement) {
   let tooltipText = "";
   const picked = viewer.scene.pick(movement.endPosition);
 
-  console.log("picked ", picked);
-  //debugger;
-
   const feature = obtainFeature(picked);
   tooltipText += createFeatureHtml("Feature", feature);
 
