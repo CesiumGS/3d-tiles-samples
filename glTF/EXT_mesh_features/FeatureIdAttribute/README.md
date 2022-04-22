@@ -6,9 +6,7 @@ The sample contains a glTF asset with a single mesh primitive. The mesh primitiv
 
 ### Feature IDs
 
-Additionally, each vertex has a _feature ID_. In this example, the feature ID is given as a [vertex attribute](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_mesh_features#vertex-attribute). 
-
-The mesh primitive contains a `FEATURE_ID_0` attribute. This attribute refers to a standard glTF accessor with type `"SCALAR"` and component type `UNSIGNED_BYTE`, so that each vertex is associated with one `UNSIGNED_BYTE` value as its feature ID.
+Additionally, each vertex has a _feature ID_. In this example, the feature ID is given by the`FEATURE_ID_0` attribute of the mesh primitive. This attribute refers to a standard glTF accessor with type `"SCALAR"` and component type `UNSIGNED_BYTE`, so that each vertex is associated with one `UNSIGNED_BYTE` value as its feature ID.
 
 The following image shows the mesh primitive with its vertices, their indices, and their feature IDs:
 
