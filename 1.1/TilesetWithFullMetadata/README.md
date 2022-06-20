@@ -14,7 +14,7 @@ The example contains a tileset that only stores metadata. The tileset contains a
 - Arrays with all component types, once with fixed length and once with dynamic length
 - All integer component types are once used in normalized and once in non-normalized form
 
-This resulty in 387 properties with different types. The following sandcastle iterates over all these properties, and prints the property values as they are stored in the tileset metadata:
+This results in 387 properties with different types. The following sandcastle iterates over all these properties, and prints the property values as they are stored in the tileset metadata:
 
 ```JavaScript
 const viewer = new Cesium.Viewer("cesiumContainer");
