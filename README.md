@@ -13,7 +13,10 @@ See [INSTRUCTIONS.md](INSTRUCTIONS.md) for details of how to host these examples
 | - | - |
 | [MetadataGranularities](1.1/MetadataGranularities) | <img src="1.1/MetadataGranularities/screenshot/MetadataGranularities.png" width="300"> |
 | [SparseImplicitQuadtree](1.1/SparseImplicitQuadtree) | <img src="1.1/SparseImplicitQuadtree/screenshot/SparseImplicitQuadtree.png" width="300"> |
+| [SparseImplicitOctree](1.1/SparseImplicitOctree) | <img src="1.1/SparseImplicitOctree/screenshot/SparseImplicitOctree.png" width="300"> |
+| [MultipleContents](1.1/MultipleContents) | <img src="1.1/MultipleContents/screenshot/MultipleContents.gif" width="300"> |
 | [BoundingBoxTests](1.1/BoundingBoxTests) | <img src="1.1/BoundingBoxTests/screenshot/BoundingBoxTests.gif" width="300"> |
+| [TilesetWithFullMetadata](1.1/TilesetWithFullMetadata) | <img src="1.1/TilesetWithFullMetadata/screenshot/TilesetWithFullMetadata.png" width="300"> |
 
 ### 3D Tiles 1.0
 

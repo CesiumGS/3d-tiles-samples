@@ -1,0 +1,21 @@
+{
+  "asset" : {
+    "version" : "1.1"
+  },
+  "geometricError" : 2.0,
+  "root" : {
+    "contents" : [ {
+      "uri" : "planeTriangles.glb"
+    }, {
+      "uri" : "planePoints.glb"
+    } ],
+    "boundingVolume" : {
+      "box" : [ 
+        0.5, -0.5, 0.0, 
+        0.5, 0.0, 0.0, 
+        0.0, -0.5, 0.0, 
+        0.0, 0.0, 0.1 ]
+    },
+    "geometricError" : 1.0
+  }
+}
