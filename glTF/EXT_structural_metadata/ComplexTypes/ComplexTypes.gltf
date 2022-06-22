@@ -187,6 +187,7 @@
       "extensions" : {
         "EXT_mesh_features" : {
           "featureIds" : [ {
+            "featureCount" : 4,
             "attribute" : 0,
             "propertyTable" : 0
           } ]
