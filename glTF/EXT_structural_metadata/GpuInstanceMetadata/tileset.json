@@ -1,0 +1,20 @@
+{
+  "asset" : {
+    "version" : "1.1"
+  },
+  "geometricError" : 100.0,
+  "root" : {
+    "content" : {
+      "uri" : "GpuInstancesMetadata.gltf"
+    },
+    "boundingVolume" : {
+      "box" : [ 
+         6.707386, -5.8532143, 5.8532143, 
+         6.707386, 0.0, 0.0, 
+         0.0, -5.8532143, 0.0, 
+         0.0, 0.0, 5.8532143
+      ]
+    },
+    "geometricError" : 0.0
+  }
+}
