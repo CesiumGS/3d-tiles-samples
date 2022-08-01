@@ -66,7 +66,7 @@ function createFeatureHtml(title, feature) {
   if (!Cesium.defined(feature)) {
     return `(No ${title})<br>`;
   }
-  const propertyKeys = feature.getPropertyNames();
+  const propertyKeys = feature.getPropertyIds();
   if (!Cesium.defined(propertyKeys)) {
     return `(No properties for ${title})<br>`;
   }
