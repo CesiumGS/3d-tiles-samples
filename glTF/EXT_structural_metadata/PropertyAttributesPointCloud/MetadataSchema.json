@@ -21,6 +21,7 @@
     },
     "enums" : {
       "classificationEnumType" : {
+        "valueType": "UINT16",
         "values" : [ {
           "name" : "MediumVegetation",
           "value" : 0
