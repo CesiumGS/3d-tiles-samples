@@ -1,4 +1,4 @@
-# Two Primitives, One Property Table
+# Shared Property Table
 
 This sample demonstrates usage of the [`EXT_structural_metadata`](https://github.com/CesiumGS/glTF/tree/3d-tiles-next/extensions/2.0/Vendor/EXT_structural_metadata) extension for storing a property table with metadata that is looked up based on feature IDs. 
 
