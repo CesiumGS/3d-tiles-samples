@@ -31,6 +31,7 @@ The sandcastle code for viewing the `EXT_structural_metadata` samples is shown i
 | [`MultipleClasses`](EXT_structural_metadata/MultipleClasses/)<br/> Two mesh primitives that define feature IDs, where both refer to the same property table | <img src="EXT_structural_metadata/MultipleClasses/screenshot/MultipleClasses.gif" width="300">
 | [`ComplexTypes`](EXT_structural_metadata/ComplexTypes/)<br/> Features that contain properties with more complex types | <img src="EXT_structural_metadata/ComplexTypes/screenshot/ComplexTypes.png" width="300">
 | [`SimplePropertyTexture`](EXT_structural_metadata/SimplePropertyTexture/)<br/> Properties that are stored in a texture | <img src="EXT_structural_metadata/SimplePropertyTexture/screenshot/SimplePropertyTexture.gif" width="300">
+| [`PropertyAttributesPointCloud`](EXT_structural_metadata/PropertyAttributesPointCloud/)<br/> Properties that are stored in vertex attributes, contained in a 3D Tiles tileset that contains statistics for the metadata values. | <img src="EXT_structural_metadata/PropertyAttributesPointCloud/screenshot/PropertyAttributesPointCloud.gif" width="300">
 
 
 ### Other glTF extensions
