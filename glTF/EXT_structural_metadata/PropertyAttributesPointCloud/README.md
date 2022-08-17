@@ -69,19 +69,33 @@ const shaders = {
 
   // The shader that uses the `classification` value from the metadata
   // and uses this to select a color for rendering the points.
+  
+  // NOTE: The classification attribute is accessed in the vertex 
+  // shader here. When it is accessed in the fragment shader, it
+  // may not have exactly the expected value. This is tracked in
+  // https://github.com/CesiumGS/cesium/issues/10699
   CLASSIFICATION_SHADER: new Cesium.CustomShader({
+    varyings: {
+      v_color: Cesium.VaryingType.VEC3,
+    },
+    vertexShaderText: `
+    void vertexMain(VertexInput vsInput, inout czm_modelVertexOutput vsOutput) {
+        int classif = int(vsInput.attributes.classification);
+        
+        vec3 color = vec3(1);
+        if (classif == 0) {
+            color = vec3(0,0.5,0);
+        }
+        else if (classif == 1) {
+            color = vec3(0.5,0.5,0.5);
+        }
+
+        v_color = color;
+    }`,
     fragmentShaderText: `
     void fragmentMain(FragmentInput fsInput, inout czm_modelMaterial material)
     {
-        vec3 color = vec3(1);
-        int classification = int(fsInput.metadata.classification + 0.5);
-        if (classification == 0) {
-            color = vec3(0,0.5,0);
-        }
-        else if (classification == 1) {
-            color = vec3(0.5,0.5,0.5);
-        }
-        material.diffuse = color;
+        material.diffuse = v_color;
     }
     `,
   }),
