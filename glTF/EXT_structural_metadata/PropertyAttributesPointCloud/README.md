@@ -80,13 +80,13 @@ const shaders = {
     },
     vertexShaderText: `
     void vertexMain(VertexInput vsInput, inout czm_modelVertexOutput vsOutput) {
-        int classif = int(vsInput.attributes.classification);
+        int classification = int(vsInput.attributes.classification);
         
         vec3 color = vec3(1);
-        if (classif == 0) {
+        if (classification == 0) {
             color = vec3(0,0.5,0);
         }
-        else if (classif == 1) {
+        else if (classification == 1) {
             color = vec3(0.5,0.5,0.5);
         }
 
