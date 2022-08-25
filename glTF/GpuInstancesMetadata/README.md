@@ -20,7 +20,7 @@ const viewer = new Cesium.Viewer("cesiumContainer");
 // Create the tileset, and move it to a certain position on the globe
 const tileset = viewer.scene.primitives.add(
   new Cesium.Cesium3DTileset({
-    url: `http://localhost:8003/glTF/GpuInstanceMetadata/tileset.json`,
+    url: `http://localhost:8003/glTF/GpuInstancesMetadata/tileset.json`,
     debugShowBoundingVolume: true,
   })
 );
@@ -69,7 +69,8 @@ function createFeatureHtml(title, feature) {
   if (!Cesium.defined(propertyKeys)) {
     return `(No properties for ${title})<br>`;
   }
-  let html = `<b>${title}:</b><br>`;
+  const id = feature.featureId;
+  let html = `<b>${title} ${id}:</b><br>`;
   for (let i = 0; i < propertyKeys.length; i++) {
     const propertyKey = propertyKeys[i];
     const propertyValue = feature.getProperty(propertyKey);
