@@ -3,6 +3,7 @@
     "version" : "1.1"
   },
   "schema" : {
+    "id": "MetadataGranularitiesSchema",
     "classes" : {
       "exampleTilesetMetadataClass" : {
         "name" : "Example tileset metadata class",
