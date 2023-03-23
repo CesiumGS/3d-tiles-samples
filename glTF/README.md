@@ -39,4 +39,5 @@ The sandcastle code for viewing the `EXT_structural_metadata` samples is shown i
 | Sample | Screenshot |
 |:---|:--:|
 | [`GpuInstancesMetadata`](GpuInstancesMetadata/)<br/> An example that uses `EXT_mesh_gpu_instancing` to create GPU instances that are associated with feature IDs, which are used for looking up metadata in a property table | <img src="GpuInstancesMetadata/screenshot/GpuInstancesMetadata.gif" width="300">
+| [`BoxPrimitiveOutline`](BoxPrimitiveOutline/)<br/> An example that uses the `CESIUM_primitive_outline` extension to enable outline rendering for the edges of a unit cube. | <img src="CESIUM_primitive_outline/BoxPrimitiveOutline/screenshot/BoxPrimitiveOutline.png" width="300">
 
