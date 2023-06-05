@@ -1,7 +1,7 @@
 
 # Sparse implicit octree
 
-An example tileset that uses the [Implicit Tiling](https://github.com/CesiumGS/3d-tiles/tree/draft-1.1/specification/ImplicitTiling) to represent a small, sparse octree. 
+An example tileset that uses the [Implicit Tiling](https://github.com/CesiumGS/3d-tiles/tree/main/specification/ImplicitTiling) to represent a small, sparse octree. 
 
 The quadtree has 6 available levels, and each subtree has 3 levels. There are 31 tiles with content in the tree: 
 

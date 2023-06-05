@@ -1,7 +1,7 @@
 
 # Sparse implicit quadtree
 
-An example tileset that uses the [Implicit Tiling](https://github.com/CesiumGS/3d-tiles/tree/draft-1.1/specification/ImplicitTiling) to represent a small, sparse quadtree. 
+An example tileset that uses the [Implicit Tiling](https://github.com/CesiumGS/3d-tiles/tree/main/specification/ImplicitTiling) to represent a small, sparse quadtree. 
 
 The quadtree has 6 available levels, and each subtree has 3 levels. There are 32 tiles available in level 5. Each of these tiles has a content, which is a simple glTF asset as a GLB (glTF binary) file that just consists of a portion of the unit square that corresponds to the extent of the respective tile. No other tiles - except for the ones that have content, and their respective ancestors - are available. 
 
