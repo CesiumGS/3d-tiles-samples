@@ -1,6 +1,6 @@
 # Tileset with full Metadata
 
-This sample demonstrates the types of metadata that may be associated with entities, based on the type system that is defined in the [3D Metadata Specification](https://github.com/CesiumGS/3d-tiles/tree/draft-1.1/specification/Metadata).
+This sample demonstrates the types of metadata that may be associated with entities, based on the type system that is defined in the [3D Metadata Specification](https://github.com/CesiumGS/3d-tiles/tree/main/specification/Metadata).
 
 ![TilesetWithFullsetMetadata](screenshot/TilesetWithFullMetadata.png)
 
