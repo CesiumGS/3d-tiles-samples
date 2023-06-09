@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/CesiumGS/3d-tiles/blob/main/figures/Cesium3DTiles.png" /></p>
+<p align="center"><img src="./figures/3DTiles_dark_color_small.png" /></p>
 
 
 ## Samples
