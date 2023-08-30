@@ -27,9 +27,9 @@ let pointsContent;
 
 // Create the tileset in the viewer, loading it from a local server
 const tileset = viewer.scene.primitives.add(
-  new Cesium.Cesium3DTileset({
-    url: "http://localhost:8003/1.1/MultipleContents/tileset.json"
-  })
+  await Cesium.Cesium3DTileset.fromUrl(
+    "http://localhost:8003/1.1/MultipleContents/tileset.json"
+  )
 );
 
 // Move the tileset to a certain position on the globe,

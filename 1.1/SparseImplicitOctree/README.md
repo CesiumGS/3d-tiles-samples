@@ -24,10 +24,12 @@ const viewer = new Cesium.Viewer("cesiumContainer");
 
 // Create the tileset in the viewer
 const tileset = viewer.scene.primitives.add(
-  new Cesium.Cesium3DTileset({
-    url: "http://localhost:8003/1.1/SparseImplicitOctree/tileset.json",
-    debugShowBoundingVolume: true,
-  })
+  await Cesium.Cesium3DTileset.fromUrl(
+    "http://localhost:8003/1.1/SparseImplicitOctree/tileset.json",
+    {
+      debugShowBoundingVolume: true,
+    }
+  )
 );
 
 // Move the tileset to a certain position on the globe,
