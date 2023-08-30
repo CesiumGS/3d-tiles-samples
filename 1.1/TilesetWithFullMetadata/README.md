@@ -21,9 +21,9 @@ const viewer = new Cesium.Viewer("cesiumContainer");
 
 // Load the tileset from a local server
 const tileset = viewer.scene.primitives.add(
-  new Cesium.Cesium3DTileset({
-    url: "http://localhost:8003/1.1/TilesetWithFullMetadata/tileset.json",
-  })
+  await Cesium.Cesium3DTileset.fromUrl(
+    "http://localhost:8003/1.1/TilesetWithFullMetadata/tileset.json"
+  )
 );
 
 /**
@@ -36,7 +36,6 @@ const tileset = viewer.scene.primitives.add(
  * @param {MetadataEntity} entity The entity
  */
 function printMetadata(schema, entity) {
-
   // Iterate over all classes of the schema
   const classes = schema.classes;
   for (let metadataClassId in classes) {
@@ -47,7 +46,6 @@ function printMetadata(schema, entity) {
       const properties = metadataClass.properties;
       for (let metadataClassPropertyId in properties) {
         if (properties.hasOwnProperty(metadataClassPropertyId)) {
-
           // Obtain the value of each property from the
           // metadata entity, and print it to the console
           const value = entity.getProperty(metadataClassPropertyId);
@@ -65,9 +63,6 @@ function printMetadata(schema, entity) {
   }
 }
 
-// Wait until the tileset and its associated metadata are loaded,
-// and then print the metadata of the tileset
-tileset.readyPromise.then(function () {
-  printMetadata(tileset.schema, tileset.metadata);
-});
+// Print the metadata of the tileset
+printMetadata(tileset.schema, tileset.metadata);
 ```

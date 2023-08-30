@@ -2,10 +2,12 @@ const viewer = new Cesium.Viewer("cesiumContainer");
 
 // Create the tileset, and move it to a certain position on the globe
 const tileset = viewer.scene.primitives.add(
-  new Cesium.Cesium3DTileset({
-    url: `http://localhost:8003/glTF/EXT_structural_metadata/SimplePropertyTexture/tileset.json`,
-    debugShowBoundingVolume: true,
-  })
+  await Cesium.Cesium3DTileset.fromUrl(
+    `http://localhost:8003/glTF/EXT_structural_metadata/SimplePropertyTexture/tileset.json`,
+    {
+      debugShowBoundingVolume: true,
+    }
+  )
 );
 tileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
   Cesium.Cartesian3.fromDegrees(-75.152325, 39.94704, 0)

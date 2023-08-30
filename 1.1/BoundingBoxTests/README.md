@@ -121,17 +121,19 @@ const viewer = new Cesium.Viewer("cesiumContainer");
 let currentTileset;
 
 // Creates the tileset for the sample with the given name.
-function createTileset(exampleName) {
+async function createTileset(exampleName) {
   if (Cesium.defined(currentTileset)) {
     viewer.scene.primitives.remove(currentTileset);
     currentTileset = undefined;
   }
   // Create the tileset, and move it to a certain position on the globe
   currentTileset = viewer.scene.primitives.add(
-    new Cesium.Cesium3DTileset({
-      url: `http://localhost:8003/1.1/BoundingBoxTests/${exampleName}/tileset.json`,
-      debugShowBoundingVolume: true,
-    })
+    await Cesium.Cesium3DTileset.fromUrl(
+      `http://localhost:8003/1.1/BoundingBoxTests/${exampleName}/tileset.json`,
+      {
+        debugShowBoundingVolume: true,
+      }
+    )
   );
   currentTileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
     Cesium.Cartesian3.fromDegrees(-75.152325, 39.94704, 0)
@@ -155,8 +157,8 @@ function createTileset(exampleName) {
 function createSampleOption(name, infoText) {
   return {
     text: name,
-    onselect: function () {
-      createTileset(name);
+    onselect: async function () {
+      await createTileset(name);
     },
   };
 }

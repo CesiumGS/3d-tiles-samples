@@ -29,20 +29,20 @@ function createCustomShader() {
   return customShader;
 }
 
-
-
 // Creates the tileset from the tileset.json in the given subdirectory
-function createTileset(subdirectory) {
+async function createTileset(subdirectory) {
   if (Cesium.defined(currentTileset)) {
     viewer.scene.primitives.remove(currentTileset);
     currentTileset = undefined;
   }
   // Create the tileset, and move it to a certain position on the globe
   currentTileset = viewer.scene.primitives.add(
-    new Cesium.Cesium3DTileset({
-      url: `http://localhost:8003/${subdirectory}/tileset.json`,
-      debugShowBoundingVolume: true,
-    })
+    await Cesium.Cesium3DTileset.fromUrl(
+      `http://localhost:8003/${subdirectory}/tileset.json`,
+      {
+        debugShowBoundingVolume: true,
+      }
+    )
   );
   currentTileset.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
     Cesium.Cartesian3.fromDegrees(-75.152325, 39.94704, 0)
@@ -83,8 +83,8 @@ function setInfoText(infoText) {
 function createSampleOption(name, directory, infoText) {
   return {
     text: name,
-    onselect: function () {
-      createTileset(directory);
+    onselect: async function () {
+      await createTileset(directory);
       setInfoText(infoText);
     },
   };

@@ -32,10 +32,12 @@ const viewer = new Cesium.Viewer("cesiumContainer");
 
 // Load the tileset from a local server
 const tileset = viewer.scene.primitives.add(
-  new Cesium.Cesium3DTileset({
-    url: `http://localhost:8003/glTF/EXT_structural_metadata/PropertyAttributesPointCloud//tileset.json`,
-    debugShowBoundingVolume: true,
-  })
+  await Cesium.Cesium3DTileset.fromUrl(
+    `http://localhost:8003/glTF/EXT_structural_metadata/PropertyAttributesPointCloud//tileset.json`,
+    {
+      debugShowBoundingVolume: true,
+    }
+  )
 );
 
 // Move the tileset to a certain position on the globe,
@@ -69,8 +71,8 @@ const shaders = {
 
   // The shader that uses the `classification` value from the metadata
   // and uses this to select a color for rendering the points.
-  
-  // NOTE: The classification attribute is accessed in the vertex 
+
+  // NOTE: The classification attribute is accessed in the vertex
   // shader here. When it is accessed in the fragment shader, it
   // may not have exactly the expected value. This is tracked in
   // https://github.com/CesiumGS/cesium/issues/10699
