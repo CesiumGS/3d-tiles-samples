@@ -13,6 +13,7 @@
       ]
     },
     "geometricError" : 1.0,
+    "refine" : "REPLACE",
     "content": {
       "uri": "BoxPrimitiveOutline.gltf"
     }

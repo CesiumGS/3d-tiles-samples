@@ -15,6 +15,7 @@
          0.0, 0.0, 5.8532143
       ]
     },
-    "geometricError" : 0.0
+    "geometricError" : 0.0,
+    "refine" : "REPLACE"
   }
 }
