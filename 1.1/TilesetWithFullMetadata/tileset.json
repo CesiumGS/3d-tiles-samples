@@ -3634,6 +3634,7 @@
     "boundingVolume" : {
       "box" : [ 0.5, 0.5, 0.5, 0.5, 0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.5 ]
     },
-    "geometricError" : 1.0
+    "geometricError" : 1.0,
+    "refine" : "REPLACE"
   }
 }
